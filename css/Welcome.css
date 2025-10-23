@@ -1,0 +1,30 @@
+/* Make sure the body fills the whole page */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* (Or whatever font you use) */
+}
+
+.splash-container {
+  /* 1. Set the size to fill the entire screen */
+  height: 100vh; /* vh = viewport height */
+  width: 100%;
+
+  /* 2. Set the background image (UPDATE THIS PATH) */
+  /* This path points to the other background.png at the root */
+  background-image: url(/images/Pngs/background.png); /* <-- Make sure this path is correct! */
+  background-size: cover;
+  background-position: center;
+
+  /* 3. Center the "Welcome!" text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-container h1 {
+  /* 4. Style the text */
+  color: #1A1A1A; /* (Or black) */
+  font-size: 72px; 
+  font-weight: 700;
+}
