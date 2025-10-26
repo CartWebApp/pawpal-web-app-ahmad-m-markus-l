@@ -1823,3 +1823,1131 @@ HEALTH PAGE (health.html) - OVERLAYS
 .log-card-row strong {
   color: #333;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ... rest of your code ... */
+/*
+========================================
+GLOBAL STYLES & RESETS
+========================================
+*/
+/*
+========================================
+ABOUT US PAGE (about-us.html)
+========================================
+*/
+
+/* 1. Apply Poppins font to this page */
+.about-us-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Center the layout and title */
+.about-us-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.about-us-page .home-content-dark {
+  max-width: 1000px; /* 1000px wide container */
+  margin: 40px auto; 
+  padding: 0;
+}
+.about-us-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 3. The Timeline Container */
+.vision-timeline {
+  position: relative;
+  width: 100%;
+  margin: 50px 0;
+  overflow: auto; /* Clears the floats */
+}
+
+/* 4. The central "branch" line */
+.timeline-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 200px; 
+  width: 8px;
+  background-color: #ddd;
+}
+
+/* 5. Base style for all boxes */
+.vision-box {
+  position: relative; 
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 400px; /* This will now be EXACTLY 400px */
+  margin-bottom: 50px; 
+  z-index: 2; /* <-- ADD THIS LINE */
+}
+.vision-box h3 {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+.vision-box h3 img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  background-color: #E0F2F2;
+  border-radius: 50%;
+  padding: 5px;
+}
+.vision-box p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 15px 0 0 0;
+  line-height: 1.6;
+}
+
+/* 6. Position Left vs. Right Boxes */
+.vision-box.box-left {
+  float: left;
+}
+.vision-box.box-right {
+  float: right;
+}
+
+/* 7. The connecting horizontal branch line */
+.vision-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  background-color: #ddd;
+  /* This math is now correct: (1000 - 400 - 400 - 8) / 2 = 96 */
+  width: 96px; 
+  z-index: 1;
+}
+.box-left::before {
+  right: -96px; 
+}
+.box-right::before {
+  left: -96px; 
+}
+
+/* 8. The final box at the bottom */
+.vision-box.box-bottom {
+  float: none;
+  clear: both;
+  margin: 50px auto 0; 
+  width: 400px;
+}
+/* The vertical branch for the bottom box */
+.box-bottom::before {
+  width: 8px;
+  height: 50px; 
+  left: 50%;
+  top: -50px; 
+  transform: translateX(-50%);
+}
+
+
+/*
+========================================
+SUPPORT PAGE (support.html)
+========================================
+*/
+
+/* 1. Apply Poppins font to this page */
+.support-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Style the layout and title */
+.support-page .home-content-dark {
+  max-width: 900px; /* Centered, fixed-width layout */
+  margin: 40px auto; 
+  padding: 0 20px;
+}
+.support-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left; /* Aligned to the left */
+  margin-bottom: 30px;
+}
+.support-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 3. The main FAQ container box */
+.faq-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 4. Individual Q&A items */
+.faq-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 25px;
+}
+.faq-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+.faq-answer {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/*
+========================================
+CONTACT US PAGE (contact-us.html) - FINAL FIX
+========================================
+*/
+
+/* 1. Apply Poppins font */
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Style the layout and title */
+.contact-page .home-content-dark {
+  /* === THIS IS THE FIX === */
+  /* Remove the default narrow width from the main container */
+  max-width: none; 
+  width: 100%;
+  padding: 0 20px; /* Keep the side padding */
+}
+.contact-page .page-title {
+  /* This centers the title, assuming it's OUTSIDE the box */
+  max-width: 800px; /* Match the form width */
+  margin: 0 auto 30px auto; /* Center the title block */
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left; /* Aligns text left within its centered block */
+}
+.contact-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 3. The main form container */
+.contact-form-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 50px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  /* === THIS IS THE FIX === */
+  max-width: 800px;  /* Set the width */
+  margin: 0 auto;    /* Center the form box itself */
+}
+
+/* 4. Form inputs and labels */
+.contact-form-container .form-group-labeled {
+  margin-bottom: 25px;
+}
+.contact-form-container .form-group-labeled label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  display: block;
+}
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 18px; 
+  border: 1px solid #ddd;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; 
+}
+
+.contact-form-container textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+/* 5. The "Done" button */
+.btn-done {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+.btn-done:hover {
+  background-color: #368383;
+}
+
+
+/*
+========================================
+CONFIRMATION PAGE (contact-confirmation.html)
+========================================
+*/
+
+.confirmation-page {
+  /* === ADD YOUR BACKGROUND IMAGE HERE === 
+    Replace 'images/your-dog-background.jpg' with the path to your image.
+  */
+  background-image: url('images/your-dog-background.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.confirmation-box {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 50px 60px;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+.confirmation-icon {
+  margin-bottom: 20px;
+}
+
+.confirmation-box h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.confirmation-box p {
+  font-size: 18px;
+  color: #555;
+  margin: 0 0 30px 0;
+}
+
+.btn-home {
+  display: inline-block;
+  width: 100%;
+  padding: 16px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+.btn-home:hover {
+  background-color: #368383;
+}
+
+/*
+========================================
+USER SETTINGS PAGE (usersettings.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.user-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.user-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #f7f7f7;
+  max-width: 1000px; /* Set a max width */
+  margin: 40px auto;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+/* 2. Main layout grid */
+.user-settings-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* 300px for pic, rest for form */
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* 3. Left Column: Profile Picture */
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.profile-pic-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.profile-pic-circle img {
+  width: 60px;
+  height: 60px;
+  filter: invert(1); /* Makes black icon white */
+  opacity: 0.7;
+}
+
+/* 4. Right Column: Form */
+.user-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.setting-input-box {
+  position: relative; /* For the edit icon */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.setting-input-box label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+.setting-input-box input[type="text"],
+.setting-input-box textarea {
+  width: 100%;
+  padding: 10px 0; /* Simpler padding */
+  font-size: 16px; 
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+  box-sizing: border-box; 
+}
+.setting-input-box textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* 5. Edit (Pencil) Icon */
+.edit-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+.bio-edit-icon {
+  top: auto; /* Moves it to the bottom */
+  bottom: 25px;
+}
+
+/* 6. "Done" button */
+.user-settings-form .btn-done {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #43A2A2;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+.user-settings-form .btn-done:hover {
+  background-color: #368383;
+}
+
+/*
+========================================
+PET PROFILES PAGE (pet-profiles.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.pet-profiles-page {
+  font-family: 'Poppins', sans-serif;
+}
+.pet-profiles-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 1000px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main layout grid */
+.pet-profile-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* 300px for pic, rest for form */
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* 3. Title styles */
+.pet-profile-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 30px 0;
+}
+
+/* 4. Left Column: Pet Photo */
+.pet-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pet-photo-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px dashed #ccc;
+  transition: background-color 0.2s ease;
+}
+.pet-photo-circle:hover {
+  background-color: #e9e9e9;
+  border-color: #aaa;
+}
+.pet-photo-circle img {
+  /* === THIS IS THE FIX === */
+  width: 245px;  /* Was 60px */
+  height: 245px; /* Was 60px */
+  opacity: 0.5;
+}
+
+/* 5. Right Column: Pet Info Form */
+.pet-info-form {
+  width: 100%;
+}
+.pet-info-box {
+  position: relative; /* For the edit icon */
+  margin-bottom: 25px;
+}
+.pet-info-box label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+.pet-info-box input[type="text"] {
+  width: 100%;
+  font-size: 18px; 
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  padding: 10px 40px 10px 0; /* Space for icon */
+  border: none;
+  border-bottom: 2px solid #eee;
+  outline: none;
+  box-sizing: border-box; 
+  transition: border-color 0.2s ease;
+}
+.pet-info-box input[type="text"]:focus {
+  border-bottom-color: #43A2A2;
+}
+
+/* 6. Edit (Pencil) Icon */
+.pet-info-box .edit-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+.pet-info-box input:focus + .edit-icon {
+  color: #43A2A2;
+}
+
+/*
+========================================
+HEALTH SETTINGS PAGE (health-settings.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.health-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.health-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.health-settings-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+========================================
+PRIVACY SETTINGS PAGE (privacy-settings.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.privacy-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.privacy-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.privacy-settings-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+========================================
+ACCESSIBILITY PAGE (accessibility.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.accessibility-page {
+  font-family: 'Poppins', sans-serif;
+}
+.accessibility-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.accessibility-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+========================================
+NOTIFICATION SETTINGS PAGE (notification-settings.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.notification-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.notification-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.notification-settings-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+========================================
+PET SELECT PAGE (pet-select.html)
+========================================
+*/
+
+/* 1. Apply Poppins font and light background */
+.pet-select-page {
+  font-family: 'Poppins', sans-serif;
+}
+.pet-select-page .home-content-dark {
+  /* White box */
+  background-color: #fff; 
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Page Title */
+.pet-select-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Pet Grid */
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+/* 4. Pet Card */
+.pet-card,
+.pet-add-card {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.pet-card:hover,
+.pet-add-card:hover {
+  border-color: #43A2A2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+.pet-card h3,
+.pet-add-card h3 {
+  margin: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.pet-card-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.pet-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5. Add Pet Card */
+.pet-add-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+}
+.pet-add-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pet-add-icon i {
+  font-size: 60px;
+  color: #ccc;
+}
+.pet-add-card:hover .pet-add-icon i {
+  color: #43A2A2;
+}
+.pet-add-card h3 {
+  color: #777;
+}
+.pet-add-card:hover h3 {
+  color: #43A2A2;
+}
+
+
+/*
+========================================
+========================================
+MOBILE RESPONSIVE STYLES
+(Add this at the VERY BOTTOM of style.css)
+========================================
+========================================
+*/
+
+/* This rule applies to all screens 768px wide or smaller.
+  This will cover tablets and all mobile phones.
+*/
+@media (max-width: 768px) {
+
+  /*
+  ========================================
+  GLOBAL FIXES (All Pages)
+  ========================================
+  */
+  
+  /* 1. Make all main content boxes fill the screen */
+  .home-content-dark,
+  .contact-form-container,
+  .settings-container,
+  .pet-profiles-page .home-content-dark,
+  .health-settings-page .home-content-dark,
+  .privacy-settings-page .home-content-dark,
+  .accessibility-page .home-content-dark,
+  .notification-settings-page .home-content-dark {
+    
+    /* This overrides the 900px/800px desktop widths */
+    max-width: 100%; 
+    
+    /* Make padding smaller for mobile */
+    padding: 25px 20px; 
+    
+    /* Remove extra margins */
+    margin-left: 0;
+    margin-right: 0;
+    
+    /* Fix for some pages being inside another box */
+    box-sizing: border-box; 
+  }
+  
+  /* 2. Reduce the size of all page titles */
+  .page-title {
+    font-size: 28px; /* Down from 36px */
+    margin-bottom: 20px;
+  }
+  
+  /* 3. Make header icons fit */
+  .main-header-dark {
+    padding: 10px 15px;
+  }
+  .main-nav-dark {
+    /* Tighter spacing between icons */
+    gap: 15px; 
+  }
+
+  /*
+  ========================================
+  ABOUT US PAGE (The Timeline)
+  ========================================
+  */
+  
+  /* 1. Stack all timeline boxes into one column */
+  .vision-box,
+  .vision-box.box-left,
+  .vision-box.box-right,
+  .vision-box.box-bottom {
+    float: none;
+    clear: both;
+    width: 100%; /* Make them fill the container */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 2. Hide all the branches (center and side) */
+  .timeline-center,
+  .vision-box::before {
+    display: none;
+  }
+
+  /*
+  ========================================
+  USER SETTINGS & PET PROFILES (The Grids)
+  ========================================
+  */
+  
+  /* 1. Stack the photo and form vertically */
+  .user-settings-grid,
+  .pet-profile-grid {
+    grid-template-columns: 1fr; /* Change from 2 columns to 1 */
+    gap: 30px;
+  }
+  
+  /* 2. Center the profile photo */
+  .profile-pic-container,
+  .pet-photo-container {
+    padding-top: 0;
+    align-items: center;
+  }
+  
+  /* 3. Make photo circle a bit smaller */
+  .profile-pic-circle,
+  .pet-photo-circle {
+    width: 200px;
+    height: 200px;
+  }
+  .pet-photo-circle img {
+    width: 100px; /* Down from 120px */
+    height: 100px;
+  }
+  
+  /* 4. Make form inputs more readable */
+  .pet-info-box label {
+    font-size: 14px;
+  }
+  .pet-info-box input[type="text"] {
+    font-size: 16px;
+  }
+
+  /*
+  ========================================
+  SETTINGS PAGES (The Toggles)
+  ========================================
+  */
+  
+  /* 1. Make text smaller so it fits */
+  .setting-text h3 {
+    font-size: 18px; /* Down from 20px */
+  }
+  .setting-text p {
+    font-size: 14px; /* Down from 16px */
+    /* Help text wrap better */
+    padding-right: 10px; 
+  }
+  
+  /* 2. Make the toggle slightly smaller */
+  .toggle-switch {
+    width: 50px; /* Down from 60px */
+  }
+
+
+  /*
+========================================
+PET-PROFILE.HTML (Overlap Bug Fix)
+========================================
+*/
+
+/* 1. Stack the two main columns on mobile */
+.profile-page .pet-profile-grid {
+  grid-template-columns: 1fr;
+  gap: 0; 
+}
+
+/* 2. Fix the overlapping cards.
+   We target .profile-section (the parent) 
+   to fix the stacking bug.
+*/
+.profile-page .pet-profile-main,
+.profile-page .profile-section { /* <--- THIS IS THE CORRECTED LINE */
+  position: relative;
+  z-index: 1;
+}
+  
+}

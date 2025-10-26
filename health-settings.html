@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support - Pawpal</title>
+  <title>Health Settings - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
 </head>
-<body class="support-page home-page-dark">
+<body class="health-settings-page home-page-dark">
 
   <header class="main-header-dark">
     <div class="logo-box">
@@ -27,7 +27,7 @@
       </a>
     </nav>
     <div class="user-icons-dark">
-      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn" class="nav-active">
       <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
       <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
     </div>
@@ -35,40 +35,55 @@
 
   <main class="home-content-dark">
     
-    <h1 class="page-title">FAQ</h1>
+    <div class="settings-container">
+      <h1 class="page-title">Health & Safety Settings</h1>
 
-    <div class="faq-container">
-      <div class="faq-item">
-        <p class="faq-question">Q: How do I add and manage my pet's profile?</p>
-        <p class="faq-answer">A: Go to My Pets -> Add Pet to enter your pet's details like name, breed, age, and health info. You can manage multiple pets from the same account.</p>
+      <div class="setting-row">
+        <div class="setting-text">
+          <h3>Health Monitoring</h3>
+          <p>Automatically track health status and send alerts for abnormal readings.</p>
+        </div>
+        <div class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" 
+               alt="Toggle off" 
+               class="toggle-switch" 
+               data-alt-src="images/Pngs/switch-tab-2.png">
+        </div>
       </div>
 
-      <div class="faq-item">
-        <p class="faq-question">Q: How does the app help me care for my pet's health?</p>
-        <p class="faq-answer">A: The app tracks vaccinations, medications, vet visits, and symptoms. It also sends reminders for checkups, feeding, and medication schedules.</p>
+      <div class="setting-row">
+        <div class="setting-text">
+          <h3>Enable Safety Mode</h3>
+          <p>Activates safety checks and limits risky actions during emergencies.</p>
+        </div>
+        <div class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" 
+               alt="Toggle off" 
+               class="toggle-switch" 
+               data-alt-src="images/Pngs/switch-tab-2.png">
+        </div>
       </div>
 
-      <div class="faq-item">
-        <p class="faq-question">Q: Can I share my pet's health data with my vet?</p>
-        <p class="faq-answer">A: Yes. Under Privacy & Sharing Controls, you can securely share health updates and records with your veterinarian.</p>
+      <div class="setting-row">
+        <div class="setting-text">
+          <h3>Share Health Data with Vet</h3>
+          <p>Allow your vet to receive real-time health updates and emergency alerts.</p>
+        </div>
+        <div class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" 
+               alt="Toggle off" 
+               class="toggle-switch" 
+               data-alt-src="images/Pngs/switch-tab-2.png">
+        </div>
       </div>
 
-      <div class="faq-item">
-        <p class="faq-question">Q: What should I do in case of an emergency?</p>
-        <p class="faq-answer">A: Use the Emergency Actions feature to quickly call your vet, send alerts to emergency contacts, or view nearby animal hospitals.</p>
-      </div>
-
-      <div class="faq-item">
-        <p class="faq-question">Q: How do I control notifications and alerts?</p>
-        <p class="faq-answer">A: Visit Notification Settings to choose which reminders you want to receive — including health updates, feeding times, and emergency alerts.</p>
-      </div>
     </div>
 
   </main>
 
   <footer class="main-footer-dark">
     <a href="about-us.html">About us</a>
-    <a href="support.html" class="footer-active">Support</a>
+    <a href="support.html">Support</a>
     <a href="contact-us.html">Contact us</a>
   </footer>
 
