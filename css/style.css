@@ -1,18 +1,30 @@
+/*
+========================================
+GLOBAL STYLES
+========================================
+*/
+
 /* Make sure the body fills the whole page */
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Poppins', sans-serif; /* (Or whatever font you use) */
+  /* Make sure to use your real font name from Figma! */
+  font-family: 'Poppins', sans-serif; 
 }
+
+/*
+========================================
+SPLASH PAGE (index.html)
+========================================
+*/
 
 .splash-container {
   /* 1. Set the size to fill the entire screen */
   height: 100vh; /* vh = viewport height */
   width: 100%;
 
-  /* 2. Set the background image (UPDATE THIS PATH) */
-  /* This path points to the other background.png at the root */
-background-image: url('../background.png'); /* <-- Make sure this path is correct! */
+  /* 2. Set the background image */
+  background-image: url('../images/Pngs/background.png');
   background-size: cover;
   background-position: center;
 
@@ -27,4 +39,1298 @@ background-image: url('../background.png'); /* <-- Make sure this path is correc
   color: #1A1A1A; /* (Or black) */
   font-size: 72px; 
   font-weight: 700;
+}
+
+/*
+========================================
+LOGIN PAGE (login.html)
+========================================
+*/
+
+/* 1. The full-page background container */
+.login-page-container {
+  background-image: url('../images/Pngs/background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 2. The white "login box" */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+/* 3. The logo (inside the box) */
+.login-logo {
+  width: 70px; 
+  height: 70px;
+  margin-bottom: 30px;
+}
+
+/* 4. The form "group" (the wrapper div) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* 5. The input boxes */
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #f7f7f7; /* Soft gray background */
+  border-radius: 8px;
+  box-sizing: border-box; /* Very important! */
+}
+
+/* 6. The placeholder text inside the inputs */
+.form-group input::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 7. The main "Log-in" button */
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #43A2A2; /* The correct teal color */
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #3B8E8E; /* A darker teal for hover */
+}
+
+/* 8. The footer "Create an account?" link */
+.signup-link {
+  margin-top: 25px;
+}
+
+.signup-link a {
+  color: #888; /* The neutral gray color */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/*
+========================================
+VERIFICATION PAGE (verify-email.html)
+========================================
+*/
+
+/* 1. Style the new text */
+.verification-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.verification-text {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* 2. The container for the 6 boxes */
+.verification-code-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between the boxes */
+  margin-bottom: 30px;
+}
+
+/* 3. The 6 individual code boxes */
+.code-input {
+  width: 45px;
+  height: 55px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  /* Make it a box */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+========================================
+VERIFIED PAGE (verified.html)
+========================================
+*/
+
+/* 1. Style the checkmark icon */
+.verified-icon-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Makes it a circle */
+  border: 4px solid #43A2A2; /* The same teal color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 20px; /* Center it */
+}
+
+.verified-icon-container img {
+  width: 50px; /* Adjust size of icon inside */
+}
+
+/* 2. Adjust the "continue!" button */
+#continue-btn {
+  text-decoration: none; /* Removes underline from the <a> tag */
+  display: block; /* Makes it a block so width:100% works */
+  box-sizing: border-box; /* Fixes padding issues */
+}
+
+/*
+========================================
+CREATE PET PROFILE PAGE (create-profile.html)
+========================================
+*/
+
+/* 1. The circular camera icon uploader */
+.pet-profile-picture-uploader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7; /* Same as input fields */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 30px; /* Center it */
+}
+
+.pet-profile-picture-uploader label {
+  cursor: pointer;
+}
+
+/* Replace it with this: */
+
+.pet-profile-picture-uploader img {
+  width: 100px;  /* <-- Made it bigger */
+  height: 100px; /* <-- Made it bigger */
+  opacity: 0.6;
+}
+
+/* 2. Hide the real file input */
+#pet-photo-upload {
+  display: none;
+}
+
+/* 3. This positions the calendar icon */
+.form-group-with-icon {
+  position: relative; /* This is the anchor */
+}
+
+.input-icon {
+  position: absolute; /* This floats on top */
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+/* 4. Fix for the "Next" button (since it's an <a> tag) */
+#next-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/*
+========================================
+ADDITIONAL INFO PAGE (additional-info.html)
+========================================
+*/
+
+/* 1. New styles for our labeled inputs */
+.form-group-labeled {
+  text-align: left; /* Align labels to the left */
+  margin-bottom: 15px;
+}
+
+.form-group-labeled label {
+  display: block; /* Puts label on its own line */
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* 2. Style for the "(Optional)" text */
+.form-group-labeled label span {
+  font-weight: 400; /* Makes it regular, not bold */
+  color: #888;
+}
+
+/* 3. IMPORTANT: Override the gray input 
+    from the login page 
+*/
+.form-group-labeled input {
+  background-color: #fff; /* Make it white */
+  border: 1px solid #ddd; /* Give it a light border */
+}
+
+/* 4. Fix for the "Done" button (since it's an <a> tag) */
+#done-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 25px; /* Give it some space */
+}
+
+/*
+========================================
+PROFILE CREATED PAGE (profile-created.html)
+========================================
+*/
+
+/* 1. Style the new "secondary" button */
+.btn-secondary {
+  display: block; /* Make it a block */
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #E0F2F2; /* Very light teal */
+  color: #43A2A2; /* The main teal color */
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box; /* Fixes padding issues */
+}
+
+.btn-secondary:hover {
+  background-color: #CFF0F0; /* A slightly darker light teal */
+}
+
+/* 2. Fix for the "continue!" <a> button */
+#continue-to-home-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/*
+========================================
+HOME PAGE (home.html)
+========================================
+*/
+
+/* 1. Reset the body for the main app */
+body.home-page {
+  background-color: #f9f9f9; /* A very light gray, not the image */
+  color: #333;
+}
+
+/* 2. Main Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 10px rgba(0,0,0, 0.05);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.logo-container img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* 3. Main Navigation */
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #888;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+.main-nav a i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+/* The "active" tab */
+.main-nav a.nav-active,
+.main-nav a:hover {
+  background-color: #E0F2F2;
+  color: #43A2A2;
+}
+
+/* 4. User Icons (Right side) */
+.user-icons {
+  display: flex;
+  align-items: center;
+}
+.user-icons i {
+  font-size: 26px;
+  color: #777;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.user-icons i:hover {
+  color: #43A2A2;
+}
+
+/* 5. Main Content Area */
+.home-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto; /* Center the content */
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.welcome-banner {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0, 0.05);
+}
+.welcome-banner h1 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+/* 6. Pet Profile Header (from last image) */
+.pet-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0, 0.05);
+}
+.pet-profile-info {
+  display: flex;
+  align-items: center;
+}
+.pet-profile-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin-right: 20px;
+}
+.pet-profile-text h2 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+.pet-profile-text span {
+  font-size: 16px;
+  color: #777;
+}
+.btn-pet-action {
+  background-color: #f5f5f5;
+  color: #555;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.btn-pet-action i {
+  margin-right: 5px;
+}
+
+/* 7. Main Footer */
+.main-footer {
+  text-align: center;
+  padding: 40px;
+  margin-top: 50px;
+  color: #999;
+}
+.main-footer a {
+  color: #777;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 15px;
+}
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+/*
+========================================
+HOME PAGE - DARK THEME (home.html)
+========================================
+*/
+body.home-page-dark {
+  background-color: #F0F2F5;
+  color: #1c1e21;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 1. Dark Header */
+.main-header-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #333;
+}
+
+/* 2. Logo Box (Left) */
+.logo-box {
+  width: 150px; /* Give it a set width */
+  display: flex;
+  align-items: center;
+}
+.logo-box img {
+  width: 30px;
+  height: 30px;
+  /* This filter turns the black SVG to white */
+  filter: brightness(0) invert(1); 
+}
+
+/* 3. Dark Nav (Center) */
+.main-nav-dark {
+  display: flex;
+  justify-content: center; /* Center icons within the nav area */
+  flex-grow: 1; /* Tell nav to take all remaining space */
+  gap: 50px;
+}
+.main-nav-dark a img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+.main-nav-dark a.nav-active img,
+.main-nav-dark a:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+  /* === RE-ADDED THE GLOW EFFECT === */
+  filter: drop-shadow(0 0 5px #43A2A2);
+}
+
+/* 4. User Icons (Right) */
+.user-icons-dark {
+  width: 150px; /* Match the logo-box width */
+  display: flex;
+  justify-content: flex-end; /* Push icons to the right */
+  gap: 25px;
+}
+.user-icons-dark img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.user-icons-dark img:hover {
+  transform: scale(1.1);
+}
+
+/* 5. Main Content Area */
+/* This new rule aligns the block to the left */
+.home-content-dark {
+  max-width: 900px;
+  margin: 40px; /* This sets a 40px margin on all sides, aligning it left */
+  padding: 0;
+  flex-grow: 1; /* This still keeps the footer down */
+}
+
+/* This NEW rule fixes the pet-profile.html page */
+.profile-page .home-content-dark {
+  margin: 40px auto;
+  padding: 0 20px; /* Adds breathing room for the centered layout */
+}
+
+.pet-profile-main {
+  text-align: left; /* <-- This is the fix */
+  margin-bottom: 40px;
+}
+.pet-profile-main img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.pet-profile-main h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.reminders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* <-- THIS ADDS THE SPACING! */
+}
+.reminders-section h3 {
+  font-size: 20px;
+  margin-bottom: 0; /* We use gap now */
+}
+
+.reminder-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.reminder-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E0F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.reminder-icon img {
+  width: 20px;
+  height: 20px;
+}
+.reminder-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.reminder-text p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+
+/* 7. Floating "Add" Button */
+/* This new rule moves the button up above the footer */
+.add-event-btn {
+  position: fixed;
+  bottom: 100px; /* Moved up to 100px from the bottom */
+  right: 40px;
+  z-index: 50;
+}
+.add-event-btn img {
+  /* Let's give your icon a size (adjust as needed) */
+  width: 80px; 
+  height: 80px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.add-event-btn:hover img {
+  transform: scale(1.05); /* A nice little grow effect */
+}
+
+/* 8. Dark Footer */
+.main-footer-dark {
+  background-color: #333;
+  padding: 30px;
+  text-align: center;
+}
+.main-footer-dark a {
+  color: #43A2A2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 20px;
+}
+
+/* === ANIMATION FOR NEW CARDS === */
+.reminder-card {
+  /* This tells the card to animate any changes */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reminder-card.new-card-animation {
+  /* This is the "starting" state (invisible) */
+  opacity: 0;
+  transform: translateY(20px);
+}
+/*
+========================================
+LAYER 2: HIDDEN OVERLAY STYLES
+========================================
+*/
+
+/* 1. The Full-Screen Dark Background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none; /* Hidden by default */
+}
+
+/* 2. Settings Panel */
+.settings-overlay-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 101;
+  padding: 20px;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+  display: none; /* Hidden by default */
+}
+.settings-overlay-panel h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+.settings-overlay-panel a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.settings-overlay-panel a:hover {
+  background-color: #f5f5f5;
+}
+.settings-overlay-panel a.logout-link {
+  color: #D9534F;
+  font-weight: 600;
+  border-top: 2px solid #eee;
+  margin-top: 10px;
+}
+
+/* 3. Notifications Panel */
+.notifications-overlay-panel {
+  position: fixed;
+  top: 80px; /* Position below header */
+  right: 40px;
+  width: 380px;
+  max-height: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 101;
+  overflow-y: auto;
+  display: none; /* Hidden by default */
+}
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+.notifications-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+.notifications-header a {
+  text-decoration: none;
+  color: #43A2A2;
+  font-weight: 600;
+  font-size: 14px;
+}
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+.notification-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.notification-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.notification-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* 4. Add Event Panel */
+.add-event-overlay-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; /* Hidden by default */
+}
+.add-event-overlay-panel h2 {
+  text-align: center;
+  margin-top: 0;
+}
+.btn-save-event {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+.close-overlay-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* 5. Logout Panel */
+.logout-overlay-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 102; /* Needs to be on top of settings panel */
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+.logout-overlay-panel h2 {
+  margin-top: 0;
+}
+.logout-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+.logout-buttons button {
+  flex: 1; /* Make both buttons equal width */
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.btn-cancel {
+  background-color: #fff;
+  color: #333;
+}
+.btn-logout-confirm {
+  background-color: #D9534F;
+  color: #fff;
+  border-color: #D9534F;
+}
+
+/* This class will be added by JavaScript to show an overlay */
+.overlay-visible {
+  display: block !important;
+}
+
+/*
+========================================
+JAVASCRIPT "WAKE UP" CLASS
+========================================
+*/
+
+/* This class will be added by JavaScript to show an overlay */
+.overlay-visible {
+  display: block !important;
+}
+
+/* Fix for <a> tags styled as buttons */
+#signup-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+#verify-submit-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/*
+========================================
+PET PROFILE PAGE (pet-profile.html)
+========================================
+*/
+
+/* 1. The 2-Column Grid Layout */
+.pet-profile-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* Left col = 350px, Right col = fills rest */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.pet-profile-col-left {
+  position: sticky; /* Makes it "stick" as you scroll */
+  top: 40px;
+}
+
+.pet-profile-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Spaces out the white boxes vertically */
+}
+
+/* 2. The Big Camera Icon (Left Column) */
+.pet-profile-main.large {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pet-profile-main.large img {
+  width: 250px;  /* <-- Made it much bigger */
+  height: 250px; /* <-- Made it much bigger */
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  margin-bottom: 15px;
+}
+.pet-profile-main.large h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* 3. Generic Section styles (for headlines) */
+.profile-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+/* 4. Generic White Box Style */
+.profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+/* 5. Specific Card Content Styling */
+
+/* "Pet Information" card */
+.info-row {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.info-row:last-child {
+  border-bottom: none;
+}
+.info-row span {
+  color: #555;
+}
+.info-row strong {
+  color: #1c1e21;
+  margin-left: auto;
+}
+.info-row .info-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}
+
+/* "Upcoming Events" card */
+.event-card-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.event-card-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+/* "Stats" card */
+.stats-card {
+  display: flex;
+  gap: 30px;
+}
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+.stat-item span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+.stat-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stat-circle strong {
+  font-size: 24px;
+  color: #1c1e21;
+}
+#sleep-circle {
+  background: conic-gradient(#43A2A2 0% 97%, #f0f0f0 97% 100%);
+}
+#energy-circle {
+  background: conic-gradient(#43A2A2 0% 50%, #f0f0f0 50% 100%);
+}
+
+/* === "Add a Reminder" card [FIXED] === */
+
+/* This rule is just for the <form> tag */
+#add-reminder-form {
+  position: relative; /* This lets us position the button inside */
+}
+
+/* This new rule styles the INPUT field */
+#reminder-name {
+  background-color: #f0f2f5; /* The light gray from your design */
+  border: none;
+  border-radius: 20px; /* Makes it rounded */
+  padding: 15px 60px 15px 20px; /* Top, Right(for button), Bottom, Left */
+  width: 100%;
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+  font-size: 16px;
+  color: #333;
+}
+#reminder-name::placeholder {
+  color: #888;
+}
+
+/* This new rule styles the "plus" BUTTON */
+.btn-save-reminder {
+  position: absolute;
+  right: 5px; /* Position 5px from the right edge */
+  top: 50%;   /* Center it vertically */
+  transform: translateY(-50%); /* ...finish centering */
+  
+  width: 40px;  /* Small circular button */
+  height: 40px; /* Small circular button */
+  border-radius: 50%;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  
+  /* For the plus icon */
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  box-shadow: none; /* Remove the old shadow */
+}
+
+/*
+========================================
+DYNAMIC REMINDERS & NOTIFICATIONS
+========================================
+*/
+
+/* 1. Style for the empty "No notifications" message */
+.empty-state {
+  padding: 30px 20px;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* 2. Make the icon container "relative" for the dot */
+.user-icons-dark img#bell-icon-btn {
+  position: relative;
+}
+
+/* 3. The "new notification" red dot */
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #D9534F; /* Red */
+  border-radius: 50%;
+  border: 2px solid #333; /* Matches the header */
+}
+
+/*
+========================================
+HOMEPAGE - "BUDDY" NAME BOX FIX
+========================================
+*/
+
+/* 1. This styles the link around the camera image */
+.pet-profile-image-link {
+  display: inline-block; /* Fixes link spacing */
+  line-height: 0; /* Fixes link spacing */
+  text-decoration: none; /* Removes underline */
+}
+
+/* 2. This styles the new white "Buddy" box */
+.pet-profile-name-box {
+  display: inline-block;
+  background-color: #fff; /* Filled white box */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Same shadow as reminder cards */
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-top: 20px; /* Space from the camera icon */
+  color: #333; /* Dark text */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*
+========================================
+SCHEDULE PAGE (schedule.html)
+========================================
+*/
+
+/* 1. The 2-Column Grid */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Calendar is 1.5x wider */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* 2. Left Column: Calendar Placeholder */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+.calendar-header {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+  gap: 10px;
+}
+.calendar-body .day-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}
+.calendar-body .day {
+  font-size: 16px;
+  font-weight: 600;
+  height: 60px;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+}
+.calendar-body .day-today {
+  background-color: #43A2A2;
+  color: #fff;
+}
+
+/* 3. Right Column: Upcoming Events */
+.upcoming-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  /* Make it "sticky" so it stays when calendar scrolls */
+  position: sticky;
+  top: 40px;
+}
+.upcoming-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.upcoming-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.btn-add-upcoming {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.btn-add-upcoming img {
+  width: 50px; /* Smaller as requested */
+  height: 50px;
+}
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 400px; /* Gives the list a scrollbar if it gets too long */
+  overflow-y: auto;
+}
+
+/* 4. Style for new event cards */
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+.event-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E0F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event-card-icon img {
+  width: 20px;
+  height: 20px;
+}
+.event-card-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.event-card-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 5. The New "Add Event" Overlay */
+.schedule-add-event-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; /* Hidden by default */
+}
+.schedule-add-event-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.schedule-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.schedule-close-btn img {
+  width: 30px;
+  height: 30px;
+}
+.icon-input {
+  position: relative;
+}
+.icon-input .input-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+.btn-save-event {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+}
+
+
+/*
+========================================
+SCHEDULE PAGE - LAYOUT FIX
+========================================
+*/
+
+/* 1. This styles the new "Appointments" title */
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 2. This overrides the homepage layout and makes
+    the schedule page wide and centered, like your Figma.
+*/
+.schedule-page .home-content-dark {
+  max-width: 1200px; /* <-- Makes it much wider */
+  margin: 40px auto; /* <-- Centers it on the page */
+  padding: 0 20px;   /* <-- Adds breathing room */
 }

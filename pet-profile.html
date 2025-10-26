@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Pawpal</title>
+  <title>Pet Profile - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
-  
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
 </head>
-<body class="home-page-dark"> <header class="main-header-dark">
+<body class="profile-page home-page-dark"> <header class="main-header-dark">
     <div class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
     </div>
-
     <nav class="main-nav-dark">
-      <a href="home.html" class="nav-active">
+      <a href="home.html">
         <img src="images/Icons/home.svg" alt="Home">
       </a>
       <a href="schedule.html">
@@ -26,37 +24,96 @@
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
-
     <div class="user-icons-dark">
       <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
-      
       <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
-      
       <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
     </div>
   </header>
 
   <main class="home-content-dark">
-    
-    <div class="pet-profile-main">
-      <a href="pet-profile.html" class="pet-profile-image-link">
-        <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture" id="pet-profile-btn">
-      </a>
 
-      <div class="pet-profile-name-box">
-        Buddy
-      </div>
-    </div>
+    <div class="pet-profile-grid">
+      
+      <div class="pet-profile-col-left">
 
-    <section class="reminders-section" id="reminders-list">
-      <h3>Reminders:</h3>
-      </section>
+        <div class="pet-profile-main large">
+          <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture">
+          <h2>Pet Name</h2>
+        </div>
 
-  </main>
+        <section class="profile-section">
+          <h3>Pet Information:</h3>
+          <div class="profile-card">
+            <div class="info-row">
+              <span>Weight:</span>
+              <strong>120lbs</strong>
+              <img src="images/Icons/scale.svg" alt="Weight" class="info-icon">
+            </div>
+            <div class="info-row">
+              <span>Gender:</span>
+              <strong>Male</strong>
+              <img src="images/Icons/Male.svg" alt="Male" class="info-icon">
+            </div>
+            <div class="info-row">
+              <span>Neuter Status:</span>
+              <strong>Yes</strong>
+              <img src="images/Icons/checkmark-icon.svg" alt="Yes" class="info-icon">
+            </div>
+          </div>
+        </section>
 
-  <a href="pet-select.html" class="add-event-btn">
-    <img src="images/Icons/Plus-box-icon.svg" alt="Add Pet">
-  </a>
+      </div> <div class="pet-profile-col-right">
+
+        <section class="profile-section">
+          <h3>Upcoming Events:</h3>
+          <div class="profile-card">
+            <div class="event-card-item">
+              <img src="images/Icons/pill.svg" alt="Pill">
+              <span>Pill Medication - 6:30 AM</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-section">
+          <h3>Stats:</h3>
+          <div class="profile-card stats-card">
+            <div class="stat-item">
+              <span>Sleep Average</span>
+              <div class="stat-circle" id="sleep-circle">
+                <strong>97%</strong>
+              </div>
+            </div>
+            <div class="stat-item">
+              <span>Energy</span>
+              <div class="stat-circle" id="energy-circle">
+                <strong>50%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-section">
+          
+          <h3>Reminders:</h3>
+
+          <div class="profile-card">
+            <form id="add-reminder-form">
+              <div class="form-group-labeled">
+                
+                <input type="text" id="reminder-name" placeholder="Add a reminder">
+              
+              </div>
+              
+              <button type="submit" class="btn-save-reminder">
+                <i class='bx bx-plus'></i>
+              </button>
+
+            </form>
+          </div>
+        </section>
+
+      </div> </div> </main>
 
   <footer class="main-footer-dark">
     <a href="#">About us</a>
@@ -64,6 +121,10 @@
     <a href="#">Contact us</a>
   </footer>
 
+  <div class="overlay" id="page-overlay"></div>
+  <div class="settings-overlay-panel" id="settings-panel">...</div>
+  <div class="notifications-overlay-panel" id="notifications-panel">...</div>
+  <div class="logout-overlay-panel" id="logout-panel">...</div>
   <div class="overlay" id="page-overlay"></div>
 
   <div class="settings-overlay-panel" id="settings-panel">
@@ -123,7 +184,7 @@
       <button class="btn-logout-confirm">Log out</button>
     </div>
   </div>
-
   <script src="javascript/script.js"></script>
+
 </body>
 </html>

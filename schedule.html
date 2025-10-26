@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+</head>
+<body class="schedule-page home-page-dark">
+
+  <header class="main-header-dark">
+    <div class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </div>
+    <nav class="main-nav-dark">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html" class="nav-active">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+    <div class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </div>
+  </header>
+
+  <main class="home-content-dark">
+    
+    <h1 class="page-title">Appointments</h1>
+
+    <div class="schedule-grid">
+      
+      <div class="calendar-container">
+        <div class="calendar-header">October 2025</div>
+        <div class="calendar-body">
+          <div class="day-name">Sun</div>
+          <div class="day-name">Mon</div>
+          <div class="day-name">Tue</div>
+          <div class="day-name">Wed</div>
+          <div class="day-name">Thu</div>
+          <div class="day-name">Fri</div>
+          <div class="day-name">Sat</div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day">1</div>
+          <div class="day">2</div>
+          <div class="day">3</div>
+          <div class="day">4</div>
+          <div class="day">5</div>
+          <div class="day">6</div>
+          <div class="day">7</div>
+          <div class="day">8</div>
+          <div class="day">9</div>
+          <div class="day day-today">10</div>
+          <div class="day">11</div>
+          <div class="day">12</div>
+          <div class="day">13</div>
+          <div class="day">14</div>
+          <div class="day">15</div>
+          <div class="day">16</div>
+          <div class="day">17</div>
+          <div class="day">18</div>
+          <div class="day">19</div>
+          <div class="day">20</div>
+          <div class="day">21</div>
+          <div class="day">22</div>
+          <div class="day">23</div>
+          <div class="day">24</div>
+          <div class="day">25</div>
+          <div class="day">26</div>
+          <div class="day">27</div>
+          <div class="day">28</div>
+          <div class="day">29</div>
+          <div class="day">30</div>
+          <div class="day">31</div>
+        </div>
+      </div>
+
+      <div class="upcoming-container">
+        <div class="upcoming-header">
+          <h3>Upcoming</h3>
+          <button class="btn-add-upcoming" id="schedule-add-btn">
+            <img src="images/Icons/Plus-box-icon.svg" alt="Add Event">
+          </button>
+        </div>
+        
+        <div class="upcoming-list" id="upcoming-list">
+          <p class="empty-state">No upcoming events.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="main-footer-dark">
+    <a href="#">About us</a>
+    <a href="support.html">Support</a>
+    <a href="#">Contact us</a>
+  </footer>
+
+  <div class="overlay" id="page-overlay"></div>
+  <div class="settings-overlay-panel" id="settings-panel">...</div>
+  <div class="notifications-overlay-panel" id="notifications-panel">...</div>
+  <div class="logout-overlay-panel" id="logout-panel">...</div>
+  <div class="schedule-add-event-overlay" id="schedule-add-event-panel">
+    <button class="schedule-close-btn" id="schedule-close-btn">
+      <img src="images/Icons/exit.svg" alt="Close">
+    </button>
+
+    <h2>Add Event</h2>
+    
+    <form id="schedule-event-form">
+      <div class="form-group-labeled">
+        <label for="event-name-schedule">Event Name:</label>
+        <input type="text" id="event-name-schedule" placeholder="Walk">
+      </div>
+      
+      <div class="form-group-labeled">
+        <label for="pet-selector-schedule">Pet Selector:</label>
+        <select id="pet-selector-schedule">
+          <option>Selected Pet: Buddy</option>
+          </select>
+      </div>
+
+      <div class="form-group-labeled icon-input">
+        <label for="event-date-schedule">Date:</label>
+        <input type="text" id="event-date-schedule" placeholder="MM/DD/YYYY">
+        <img src="images/Icons/black-calender.svg" alt="Calendar" class="input-icon">
+      </div>
+
+      <div class="form-group-labeled icon-input">
+        <label for="event-time-schedule">Time:</label>
+        <input type="text" id="event-time-schedule" placeholder="-- : -- AM/PM">
+        <img src="images/Icons/clock.svg" alt="Clock" class="input-icon">
+      </div>
+
+      <button type="submit" class="btn-save-event">Save</button>
+    </form>
+  </div>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
