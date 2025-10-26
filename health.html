@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Report - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+</head>
+<body class="health-page home-page-dark">
+
+  <header class="main-header-dark">
+    <div class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </div>
+    <nav class="main-nav-dark">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html" class="nav-active">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+    <div class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </div>
+  </header>
+
+  <main class="home-content-dark">
+    
+    <h1 class="page-title">Health Report</h1>
+
+    </main>
+
+  <footer class="main-footer-dark">
+    <a href="#">About us</a>
+    <a href="support.html">Support</a>
+    <a href="#">Contact us</a>
+  </footer>
+
+  <div class="overlay" id="page-overlay"></div>
+
+  <div class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <a href="#">Pet Profile Management</a>
+    <a href="#">Health & Safety Settings</a>
+    <a href="#">Privacy & Sharing Controls</a>
+    <a href="#">Accessibility Options</a>
+    <a href="#">Notification settings</a>
+    <a href="#" class="logout-link" id="logout-btn">Log out</a>
+  </div>
+
+  <div class="notifications-overlay-panel" id="notifications-panel">
+    <div class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </div>
+    <div class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </div>
+  </div>
+
+  <div class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <div class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </div>
+  </div>
+  
+  <script src="javascript/script.js"></script>
+</body>
+</html>

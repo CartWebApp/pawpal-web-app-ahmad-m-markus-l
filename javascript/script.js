@@ -180,13 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check if we are on the schedule page
   if (document.body.classList.contains('schedule-page')) {
     
-    // Get all the buttons and panels
+    // --- Get all the elements ---
     const addEventBtn = document.getElementById('schedule-add-btn');
     const addEventPanel = document.getElementById('schedule-add-event-panel');
     const closeEventPanelBtn = document.getElementById('schedule-close-btn');
     const addEventForm = document.getElementById('schedule-event-form');
     const upcomingList = document.getElementById('upcoming-list');
     const pageOverlay = document.getElementById('page-overlay');
+
+    // Get the new form fields
+    const eventNameSelect = document.getElementById('event-name-select');
+    const customEventGroup = document.getElementById('custom-event-group');
+    const customEventInput = document.getElementById('event-name-custom');
+
+    // A "lookup map" for your icons, just as you described
+    const iconMap = {
+      "Pill Medication": "images/Icons/pill.svg",
+      "Walk": "images/Icons/paw.svg",
+      "Groom Appointment": "images/Icons/groom.svg",
+      "Veterinary Visit": "images/Icons/black-calender.svg",
+      "Other": "images/Icons/bell.svg" // Default bell for custom
+    };
 
     // --- Function to show the event panel ---
     function showEventPanel() {
@@ -198,21 +212,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideEventPanel() {
       pageOverlay.classList.remove('overlay-visible');
       addEventPanel.style.display = 'none';
+      // Also hide the custom field when we close
+      customEventGroup.style.display = 'none';
     }
     
     // --- Function to add a new event card to the list ---
+    // (This is now upgraded to use the event.iconPath)
     function addEventCard(event) {
-      // First, remove the "empty state" message if it's there
       const emptyState = upcomingList.querySelector('.empty-state');
       if (emptyState) {
         emptyState.remove();
       }
-
-      // Create the new event card HTML
+      
       const eventHTML = `
         <div class="event-card">
           <div class="event-card-icon">
-            <img src="images/Icons/bell.svg" alt="Event">
+            <img src="${event.iconPath}" alt="Event Icon">
           </div>
           <div class="event-card-text">
             <h4>${event.name}</h4>
@@ -220,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `;
-      // Add the new card to the top of the list
       upcomingList.insertAdjacentHTML('afterbegin', eventHTML);
     }
     
@@ -228,47 +242,73 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadEvents() {
       const events = JSON.parse(localStorage.getItem('events')) || [];
       if (events.length > 0) {
+        // Fix for old events: if iconPath doesn't exist, use a bell
         events.forEach(event => {
+          if (!event.iconPath) {
+            event.iconPath = 'images/Icons/bell.svg';
+          }
           addEventCard(event);
         });
       }
     }
-    loadEvents(); // Run this function when the page loads
+    loadEvents(); // Run this when the page loads
 
     // --- 2. Listen for "Add Event" button click ---
     addEventBtn.addEventListener('click', showEventPanel);
 
     // --- 3. Listen for "Close" button click ---
     closeEventPanelBtn.addEventListener('click', hideEventPanel);
-    // Also hide panel if user clicks the gray overlay
     pageOverlay.addEventListener('click', () => {
       if (addEventPanel.style.display === 'block') {
         hideEventPanel();
       }
     });
+    
+    // --- 4. NEW: Show/Hide Custom Field ---
+    eventNameSelect.addEventListener('change', () => {
+      if (eventNameSelect.value === 'Other') {
+        customEventGroup.style.display = 'block';
+      } else {
+        customEventGroup.style.display = 'none';
+      }
+    });
 
-    // --- 4. Listen for "Save" form submission ---
+    // --- 5. UPDATED: Listen for "Save" form submission ---
     addEventForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Get values from the form
+      let eventName;
+      let iconPath;
+      
+      // Check which name and icon to use
+      if (eventNameSelect.value === 'Other') {
+        eventName = customEventInput.value;
+        iconPath = iconMap['Other']; // Default bell
+      } else {
+        eventName = eventNameSelect.value;
+        iconPath = iconMap[eventName]; // Look up the correct icon
+      }
+
+      // Build the new event object
       const newEvent = {
-        name: document.getElementById('event-name-schedule').value,
+        name: eventName,
         date: document.getElementById('event-date-schedule').value,
-        time: document.getElementById('event-time-schedule').value
+        time: document.getElementById('event-time-schedule').value,
+        iconPath: iconPath // Save the icon path!
       };
 
-      // Get existing events, add new one, save back to storage
+      // Save to storage
       let events = JSON.parse(localStorage.getItem('events')) || [];
       events.push(newEvent);
       localStorage.setItem('events', JSON.stringify(events));
 
-      // Add the new event card to the list right away
+      // Add the card to the UI
       addEventCard(newEvent);
 
-      // Hide the form and reset it
+      // Hide and reset
       hideEventPanel();
       addEventForm.reset();
+      customEventGroup.style.display = 'none'; // Make sure to hide this
     });
   }
 });

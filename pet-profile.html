@@ -9,7 +9,8 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
 </head>
-<body class="profile-page home-page-dark"> <header class="main-header-dark">
+<body class="profile-page home-page-dark"> 
+  <header class="main-header-dark">
     <div class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
     </div>
@@ -63,7 +64,9 @@
           </div>
         </section>
 
-      </div> <div class="pet-profile-col-right">
+      </div> 
+
+      <div class="pet-profile-col-right">
 
         <section class="profile-section">
           <h3>Upcoming Events:</h3>
@@ -113,7 +116,9 @@
           </div>
         </section>
 
-      </div> </div> </main>
+      </div> 
+    </div> 
+  </main>
 
   <footer class="main-footer-dark">
     <a href="#">About us</a>
@@ -121,10 +126,6 @@
     <a href="#">Contact us</a>
   </footer>
 
-  <div class="overlay" id="page-overlay"></div>
-  <div class="settings-overlay-panel" id="settings-panel">...</div>
-  <div class="notifications-overlay-panel" id="notifications-panel">...</div>
-  <div class="logout-overlay-panel" id="logout-panel">...</div>
   <div class="overlay" id="page-overlay"></div>
 
   <div class="settings-overlay-panel" id="settings-panel">
@@ -142,38 +143,9 @@
       <h2>Notifications</h2>
       <a href="#">Mark all as read</a>
     </div>
-    
     <div class="notification-list-container" id="notification-list">
       <p class="empty-state">No notifications yet.</p>
     </div>
-  </div>
-
-  <div class="add-event-overlay-panel" id="add-event-panel">
-    <button class="close-overlay-btn" id="close-event-panel-btn">
-      <i class='bx bx-x'></i>
-    </button>
-    <h2>Add Event</h2>
-    <form>
-      <div class="form-group-labeled">
-        <label for="event-name">Event Name:</label>
-        <input type="text" id="event-name">
-      </div>
-      <div class="form-group-labeled">
-        <label for="pet-selector">Pet Selector:</label>
-        <select id="pet-selector">
-          <option>Selected Pet: Buddy</option>
-        </select>
-      </div>
-      <div class="form-group-labeled">
-        <label for="event-date">Date:</label>
-        <input type="text" id="event-date" placeholder="-- / -- / --">
-      </div>
-      <div class="form-group-labeled">
-        <label for="event-time">Time:</label>
-        <input type="text" id="event-time" placeholder="-- : --">
-      </div>
-      <button type="submit" class="btn-save-event">Save</button>
-    </form>
   </div>
 
   <div class="logout-overlay-panel" id="logout-panel">
@@ -184,6 +156,7 @@
       <button class="btn-logout-confirm">Log out</button>
     </div>
   </div>
+
   <script src="javascript/script.js"></script>
 
 </body>

@@ -1137,92 +1137,136 @@ SCHEDULE PAGE (schedule.html)
 ========================================
 */
 
-/* 1. The 2-Column Grid */
-.schedule-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr; /* Calendar is 1.5x wider */
-  gap: 30px;
-  align-items: flex-start;
+/* 1. This styles the "Appointments" title */
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-/* 2. Left Column: Calendar Placeholder */
+/* 2. This makes the layout wide and centered */
+.schedule-page .home-content-dark {
+  /* === THE HORIZONTAL FIX === */
+  max-width: 90vw; /* Use 90% of the screen width */
+  margin: 40px auto; 
+  padding: 0;
+}
+
+/* 3. The 2-Column Grid */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr; /* Make calendar much wider */
+  gap: 30px;
+  align-items: flex-start; 
+}
+
+/* 4. Left Column: Calendar */
 .calendar-container {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 20px;
+  padding: 25px;
+  min-height: 700px; /* Give it a tall height */
 }
 .calendar-header {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: left; /* Match Figma */
+  margin-bottom: 30px;
 }
 .calendar-body {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+  grid-template-columns: repeat(7, 1fr);
   gap: 10px;
 }
 .calendar-body .day-name {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
-  text-align: center;
+  text-align: left; /* Match Figma */
+  margin-bottom: 10px;
 }
 .calendar-body .day {
-  font-size: 16px;
-  font-weight: 600;
-  height: 60px;
-  padding: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  height: 90px;
+  padding: 8px;
   border-radius: 8px;
-  text-align: center;
+  /* === THE CALENDAR DAY FIX === */
+  text-align: left; /* Align number to the left */
+  vertical-align: top;
 }
 .calendar-body .day-today {
   background-color: #43A2A2;
   color: #fff;
 }
 
-/* 3. Right Column: Upcoming Events */
+/* 5. Right Column: Upcoming Events */
 .upcoming-container {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 20px;
-  /* Make it "sticky" so it stays when calendar scrolls */
+  padding: 25px;
   position: sticky;
   top: 40px;
+  min-height: 700px; /* Match calendar height */
+  
+  /* === THE BUTTON FIX (part 1) === */
+  /* Use flexbox to push button to bottom */
+  display: flex;
+  flex-direction: column;
 }
 .upcoming-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Stop header from shrinking */
 }
 .upcoming-header h3 {
   margin: 0;
-  font-size: 20px;
-}
-.btn-add-upcoming {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-.btn-add-upcoming img {
-  width: 50px; /* Smaller as requested */
-  height: 50px;
+  font-size: 24px;
+  font-weight: 700;
 }
 .upcoming-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-height: 400px; /* Gives the list a scrollbar if it gets too long */
+  flex-grow: 1; /* This makes the list fill the empty space */
   overflow-y: auto;
 }
+.upcoming-list .empty-state {
+  margin-top: 30px;
+}
 
-/* 4. Style for new event cards */
+/* === THE BUTTON FIX (part 2) === */
+.btn-add-upcoming {
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded square */
+  width: 70px;
+  height: 70px;
+  font-size: 40px; /* Big plus icon */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Position at bottom */
+  margin-top: 20px; /* Space from list */
+  margin-left: auto; /* Push to the right */
+  flex-shrink: 0; /* Stop button from shrinking */
+  transition: all 0.2s ease;
+}
+.btn-add-upcoming:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(67, 162, 162, 0.4);
+}
+
+
+/* 6. Style for new event cards (Unchanged) */
 .event-card {
   display: flex;
   align-items: center;
@@ -1230,6 +1274,7 @@ SCHEDULE PAGE (schedule.html)
   background-color: #f9f9f9;
   padding: 15px;
   border-radius: 10px;
+  flex-shrink: 0; 
 }
 .event-card-icon {
   width: 40px;
@@ -1253,6 +1298,7 @@ SCHEDULE PAGE (schedule.html)
   font-size: 14px;
   color: #555;
 }
+
 
 /* 5. The New "Add Event" Overlay */
 .schedule-add-event-overlay {
@@ -1286,17 +1332,61 @@ SCHEDULE PAGE (schedule.html)
   width: 30px;
   height: 30px;
 }
-.icon-input {
+/* Fix to show the dropdown arrow on the <select> tags */
+.schedule-add-event-overlay select {
+  appearance: auto;
+}
+
+/* === NEW STYLES FOR THE FORM === */
+
+/* Style for the labels (big and bold) */
+.schedule-add-event-overlay .form-group-labeled {
+  margin-bottom: 20px;
+}
+.schedule-add-event-overlay .form-group-labeled label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Style for ALL inputs and selects (white, rounded) */
+.schedule-add-event-overlay input[type="text"],
+.schedule-add-event-overlay select {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+  appearance: none; /* Removes default select arrow */
+}
+
+/* Style for the special icon container */
+.input-with-icon {
   position: relative;
 }
-.icon-input .input-icon {
+
+/* Style for the icon INSIDE the container (on the LEFT) */
+.input-with-icon .input-icon {
   position: absolute;
-  right: 15px;
+  left: 20px; /* Position on the left */
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
 }
+
+/* Style for the input field NEXT to the icon */
+/* Style for the input field NEXT to the icon */
+.input-with-icon input {
+  padding-left: 55px; /* Add padding to make space for the icon */
+  text-align: center; /* <-- ADD THIS LINE */
+}
+
+/* Style for the 'Save' button (already correct) */
 .btn-save-event {
   width: 100px;
   height: 100px;
@@ -1311,26 +1401,17 @@ SCHEDULE PAGE (schedule.html)
   margin: 30px auto 0;
 }
 
-
 /*
 ========================================
-SCHEDULE PAGE - LAYOUT FIX
+HEALTH PAGE (health.html)
 ========================================
 */
 
-/* 1. This styles the new "Appointments" title */
-.page-title {
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* 2. This overrides the homepage layout and makes
-    the schedule page wide and centered, like your Figma.
+/* This makes the health page layout wide and centered,
+   just like the schedule page.
 */
-.schedule-page .home-content-dark {
-  max-width: 1200px; /* <-- Makes it much wider */
-  margin: 40px auto; /* <-- Centers it on the page */
-  padding: 0 20px;   /* <-- Adds breathing room */
+.health-page .home-content-dark {
+  max-width: 90vw; /* Use 90% of the screen width */
+  margin: 40px auto; 
+  padding: 0;
 }

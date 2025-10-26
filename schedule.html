@@ -77,7 +77,7 @@
           <div class="day">23</div>
           <div class="day">24</div>
           <div class="day">25</div>
-          <div class="day">26</div>
+          <div classs="day">26</div>
           <div class="day">27</div>
           <div class="day">28</div>
           <div class="day">29</div>
@@ -89,16 +89,16 @@
       <div class="upcoming-container">
         <div class="upcoming-header">
           <h3>Upcoming</h3>
-          <button class="btn-add-upcoming" id="schedule-add-btn">
-            <img src="images/Icons/Plus-box-icon.svg" alt="Add Event">
-          </button>
         </div>
         
         <div class="upcoming-list" id="upcoming-list">
           <p class="empty-state">No upcoming events.</p>
         </div>
-      </div>
 
+        <button class="btn-add-upcoming" id="schedule-add-btn">
+          <i class='bx bx-plus'></i>
+        </button>
+      </div>
     </div>
   </main>
 
@@ -109,9 +109,36 @@
   </footer>
 
   <div class="overlay" id="page-overlay"></div>
-  <div class="settings-overlay-panel" id="settings-panel">...</div>
-  <div class="notifications-overlay-panel" id="notifications-panel">...</div>
-  <div class="logout-overlay-panel" id="logout-panel">...</div>
+
+  <div class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <a href="#">Pet Profile Management</a>
+    <a href="#">Health & Safety Settings</a>
+    <a href="#">Privacy & Sharing Controls</a>
+    <a href="#">Accessibility Options</a>
+    <a href="#">Notification settings</a>
+    <a href="#" class="logout-link" id="logout-btn">Log out</a>
+  </div>
+
+  <div class="notifications-overlay-panel" id="notifications-panel">
+    <div class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </div>
+    <div class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </div>
+  </div>
+
+  <div class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <div class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </div>
+  </div>
+  
   <div class="schedule-add-event-overlay" id="schedule-add-event-panel">
     <button class="schedule-close-btn" id="schedule-close-btn">
       <img src="images/Icons/exit.svg" alt="Close">
@@ -121,27 +148,42 @@
     
     <form id="schedule-event-form">
       <div class="form-group-labeled">
-        <label for="event-name-schedule">Event Name:</label>
-        <input type="text" id="event-name-schedule" placeholder="Walk">
+        <label for="event-name-select">Event Name:</label>
+        <select id="event-name-select">
+          <option value="Pill Medication">Pill Medication</option>
+          <option value="Walk">Walk</option>
+          <option value="Groom Appointment">Groom Appointment</option>
+          <option value="Veterinary Visit">Veterinary Visit</option>
+          <option value="Other">Other (Custom)</option>
+        </select>
+      </div>
+      
+      <div class="form-group-labeled" id="custom-event-group" style="display: none;">
+        <label for="event-name-custom">Custom Event Name:</label>
+        <input type="text" id="event-name-custom" placeholder="e.g., Dog Park">
       </div>
       
       <div class="form-group-labeled">
         <label for="pet-selector-schedule">Pet Selector:</label>
         <select id="pet-selector-schedule">
           <option>Selected Pet: Buddy</option>
-          </select>
+        </select>
       </div>
 
-      <div class="form-group-labeled icon-input">
+      <div class="form-group-labeled">
         <label for="event-date-schedule">Date:</label>
-        <input type="text" id="event-date-schedule" placeholder="MM/DD/YYYY">
-        <img src="images/Icons/black-calender.svg" alt="Calendar" class="input-icon">
+        <div class="input-with-icon">
+          <img src="images/Icons/black-calender.svg" alt="Calendar" class="input-icon">
+          <input type="text" id="event-date-schedule" placeholder="--|--">
+        </div>
       </div>
 
-      <div class="form-group-labeled icon-input">
+      <div class="form-group-labeled">
         <label for="event-time-schedule">Time:</label>
-        <input type="text" id="event-time-schedule" placeholder="-- : -- AM/PM">
-        <img src="images/Icons/clock.svg" alt="Clock" class="input-icon">
+        <div class="input-with-icon">
+          <img src="images/Icons/clock.svg" alt="Clock" class="input-icon">
+          <input type="text" id="event-time-schedule" placeholder="--|--">
+        </div>
       </div>
 
       <button type="submit" class="btn-save-event">Save</button>
