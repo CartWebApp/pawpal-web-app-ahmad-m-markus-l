@@ -1407,11 +1407,419 @@ HEALTH PAGE (health.html)
 ========================================
 */
 
-/* This makes the health page layout wide and centered,
-   just like the schedule page.
-*/
+/* This centers the title and the entire page. */
+.health-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
 .health-page .home-content-dark {
   max-width: 90vw; /* Use 90% of the screen width */
   margin: 40px auto; 
   padding: 0;
+}
+
+/* 1. The 2-Column Grid */
+.health-grid {
+  display: grid;
+  /* === CHANGED: Fixed left col, bigger gap === */
+  grid-template-columns: 400px 1fr; 
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* 2. Left Column */
+.health-col-left h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+.health-col-left h2 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+.health-col-left h2 a:hover {
+  color: #43A2A2;
+}
+.health-pet-img {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+.health-pet-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  object-fit: cover;
+}
+
+/* 3. Left Column Info Cards */
+.health-info-card {
+  background-color: #fff;
+  border-radius: 12px;
+  /* === CHANGED: Bigger padding === */
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  /* === CHANGED: More space between === */
+  margin-bottom: 25px;
+}
+.health-info-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  /* === CHANGED: Bigger font === */
+  font-size: 20px;
+  font-weight: 700;
+}
+.health-info-card p {
+  /* === CHANGED: Bigger font === */
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  font-weight: 600;
+}
+.health-info-card .info-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.health-info-card .info-card-content img {
+  width: 24px;
+  height: 24px;
+}
+.health-info-card .info-card-content p {
+  font-size: 18px; /* Match other text */
+}
+/* Specific fix for weight card icon */
+.health-info-card .info-card-content img[alt="Scale"] {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* 4. Right Column Link Cards */
+.health-col-right {
+  display: flex;
+  flex-direction: column;
+  /* === CHANGED: More space between === */
+  gap: 25px;
+}
+.health-link-card {
+  background-color: #fff;
+  border-radius: 12px;
+  /* === CHANGED: Bigger padding === */
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: #333;
+  /* === CHANGED: Bigger font === */
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.health-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.health-link-card i {
+  font-size: 30px;
+  color: #43A2A2;
+}
+
+/* 5. The new big "Add" button */
+.btn-add-health {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  z-index: 50;
+}
+.btn-add-health img {
+  /* === CHANGED: Bigger button === */
+  width: 120px; 
+  height: 120px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn-add-health:hover img {
+  transform: scale(1.05);
+}
+
+/* 6. "Add New Health Record" Overlay (health.html) */
+.health-add-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; /* Hidden by default */
+}
+.health-add-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.health-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.health-option-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.health-option-card:hover {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  transform: scale(1.02);
+}
+.health-option-card img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+/*
+========================================
+HEALTH PAGE (health.html) - OVERLAYS
+========================================
+*/
+
+/* 6. "Add New Health Record" Menu (Already added, just a reminder) */
+.health-add-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; 
+}
+.health-add-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5; /* Keep it on top */
+}
+.health-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.health-option-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.health-option-card:hover {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  transform: scale(1.02);
+}
+.health-option-card img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+/* 7. NEW: "Health LOG" Overlays (for displaying history) */
+.health-log-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; /* Wider for logs */
+  max-height: 80vh;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 102; /* Higher than the menu */
+  display: none; 
+  flex-direction: column;
+}
+.health-log-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  padding-right: 10px; /* For scrollbar */
+}
+.health-log-list .empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-style: italic;
+}
+
+/* 8. NEW: "Health FORM" Overlays (for data input) */
+.health-form-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 103; /* Highest level */
+  display: none; 
+}
+.health-form-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-form-overlay .form-group-labeled {
+  margin-bottom: 20px;
+}
+.health-form-overlay .form-group-labeled label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+.health-form-overlay input[type="text"],
+.health-form-overlay input[type="number"],
+.health-form-overlay input[type="date"],
+.health-form-overlay input[type="time"] {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.btn-save-health-form {
+  width: 100%;
+  padding: 15px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 9. NEW: Log Card Styles (for inside the log overlays) */
+
+/* Base card for all logs */
+.log-card {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Weight Card (Image 1) */
+.log-card-weight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.log-card-weight strong {
+  font-size: 20px;
+  color: #333;
+}
+.log-card-weight span {
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Medication Card (Image 2) */
+.log-card-med h4,
+.log-card-vax h4,
+.log-card-vet h4 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+}
+.log-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.log-card-row:last-child {
+  border-bottom: none;
+}
+.log-card-row strong {
+  color: #333;
 }

@@ -312,3 +312,370 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/*
+========================================
+HEALTH PAGE (health.html) LOGIC
+========================================
+*/
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Check if we are on the health page
+  if (document.body.classList.contains('health-page')) {
+    
+    // --- 1. GET ALL ELEMENTS ---
+    const pageOverlay = document.getElementById('page-overlay');
+
+    // Main Page Elements
+    const currentWeightText = document.getElementById('current-weight-text');
+    const currentAllergyText = document.getElementById('current-allergy-text');
+    // ADDED: Main medication text element
+    const currentMedicationText = document.getElementById('current-medication-text'); 
+
+    // "Add" Menu (Layer 1)
+    const addHealthBtn = document.getElementById('health-add-btn');
+    const addHealthPanel = document.getElementById('health-add-panel');
+    
+    // "Add" Menu Buttons
+    const addWeightBtn = document.getElementById('add-weight-btn');
+    const addMedicationBtn = document.getElementById('add-medication-btn');
+    const addVetVisitBtn = document.getElementById('add-vet-visit-btn');
+    const addVaccinationBtn = document.getElementById('add-vaccination-btn');
+    const addAllergyBtn = document.getElementById('add-allergy-btn');
+
+    // "History Log" Links
+    const weightHistoryBtn = document.getElementById('weight-history-btn');
+    const medicationLogBtn = document.getElementById('medication-log-btn');
+    const vaccinationLogBtn = document.getElementById('vaccination-log-btn');
+    const vetVisitsBtn = document.getElementById('vet-visits-btn');
+
+    // "History Log" Panels (Layer 2 - Display)
+    const weightHistoryPanel = document.getElementById('weight-history-panel');
+    const medicationLogPanel = document.getElementById('medication-log-panel');
+    const vaccinationLogPanel = document.getElementById('vaccination-log-panel');
+    const vetVisitsPanel = document.getElementById('vet-visits-panel');
+    const logPanels = [weightHistoryPanel, medicationLogPanel, vaccinationLogPanel, vetVisitsPanel];
+    
+    // "Form" Panels (Layer 2 - Input)
+    const logWeightPanel = document.getElementById('log-weight-panel');
+    const logMedicationPanel = document.getElementById('log-medication-panel');
+    const logVaccinationPanel = document.getElementById('log-vaccination-panel');
+    const logVetVisitPanel = document.getElementById('log-vet-visit-panel');
+    const logAllergyPanel = document.getElementById('log-allergy-panel');
+    const formPanels = [logWeightPanel, logMedicationPanel, logVaccinationPanel, logVetVisitPanel, logAllergyPanel];
+
+    // "Form" Elements
+    const logWeightForm = document.getElementById('log-weight-form');
+    const logMedicationForm = document.getElementById('log-medication-form');
+    const logVaccinationForm = document.getElementById('log-vaccination-form');
+    const logVetVisitForm = document.getElementById('log-vet-visit-form');
+    const logAllergyForm = document.getElementById('log-allergy-form');
+
+    // "Log List" Containers
+    const weightLogList = document.getElementById('weight-log-list');
+    const medicationLogList = document.getElementById('medication-log-list');
+    const vaccinationLogList = document.getElementById('vaccination-log-list');
+    const vetVisitLogList = document.getElementById('vet-visit-log-list');
+
+    // All Close Buttons
+    const allCloseButtons = document.querySelectorAll('.health-close-btn');
+    
+    
+    // --- 2. HELPER FUNCTIONS ---
+    function showPanel(panel) {
+      pageOverlay.classList.add('overlay-visible');
+      panel.style.display = 'flex'; // Use flex for vertical centering
+    }
+
+    function hideAllPanels() {
+      pageOverlay.classList.remove('overlay-visible');
+      addHealthPanel.style.display = 'none';
+      logPanels.forEach(p => p.style.display = 'none');
+      formPanels.forEach(p => p.style.display = 'none');
+    }
+
+    // --- 3. LOAD MAIN PAGE DATA ---
+    function loadMainHealthData() {
+      const weight = localStorage.getItem('currentWeight');
+      const allergy = localStorage.getItem('currentAllergy');
+      const meds = JSON.parse(localStorage.getItem('medications')) || []; // Get the list of meds
+      
+      if (weight) {
+        currentWeightText.textContent = `${weight} lbs`;
+      } else {
+        currentWeightText.textContent = '-- lbs';
+      }
+      
+      if (allergy) {
+        currentAllergyText.textContent = allergy;
+      } else {
+        currentAllergyText.textContent = 'No known allergies';
+      }
+
+      // NEW: Check for the latest medication name
+      if (meds.length > 0) {
+          // Display the name of the most recently logged medication
+          currentMedicationText.textContent = meds[meds.length - 1].name; 
+      } else {
+          // Set to blank state if no meds are logged
+          currentMedicationText.textContent = 'No medications logged.'; 
+      }
+    }
+    loadMainHealthData(); // Run on page load
+
+    // --- 4. LOAD HISTORY LOG DATA ---
+    
+    // Load Weight
+    function loadWeightHistory() {
+      weightLogList.innerHTML = '';
+      const weights = JSON.parse(localStorage.getItem('weights')) || [];
+      if (weights.length === 0) {
+        weightLogList.innerHTML = '<p class="empty-state">No weight history logged.</p>';
+        return;
+      }
+      weights.reverse().forEach(w => {
+        const card = `
+          <div class="log-card log-card-weight">
+            <strong>${w.weight} lbs</strong>
+            <span>${w.date}</span>
+          </div>`;
+        weightLogList.insertAdjacentHTML('beforeend', card);
+      });
+    }
+    
+    // Load Medication
+    function loadMedicationLog() {
+      medicationLogList.innerHTML = '';
+      const meds = JSON.parse(localStorage.getItem('medications')) || [];
+      if (meds.length === 0) {
+        medicationLogList.innerHTML = '<p class="empty-state">No medications logged.</p>';
+        return;
+      }
+      meds.reverse().forEach(m => {
+        const card = `
+          <div class="log-card log-card-med">
+            <h4>${m.name}</h4>
+            <div class="log-card-row">
+              <span>Dose:</span>
+              <strong>${m.dose}</strong>
+            </div>
+            <div class="log-card-row">
+              <span>Date Logged:</span>
+              <strong>${m.date}</strong>
+            </div>
+            <div class="log-card-row">
+              <span>Time Administered:</span>
+              <strong>${m.time}</strong>
+            </div>
+          </div>`;
+        medicationLogList.insertAdjacentHTML('beforeend', card);
+      });
+    }
+
+    // Load Vaccinations
+    function loadVaccinationLog() {
+      vaccinationLogList.innerHTML = '';
+      const vax = JSON.parse(localStorage.getItem('vaccinations')) || [];
+      if (vax.length === 0) {
+        vaccinationLogList.innerHTML = '<p class="empty-state">No vaccinations logged.</p>';
+        return;
+      }
+      vax.reverse().forEach(v => {
+        const card = `
+          <div class="log-card log-card-vax">
+            <h4>${v.name}</h4>
+            <div class="log-card-row">
+              <span>Date Given:</span>
+              <strong>${v.dateGiven}</strong>
+            </div>
+            <div class="log-card-row">
+              <span>Next Due Date:</span>
+              <strong>${v.dateDue}</strong>
+            </div>
+          </div>`;
+        vaccinationLogList.insertAdjacentHTML('beforeend', card);
+      });
+    }
+
+    // Load Vet Visits
+    function loadVetVisitLog() {
+      vetVisitLogList.innerHTML = '';
+      const visits = JSON.parse(localStorage.getItem('vetVisits')) || [];
+      if (visits.length === 0) {
+        vetVisitLogList.innerHTML = '<p class="empty-state">No vet visits logged.</p>';
+        return;
+      }
+      visits.reverse().forEach(v => {
+        const card = `
+          <div class="log-card log-card-vet">
+            <h4>${v.reason}</h4>
+            <div class="log-card-row">
+              <span>Date of Visit:</span>
+              <strong>${v.date}</strong>
+            </div>
+            <div class="log-card-row">
+              <span>Clinic Name:</span>
+              <strong>${v.clinic}</strong>
+            </div>
+          </div>`;
+        vetVisitLogList.insertAdjacentHTML('beforeend', card);
+      });
+    }
+
+
+    // --- 5. ADD EVENT LISTENERS ---
+
+    // Open "Add" Menu
+    addHealthBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPanel(addHealthPanel);
+    });
+
+    // Close all panels
+    allCloseButtons.forEach(btn => btn.addEventListener('click', hideAllPanels));
+    pageOverlay.addEventListener('click', hideAllPanels);
+
+    // Open "History Log" Panels (Reloads data each time)
+    weightHistoryBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadWeightHistory();
+      showPanel(weightHistoryPanel);
+    });
+    medicationLogBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadMedicationLog();
+      showPanel(medicationLogPanel);
+    });
+    vaccinationLogBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadVaccinationLog();
+      showPanel(vaccinationLogPanel);
+    });
+    vetVisitsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadVetVisitLog();
+      showPanel(vetVisitsPanel);
+    });
+
+    // Open "Form" Panels (from "Add" menu)
+    addWeightBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideAllPanels();
+      showPanel(logWeightPanel);
+    });
+    addMedicationBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideAllPanels();
+      showPanel(logMedicationPanel);
+    });
+    addVaccinationBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideAllPanels();
+      showPanel(logVaccinationPanel);
+    });
+    addVetVisitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideAllPanels();
+      showPanel(logVetVisitPanel);
+    });
+    addAllergyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideAllPanels();
+      showPanel(logAllergyPanel);
+    });
+
+    // --- 6. HANDLE FORM SUBMISSIONS ---
+
+    // Save Weight
+    logWeightForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const weight = document.getElementById('weight-input').value;
+      const date = document.getElementById('weight-date-input').value;
+      
+      if (!weight || !date) return; // Simple validation
+      
+      const newWeight = { weight, date };
+      let weights = JSON.parse(localStorage.getItem('weights')) || [];
+      weights.push(newWeight);
+      localStorage.setItem('weights', JSON.stringify(weights));
+      
+      // Also update the main page
+      localStorage.setItem('currentWeight', weight);
+      loadMainHealthData();
+      
+      hideAllPanels();
+      logWeightForm.reset();
+    });
+
+    // Save Medication
+    logMedicationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // ADDED DOSE INPUT
+      const newMed = {
+        name: document.getElementById('med-name-input').value,
+        dose: document.getElementById('med-dose-input').value, // NEW: get dose
+        date: document.getElementById('med-date-input').value,
+        time: document.getElementById('med-time-input').value
+      };
+
+      if (!newMed.name || !newMed.dose || !newMed.date) return; // Simple validation
+
+      let meds = JSON.parse(localStorage.getItem('medications')) || [];
+      meds.push(newMed);
+      localStorage.setItem('medications', JSON.stringify(meds));
+
+      // Update the main page to show the new medication name
+      loadMainHealthData(); 
+      
+      hideAllPanels();
+      logMedicationForm.reset();
+    });
+
+    // Save Vaccination
+    logVaccinationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newVax = {
+        name: document.getElementById('vax-name-input').value,
+        dateGiven: document.getElementById('vax-date-given-input').value,
+        dateDue: document.getElementById('vax-date-due-input').value
+      };
+      if (!newVax.name || !newVax.dateGiven || !newVax.dateDue) return; // Simple validation
+
+      let vax = JSON.parse(localStorage.getItem('vaccinations')) || [];
+      vax.push(newVax);
+      localStorage.setItem('vaccinations', JSON.stringify(vax));
+      hideAllPanels();
+      logVaccinationForm.reset();
+    });
+    
+    // Save Vet Visit
+    logVetVisitForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newVisit = {
+        date: document.getElementById('vet-date-input').value,
+        reason: document.getElementById('vet-reason-input').value,
+        clinic: document.getElementById('vet-clinic-input').value
+      };
+      if (!newVisit.date || !newVisit.reason || !newVisit.clinic) return; // Simple validation
+
+      let visits = JSON.parse(localStorage.getItem('vetVisits')) || [];
+      visits.push(newVisit);
+      localStorage.setItem('vetVisits', JSON.stringify(visits));
+      hideAllPanels();
+      logVetVisitForm.reset();
+    });
+    
+    // Save Allergy
+    logAllergyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const allergy = document.getElementById('allergy-name-input').value;
+      if (!allergy) return; // Simple validation
+      
+      localStorage.setItem('currentAllergy', allergy);
+      loadMainHealthData();
+      hideAllPanels();
+      logAllergyForm.reset();
+    });
+
+  }
+});
