@@ -3,6 +3,24 @@
 GLOBAL STYLES
 ========================================
 */
+/*
+========================================
+TARGETED STICKY FOOTER FIX (Schedule & Health)
+========================================
+*/
+/* This targets *only* the schedule and health page bodies */
+.schedule-page,
+.health-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* This targets the <main> element *only* inside those two pages */
+.schedule-page > main,
+.health-page > main {
+  flex-grow: 1;
+}
 
 /* Make sure the body fills the whole page */
 body, html {
@@ -2842,6 +2860,10 @@ MOBILE RESPONSIVE STYLES
     /* Tighter spacing between icons */
     gap: 15px; 
   }
+  .user-icons-dark {
+    /* Tighter spacing for user icons */
+    gap: 15px; 
+  }
 
   /*
   ========================================
@@ -2929,25 +2951,87 @@ MOBILE RESPONSIVE STYLES
 
 
   /*
-========================================
-PET-PROFILE.HTML (Overlap Bug Fix)
-========================================
-*/
+  ========================================
+  PET-PROFILE.HTML (Overlap Bug Fix - Aggressive)
+  ========================================
+  */
 
-/* 1. Stack the two main columns on mobile */
-.profile-page .pet-profile-grid {
-  grid-template-columns: 1fr;
-  gap: 0; 
-}
+  /* This is a much stronger fix. We are resetting 
+    the layout at all three levels: the grid, 
+    the columns, and the cards inside.
+  */
 
-/* 2. Fix the overlapping cards.
-   We target .profile-section (the parent) 
-   to fix the stacking bug.
-*/
-.profile-page .pet-profile-main,
-.profile-page .profile-section { /* <--- THIS IS THE CORRECTED LINE */
-  position: relative;
-  z-index: 1;
-}
+  /* 1. This time, we use Flexbox to stack the columns,
+     which is more reliable than 'display: block'.
+  */
+  .profile-page .pet-profile-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0; /* Remove any desktop gap */
+  }
+
+  /* 2. We force both columns to be 100% wide
+     and *reset* their position and margins,
+     overriding any desktop styles.
+  */
+  .profile-page .pet-profile-col-left,
+  .profile-page .pet-profile-col-right {
+    width: 100%;
+    position: static; /* Resets any 'relative' or 'absolute' */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 3. Finally, we reset the position of all
+     the cards *inside* the columns. This
+     is the most likely source of the overlap bug.
+  */
+  .profile-page .pet-profile-main,
+  .profile-page .profile-section {
+    position: static; /* Forces default stacking */
+    margin-bottom: 25px; /* Adds space so they don't touch */
+  }
   
+  /*
+  ========================================
+  SCHEDULE PAGE (Mobile Layout Fix)
+  ========================================
+  */
+  
+  /* 1. This destroys the desktop grid layout */
+  .schedule-page .schedule-grid {
+    display: block;
+    width: 100%;
+  }
+  
+  /* 2. This makes both columns stack vertically */
+  .schedule-page .calendar-container,
+  .schedule-page .upcoming-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Prevents padding from breaking layout */
+    margin-bottom: 25px; /* Adds space between the stacked boxes */
+  }
+
+  /*
+  ========================================
+  HEALTH PAGE (Mobile Layout Fix)
+  ========================================
+  */
+  
+  /* 1. This destroys the desktop grid layout */
+  .health-page .health-grid {
+    display: block;
+    width: 100%;
+  }
+  
+  /* 2. This makes both columns stack vertically */
+  .health-page .health-col-left,
+  .health-page .health-col-right {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Prevents padding from breaking layout */
+    margin-bottom: 25px; /* Adds space between the stacked boxes */
+  }
 }
