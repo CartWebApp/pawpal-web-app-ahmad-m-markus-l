@@ -7,12 +7,22 @@
   
   <link rel="stylesheet" href="css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<<<<<<< HEAD
 </head>
 <body class="profile-page home-page-dark"> 
   <header class="main-header-dark">
     <figure class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
     </figure>
+=======
+  
+</head>
+<body class="profile-page home-page-dark"> 
+  <header class="main-header-dark">
+    <div class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </div>
+>>>>>>> 4e6223442c73bebff9309052783452f733245b37
     <nav class="main-nav-dark">
       <a href="home.html">
         <img src="images/Icons/home.svg" alt="Home">
@@ -24,6 +34,7 @@
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
+<<<<<<< HEAD
     <aside class="user-icons-dark">
       <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
       <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
@@ -71,10 +82,64 @@
               <span>Pill Medication - 6:30 AM</span>
             </section>
           </section>
+=======
+    <div class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </div>
+  </header>
+
+  <main class="home-content-dark">
+
+    <div class="pet-profile-grid">
+      
+      <div class="pet-profile-col-left">
+
+        <div class="pet-profile-main large">
+          <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture">
+          <h2>Pet Name</h2>
+        </div>
+
+        <section class="profile-section">
+          <h3>Pet Information:</h3>
+          <div class="profile-card">
+            <div class="info-row">
+              <span>Weight:</span>
+              <strong>120lbs</strong>
+              <img src="images/Icons/scale.svg" alt="Weight" class="info-icon">
+            </div>
+            <div class="info-row">
+              <span>Gender:</span>
+              <strong>Male</strong>
+              <img src="images/Icons/Male.svg" alt="Male" class="info-icon">
+            </div>
+            <div class="info-row">
+              <span>Neuter Status:</span>
+              <strong>Yes</strong>
+              <img src="images/Icons/checkmark-icon.svg" alt="Yes" class="info-icon">
+            </div>
+          </div>
+        </section>
+
+      </div> 
+
+      <div class="pet-profile-col-right">
+
+        <section class="profile-section">
+          <h3>Upcoming Events:</h3>
+          <div class="profile-card">
+            <div class="event-card-item">
+              <img src="images/Icons/pill.svg" alt="Pill">
+              <span>Pill Medication - 6:30 AM</span>
+            </div>
+          </div>
+>>>>>>> 4e6223442c73bebff9309052783452f733245b37
         </section>
 
         <section class="profile-section">
           <h3>Stats:</h3>
+<<<<<<< HEAD
           <section class="profile-card stats-card">
             <section class="stat-item">
               <span>Sleep Average</span>
@@ -106,6 +171,46 @@
         </section>
       </section> 
     </section> 
+=======
+          <div class="profile-card stats-card">
+            <div class="stat-item">
+              <span>Sleep Average</span>
+              <div class="stat-circle" id="sleep-circle">
+                <strong>97%</strong>
+              </div>
+            </div>
+            <div class="stat-item">
+              <span>Energy</span>
+              <div class="stat-circle" id="energy-circle">
+                <strong>50%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-section">
+          
+          <h3>Reminders:</h3>
+
+          <div class="profile-card">
+            <form id="add-reminder-form">
+              <div class="form-group-labeled">
+                
+                <input type="text" id="reminder-name" placeholder="Add a reminder">
+              
+              </div>
+              
+              <button type="submit" class="btn-save-reminder">
+                <i class='bx bx-plus'></i>
+              </button>
+
+            </form>
+          </div>
+        </section>
+
+      </div> 
+    </div> 
+>>>>>>> 4e6223442c73bebff9309052783452f733245b37
   </main>
 
   <footer class="main-footer-dark">
@@ -114,9 +219,15 @@
     <a href="contact-us.html">Contact us</a>
   </footer>
 
+<<<<<<< HEAD
   <section class="overlay" id="page-overlay"></section>
 
   <aside class="settings-overlay-panel" id="settings-panel">
+=======
+  <div class="overlay" id="page-overlay"></div>
+
+  <div class="settings-overlay-panel" id="settings-panel">
+>>>>>>> 4e6223442c73bebff9309052783452f733245b37
     <h2>Settings</h2>
     <a href="pet-profiles.html">Pet Profile Management</a>
     <a href="health-settings.html">Health & Safety Settings</a>
@@ -124,6 +235,7 @@
     <a href="accessibility.html">Accessibility Options</a>
     <a href="notification-settings.html">Notification settings</a>
     <a href="#" class="logout-link" id="logout-btn">Log out</a>
+<<<<<<< HEAD
   </aside>
 
   <aside class="notifications-overlay-panel" id="notifications-panel">
@@ -148,3 +260,30 @@
   <script src="javascript/script.js"></script>
 </body>
 </html>
+=======
+  </div>
+
+  <div class="notifications-overlay-panel" id="notifications-panel">
+    <div class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </div>
+    <div class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </div>
+  </div>
+
+  <div class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <div class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </div>
+  </div>
+
+  <script src="javascript/script.js"></script>
+
+</body>
+</html>
+>>>>>>> 4e6223442c73bebff9309052783452f733245b37
