@@ -7,14 +7,13 @@
   
   <link rel="stylesheet" href="css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  
 </head>
 <body class="pet-profiles-page home-page-dark">
 
   <header class="main-header-dark">
-    <div class="logo-box">
+    <figure class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
-    </div>
+    </figure>
     <nav class="main-nav-dark">
       <a href="home.html">
         <img src="images/Icons/home.svg" alt="Home">
@@ -26,66 +25,64 @@
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
-    <div class="user-icons-dark">
+    <aside class="user-icons-dark">
       <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn" class="nav-active">
       <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
       <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
-    </div>
+    </aside>
   </header>
 
   <main class="home-content-dark">
-    
-    <div class="pet-profile-grid">
+    <section class="pet-profile-grid">
       
-      <div class="pet-photo-container">
+      <section class="pet-photo-container">
         <h2 class="pet-profile-title">Pet Photo:</h2>
-        <div class="pet-photo-circle">
+        <figure class="pet-photo-circle">
           <img src="images/Pngs/Camera.png" alt="Upload Pet Photo">
-        </div>
-      </div>
+        </figure>
+      </section>
 
-      <div class="pet-info-form">
+      <section class="pet-info-form">
         <h2 class="pet-profile-title">Pet information:</h2>
         
-        <div class="pet-info-box">
+        <section class="pet-info-box">
           <label for="pet-name">Pet Name</label>
           <input type="text" id="pet-name" placeholder="Enter pet name">
           <i class='bx bx-pencil edit-icon'></i>
-        </div>
+        </section>
 
-        <div class="pet-info-box">
+        <section class="pet-info-box">
           <label for="pet-type">Type of Pet</label>
           <input type="text" id="pet-type" placeholder="e.g., Dog, Cat">
           <i class='bx bx-pencil edit-icon'></i>
-        </div>
+        </section>
 
-        <div class="pet-info-box">
+        <section class="pet-info-box">
           <label for="pet-breed">Breed</label>
           <input type="text" id="pet-breed" placeholder="Enter breed">
           <i class='bx bx-pencil edit-icon'></i>
-        </div>
+        </section>
 
-        <div class="pet-info-box">
+        <section class="pet-info-box">
           <label for="pet-birthdate">Birthdate or Adoption Date</label>
           <input type="text" id="pet-birthdate" placeholder="MM/DD/YYYY">
           <i class='bx bx-calendar-alt edit-icon'></i>
-        </div>
+        </section>
 
-        <div class="pet-info-box">
+        <section class="pet-info-box">
           <label for="pet-spay-neuter">Sex & Spay/Neuter Status</label>
           <input type="text" id="pet-spay-neuter" placeholder="e.g., Male, Neutered">
           <i class='bx bx-pencil edit-icon'></i>
-        </div>
+        </section>
 
-        <div class="pet-info-box">
+        <section class="pet-info-box">
           <label for="pet-vet">Veterinarian Information (Optional)</label>
           <input type="text" id="pet-vet" placeholder="e.g., City Vet, Dr. Smith">
           <i class='bx bx-pencil edit-icon'></i>
-        </div>
+        </section>
         
-      </div>
-    </div>
-
+      </section>
+    </section>
   </main>
 
   <footer class="main-footer-dark">
@@ -94,9 +91,9 @@
     <a href="contact-us.html">Contact us</a>
   </footer>
 
-  <div class="overlay" id="page-overlay"></div>
+  <section class="overlay" id="page-overlay"></section>
 
-  <div class="settings-overlay-panel" id="settings-panel">
+  <aside class="settings-overlay-panel" id="settings-panel">
     <h2>Settings</h2>
     <a href="pet-profiles.html">Pet Profile Management</a>
     <a href="health-settings.html">Health & Safety Settings</a>
@@ -104,26 +101,26 @@
     <a href="accessibility.html">Accessibility Options</a>
     <a href="notification-settings.html">Notification settings</a>
     <a href="#" class="logout-link" id="logout-btn">Log out</a>
-  </div>
+  </aside>
 
-  <div class="notifications-overlay-panel" id="notifications-panel">
-    <div class="notifications-header">
+  <aside class="notifications-overlay-panel" id="notifications-panel">
+    <header class="notifications-header">
       <h2>Notifications</h2>
       <a href="#">Mark all as read</a>
-    </div>
-    <div classs="notification-list-container" id="notification-list">
+    </header>
+    <section class="notification-list-container" id="notification-list">
       <p class="empty-state">No notifications yet.</p>
-    </div>
-  </div>
+    </section>
+  </aside>
 
-  <div class="logout-overlay-panel" id="logout-panel">
+  <section class="logout-overlay-panel" id="logout-panel">
     <h2>Log Out?</h2>
     <p>Are you sure you want to log out?</p>
-    <div class="logout-buttons">
+    <footer class="logout-buttons">
       <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
       <button class="btn-logout-confirm">Log out</button>
-    </div>
-  </div>
+    </footer>
+  </section>
   
   <script src="javascript/script.js"></script>
 </body>
