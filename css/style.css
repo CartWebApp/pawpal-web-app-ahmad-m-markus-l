@@ -1,30 +1,2631 @@
-/* Make sure the body fills the whole page */
+/*GLOBAL STYLES*/
+
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Poppins', sans-serif; /* (Or whatever font you use) */
+  font-family: 'Poppins', sans-serif; 
 }
 
-.splash-container {
-  /* 1. Set the size to fill the entire screen */
-  height: 100vh; /* vh = viewport height */
-  width: 100%;
+/*SPLASH PAGE */
 
-  /* 2. Set the background image (UPDATE THIS PATH) */
-  /* This path points to the other background.png at the root */
-background-image: url('../background.png'); /* <-- Make sure this path is correct! */
+.splash-container {
+
+  height: 100vh; 
+  width: 100%;
+  background-image: url('../images/Pngs/background.png');
   background-size: cover;
   background-position: center;
-
-  /* 3. Center the "Welcome!" text */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .splash-container h1 {
-  /* 4. Style the text */
-  color: #1A1A1A; /* (Or black) */
+  color: #1A1A1A; 
   font-size: 72px; 
   font-weight: 700;
+}
+
+/*LOGIN PAGE */
+
+.login-page-container {
+  background-image: url('../images/Pngs/background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* The white "login box" */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+.login-logo {
+  width: 70px; 
+  height: 70px;
+  margin-bottom: 30px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #f7f7f7; 
+  border-radius: 8px;
+  box-sizing: border-box; 
+}
+
+
+.form-group input::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+}
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #43A2A2;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #3B8E8E; 
+}
+.signup-link {
+  margin-top: 25px;
+}
+.signup-link a {
+  color: #888; 
+  text-decoration: none;
+  font-size: 14px;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* VERIFICATION PAGE */
+
+.verification-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.verification-text {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 30px;
+}
+.verification-code-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.code-input {
+  width: 45px;
+  height: 55px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*VERIFIED PAGE (verified.html)*/
+
+.verified-icon-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+  border: 4px solid #43A2A2; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 20px; 
+}
+
+.verified-icon-container img {
+  width: 50px; 
+}
+#continue-btn {
+  text-decoration: none; 
+  display: block; 
+  box-sizing: border-box; 
+}
+
+/*CREATE PET PROFILE PAGE*/
+
+.pet-profile-picture-uploader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 30px; 
+}
+.pet-profile-picture-uploader label {
+  cursor: pointer;
+}
+
+/* Replace it with this: */
+
+.pet-profile-picture-uploader img {
+  width: 100px;  
+  height: 100px; 
+  opacity: 0.6;
+}
+#pet-photo-upload {
+  display: none;
+}
+.form-group-with-icon {
+  position: relative;
+}
+.input-icon {
+  position: absolute; 
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+#next-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/*ADDITIONAL INFO PAGE*/
+
+.form-group-labeled {
+  text-align: left; 
+  margin-bottom: 15px;
+}
+.form-group-labeled label {
+  display: block; 
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+.form-group-labeled label span {
+  font-weight: 400; 
+  color: #888;
+}
+.form-group-labeled input {
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+}
+#done-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 25px;
+}
+
+/*PROFILE CREATED PAGE*/
+
+.btn-secondary {
+  display: block;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #E0F2F2; 
+  color: #43A2A2; 
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box; 
+}
+.btn-secondary:hover {
+  background-color: #CFF0F0; 
+
+}
+#continue-to-home-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/*HOME PAGE - DARK THEME */
+
+body.home-page-dark {
+  background-color: #F0F2F5;
+  color: #1c1e21;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-header-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #333;
+}
+.logo-box {
+  width: 150px;
+  display: flex;
+  align-items: center;
+}
+.logo-box img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); 
+}
+.main-nav-dark {
+  display: flex;
+  justify-content: center; 
+  flex-grow: 1; 
+  gap: 50px;
+}
+.main-nav-dark a img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+.main-nav-dark a.nav-active img,
+.main-nav-dark a:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #43A2A2);
+}
+
+.user-icons-dark {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+.user-icons-dark img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.user-icons-dark img:hover {
+  transform: scale(1.1);
+}
+.home-content-dark {
+  max-width: 900px;
+  margin: 40px; 
+  padding: 0;
+  flex-grow: 1; 
+}
+.profile-page .home-content-dark {
+  margin: 40px auto;
+  padding: 0 20px; 
+}
+.pet-profile-main {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.pet-profile-main img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.pet-profile-main h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.reminders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.reminders-section h3 {
+  font-size: 20px;
+  margin-bottom: 0; 
+}
+
+.reminder-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.reminder-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E0F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.reminder-icon img {
+  width: 20px;
+  height: 20px;
+}
+.reminder-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.reminder-text p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+.add-event-btn {
+  position: fixed;
+  bottom: 100px; 
+  right: 40px;
+  z-index: 50;
+}
+.add-event-btn img {
+ 
+  width: 80px; 
+  height: 80px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.add-event-btn:hover img {
+  transform: scale(1.05); 
+}
+.main-footer-dark {
+  background-color: #333;
+  padding: 30px;
+  text-align: center;
+}
+.main-footer-dark a {
+  color: #43A2A2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 20px;
+}
+
+/* ANIMATION FOR NEW CARDS */
+.reminder-card {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reminder-card.new-card-animation {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* LAYER 2: HIDDEN OVERLAY STYLES */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+.settings-overlay-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 101;
+  padding: 20px;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+  display: none; 
+}
+.settings-overlay-panel h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+.settings-overlay-panel a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.settings-overlay-panel a:hover {
+  background-color: #f5f5f5;
+}
+.settings-overlay-panel a.logout-link {
+  color: #D9534F;
+  font-weight: 600;
+  border-top: 2px solid #eee;
+  margin-top: 10px;
+}
+
+.notifications-overlay-panel {
+  position: fixed;
+  top: 80px; 
+  right: 40px;
+  width: 380px;
+  max-height: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 101;
+  overflow-y: auto;
+  display: none;
+}
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+.notifications-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+.notifications-header a {
+  text-decoration: none;
+  color: #43A2A2;
+  font-weight: 600;
+  font-size: 14px;
+}
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+.notification-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.notification-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.notification-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+.add-event-overlay-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; 
+}
+.add-event-overlay-panel h2 {
+  text-align: center;
+  margin-top: 0;
+}
+.btn-save-event {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+.close-overlay-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* 5. Logout Panel */
+.logout-overlay-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 102; /* Needs to be on top of settings panel */
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+.logout-overlay-panel h2 {
+  margin-top: 0;
+}
+.logout-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+.logout-buttons button {
+  flex: 1; /* Make both buttons equal width */
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.btn-cancel {
+  background-color: #fff;
+  color: #333;
+}
+.btn-logout-confirm {
+  background-color: #D9534F;
+  color: #fff;
+  border-color: #D9534F;
+}
+
+/* This class will be added by JavaScript to show an overlay */
+.overlay-visible {
+  display: block !important;
+}
+
+/*
+
+JAVASCRIPT "WAKE UP" CLASS
+
+*/
+
+/* This class will be added by JavaScript to show an overlay */
+.overlay-visible {
+  display: block !important;
+}
+
+/* Fix for <a> tags styled as buttons */
+#signup-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+#verify-submit-btn {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+/*
+
+PET PROFILE PAGE (pet-profile.html)
+
+*/
+
+/* 1. The 2-Column Grid Layout */
+.pet-profile-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* Left col = 350px, Right col = fills rest */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.pet-profile-col-left {
+  position: sticky; /* Makes it "stick" as you scroll */
+  top: 40px;
+}
+
+.pet-profile-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Spaces out the white boxes vertically */
+}
+
+/* 2. The Big Camera Icon (Left Column) */
+.pet-profile-main.large {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pet-profile-main.large img {
+  width: 250px;  /* <-- Made it much bigger */
+  height: 250px; /* <-- Made it much bigger */
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  margin-bottom: 15px;
+}
+.pet-profile-main.large h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* 3. Generic Section styles (for headlines) */
+.profile-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+/* 4. Generic White Box Style */
+.profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+/* 5. Specific Card Content Styling */
+
+/* "Pet Information" card */
+.info-row {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.info-row:last-child {
+  border-bottom: none;
+}
+.info-row span {
+  color: #555;
+}
+.info-row strong {
+  color: #1c1e21;
+  margin-left: auto;
+}
+.info-row .info-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}
+
+/* "Upcoming Events" card */
+.event-card-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.event-card-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+/* "Stats" card */
+.stats-card {
+  display: flex;
+  gap: 30px;
+}
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+.stat-item span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+.stat-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stat-circle strong {
+  font-size: 24px;
+  color: #1c1e21;
+}
+#sleep-circle {
+  background: conic-gradient(#43A2A2 0% 97%, #f0f0f0 97% 100%);
+}
+#energy-circle {
+  background: conic-gradient(#43A2A2 0% 50%, #f0f0f0 50% 100%);
+}
+
+/* === "Add a Reminder" card [FIXED] === */
+
+/* This rule is just for the <form> tag */
+#add-reminder-form {
+  position: relative; /* This lets us position the button inside */
+}
+
+/* This new rule styles the INPUT field */
+#reminder-name {
+  background-color: #f0f2f5; /* The light gray from your design */
+  border: none;
+  border-radius: 20px; /* Makes it rounded */
+  padding: 15px 60px 15px 20px; /* Top, Right(for button), Bottom, Left */
+  width: 100%;
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+  font-size: 16px;
+  color: #333;
+}
+#reminder-name::placeholder {
+  color: #888;
+}
+
+/* This new rule styles the "plus" BUTTON */
+.btn-save-reminder {
+  position: absolute;
+  right: 5px; /* Position 5px from the right edge */
+  top: 50%;   /* Center it vertically */
+  transform: translateY(-50%); /* ...finish centering */
+  
+  width: 40px;  /* Small circular button */
+  height: 40px; /* Small circular button */
+  border-radius: 50%;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  
+  /* For the plus icon */
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  box-shadow: none; /* Remove the old shadow */
+}
+
+/*
+
+DYNAMIC REMINDERS & NOTIFICATIONS
+
+*/
+
+/* 1. Style for the empty "No notifications" message */
+.empty-state {
+  padding: 30px 20px;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* 2. Make the icon container "relative" for the dot */
+.user-icons-dark img#bell-icon-btn {
+  position: relative;
+}
+
+/* 3. The "new notification" red dot */
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #D9534F; /* Red */
+  border-radius: 50%;
+  border: 2px solid #333; /* Matches the header */
+}
+
+/*
+
+HOMEPAGE - "BUDDY" NAME BOX FIX
+
+*/
+
+/* 1. This styles the link around the camera image */
+.pet-profile-image-link {
+  display: inline-block; /* Fixes link spacing */
+  line-height: 0; /* Fixes link spacing */
+  text-decoration: none; /* Removes underline */
+}
+
+/* 2. This styles the new white "Buddy" box */
+.pet-profile-name-box {
+  display: inline-block;
+  background-color: #fff; /* Filled white box */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Same shadow as reminder cards */
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-top: 20px; /* Space from the camera icon */
+  color: #333; /* Dark text */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*
+
+SCHEDULE PAGE (schedule.html)
+
+*/
+
+/* 1. This styles the "Appointments" title */
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 2. This makes the layout wide and centered */
+.schedule-page .home-content-dark {
+  /* === THE HORIZONTAL FIX === */
+  max-width: 90vw; /* Use 90% of the screen width */
+  margin: 40px auto; 
+  padding: 0;
+}
+
+/* 3. The 2-Column Grid */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr; /* Make calendar much wider */
+  gap: 30px;
+  align-items: flex-start; 
+}
+
+/* 4. Left Column: Calendar */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 25px;
+  min-height: 700px; /* Give it a tall height */
+}
+.calendar-header {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left; /* Match Figma */
+  margin-bottom: 30px;
+}
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.calendar-body .day-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #777;
+  text-align: left; /* Match Figma */
+  margin-bottom: 10px;
+}
+.calendar-body .day {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  /* === THE CALENDAR DAY FIX === */
+  text-align: left; /* Align number to the left */
+  vertical-align: top;
+}
+.calendar-body .day-today {
+  background-color: #43A2A2;
+  color: #fff;
+}
+
+/* 5. Right Column: Upcoming Events */
+.upcoming-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 25px;
+  position: sticky;
+  top: 40px;
+  min-height: 700px; /* Match calendar height */
+  
+  /* === THE BUTTON FIX (part 1) === */
+  /* Use flexbox to push button to bottom */
+  display: flex;
+  flex-direction: column;
+}
+.upcoming-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Stop header from shrinking */
+}
+.upcoming-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1; /* This makes the list fill the empty space */
+  overflow-y: auto;
+}
+.upcoming-list .empty-state {
+  margin-top: 30px;
+}
+
+/* === THE BUTTON FIX (part 2) === */
+.btn-add-upcoming {
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded square */
+  width: 70px;
+  height: 70px;
+  font-size: 40px; /* Big plus icon */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Position at bottom */
+  margin-top: 20px; /* Space from list */
+  margin-left: auto; /* Push to the right */
+  flex-shrink: 0; /* Stop button from shrinking */
+  transition: all 0.2s ease;
+}
+.btn-add-upcoming:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(67, 162, 162, 0.4);
+}
+
+
+/* 6. Style for new event cards (Unchanged) */
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  flex-shrink: 0; 
+}
+.event-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E0F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event-card-icon img {
+  width: 20px;
+  height: 20px;
+}
+.event-card-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.event-card-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* 5. The New "Add Event" Overlay */
+.schedule-add-event-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; /* Hidden by default */
+}
+.schedule-add-event-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.schedule-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.schedule-close-btn img {
+  width: 30px;
+  height: 30px;
+}
+/* Fix to show the dropdown arrow on the <select> tags */
+.schedule-add-event-overlay select {
+  appearance: auto;
+}
+
+/* === NEW STYLES FOR THE FORM === */
+
+/* Style for the labels (big and bold) */
+.schedule-add-event-overlay .form-group-labeled {
+  margin-bottom: 20px;
+}
+.schedule-add-event-overlay .form-group-labeled label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Style for ALL inputs and selects (white, rounded) */
+.schedule-add-event-overlay input[type="text"],
+.schedule-add-event-overlay select {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+  appearance: none; /* Removes default select arrow */
+}
+
+/* Style for the special icon container */
+.input-with-icon {
+  position: relative;
+}
+
+/* Style for the icon INSIDE the container (on the LEFT) */
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 20px; /* Position on the left */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Style for the input field NEXT to the icon */
+/* Style for the input field NEXT to the icon */
+.input-with-icon input {
+  padding-left: 55px; /* Add padding to make space for the icon */
+  text-align: center; /* <-- ADD THIS LINE */
+}
+
+/* Style for the 'Save' button (already correct) */
+.btn-save-event {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+}
+
+/*
+
+HEALTH PAGE (health.html)
+
+*/
+
+/* This centers the title and the entire page. */
+.health-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.health-page .home-content-dark {
+  max-width: 90vw; /* Use 90% of the screen width */
+  margin: 40px auto; 
+  padding: 0;
+}
+
+/* 1. The 2-Column Grid */
+.health-grid {
+  display: grid;
+  /* === CHANGED: Fixed left col, bigger gap === */
+  grid-template-columns: 400px 1fr; 
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* 2. Left Column */
+.health-col-left h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+.health-col-left h2 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+.health-col-left h2 a:hover {
+  color: #43A2A2;
+}
+.health-pet-img {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+.health-pet-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  object-fit: cover;
+}
+
+/* 3. Left Column Info Cards */
+.health-info-card {
+  background-color: #fff;
+  border-radius: 12px;
+  /* === CHANGED: Bigger padding === */
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  /* === CHANGED: More space between === */
+  margin-bottom: 25px;
+}
+.health-info-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  /* === CHANGED: Bigger font === */
+  font-size: 20px;
+  font-weight: 700;
+}
+.health-info-card p {
+  /* === CHANGED: Bigger font === */
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  font-weight: 600;
+}
+.health-info-card .info-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.health-info-card .info-card-content img {
+  width: 24px;
+  height: 24px;
+}
+.health-info-card .info-card-content p {
+  font-size: 18px; /* Match other text */
+}
+/* Specific fix for weight card icon */
+.health-info-card .info-card-content img[alt="Scale"] {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* 4. Right Column Link Cards */
+.health-col-right {
+  display: flex;
+  flex-direction: column;
+  /* === CHANGED: More space between === */
+  gap: 25px;
+}
+.health-link-card {
+  background-color: #fff;
+  border-radius: 12px;
+  /* === CHANGED: Bigger padding === */
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: #333;
+  /* === CHANGED: Bigger font === */
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.health-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.health-link-card i {
+  font-size: 30px;
+  color: #43A2A2;
+}
+
+/* 5. The new big "Add" button */
+.btn-add-health {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  z-index: 50;
+}
+.btn-add-health img {
+  /* === CHANGED: Bigger button === */
+  width: 120px; 
+  height: 120px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn-add-health:hover img {
+  transform: scale(1.05);
+}
+
+/* 6. "Add New Health Record" Overlay (health.html) */
+.health-add-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; /* Hidden by default */
+}
+.health-add-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.health-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.health-option-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.health-option-card:hover {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  transform: scale(1.02);
+}
+.health-option-card img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+/*
+
+HEALTH PAGE (health.html) - OVERLAYS
+
+*/
+
+/* 6. "Add New Health Record" Menu (Already added, just a reminder) */
+.health-add-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; 
+}
+.health-add-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5; /* Keep it on top */
+}
+.health-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.health-option-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.health-option-card:hover {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  transform: scale(1.02);
+}
+.health-option-card img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+/* 7. NEW: "Health LOG" Overlays (for displaying history) */
+.health-log-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; /* Wider for logs */
+  max-height: 80vh;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 102; /* Higher than the menu */
+  display: none; 
+  flex-direction: column;
+}
+.health-log-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  padding-right: 10px; /* For scrollbar */
+}
+.health-log-list .empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-style: italic;
+}
+
+/* 8. NEW: "Health FORM" Overlays (for data input) */
+.health-form-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 103; /* Highest level */
+  display: none; 
+}
+.health-form-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-form-overlay .form-group-labeled {
+  margin-bottom: 20px;
+}
+.health-form-overlay .form-group-labeled label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+.health-form-overlay input[type="text"],
+.health-form-overlay input[type="number"],
+.health-form-overlay input[type="date"],
+.health-form-overlay input[type="time"] {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.btn-save-health-form {
+  width: 100%;
+  padding: 15px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 9. NEW: Log Card Styles (for inside the log overlays) */
+
+/* Base card for all logs */
+.log-card {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Weight Card (Image 1) */
+.log-card-weight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.log-card-weight strong {
+  font-size: 20px;
+  color: #333;
+}
+.log-card-weight span {
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Medication Card (Image 2) */
+.log-card-med h4,
+.log-card-vax h4,
+.log-card-vet h4 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+}
+.log-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.log-card-row:last-child {
+  border-bottom: none;
+}
+.log-card-row strong {
+  color: #333;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ... rest of your code ... */
+/*
+
+GLOBAL STYLES & RESETS
+
+*/
+/*
+
+ABOUT US PAGE (about-us.html)
+
+*/
+
+/* 1. Apply Poppins font to this page */
+.about-us-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Center the layout and title */
+.about-us-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.about-us-page .home-content-dark {
+  max-width: 1000px; /* 1000px wide container */
+  margin: 40px auto; 
+  padding: 0;
+}
+.about-us-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 3. The Timeline Container */
+.vision-timeline {
+  position: relative;
+  width: 100%;
+  margin: 50px 0;
+  overflow: auto; /* Clears the floats */
+}
+
+/* 4. The central "branch" line */
+.timeline-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 200px; 
+  width: 8px;
+  background-color: #ddd;
+}
+
+/* 5. Base style for all boxes */
+.vision-box {
+  position: relative; 
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 400px; /* This will now be EXACTLY 400px */
+  margin-bottom: 50px; 
+  z-index: 2; /* <-- ADD THIS LINE */
+}
+.vision-box h3 {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+.vision-box h3 img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  background-color: #E0F2F2;
+  border-radius: 50%;
+  padding: 5px;
+}
+.vision-box p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 15px 0 0 0;
+  line-height: 1.6;
+}
+
+/* 6. Position Left vs. Right Boxes */
+.vision-box.box-left {
+  float: left;
+}
+.vision-box.box-right {
+  float: right;
+}
+
+/* 7. The connecting horizontal branch line */
+.vision-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  background-color: #ddd;
+  /* This math is now correct: (1000 - 400 - 400 - 8) / 2 = 96 */
+  width: 96px; 
+  z-index: 1;
+}
+.box-left::before {
+  right: -96px; 
+}
+.box-right::before {
+  left: -96px; 
+}
+
+/* 8. The final box at the bottom */
+.vision-box.box-bottom {
+  float: none;
+  clear: both;
+  margin: 50px auto 0; 
+  width: 400px;
+}
+/* The vertical branch for the bottom box */
+.box-bottom::before {
+  width: 8px;
+  height: 50px; 
+  left: 50%;
+  top: -50px; 
+  transform: translateX(-50%);
+}
+
+
+/*
+
+SUPPORT PAGE (support.html)
+
+*/
+
+/* 1. Apply Poppins font to this page */
+.support-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Style the layout and title */
+.support-page .home-content-dark {
+  max-width: 900px; /* Centered, fixed-width layout */
+  margin: 40px auto; 
+  padding: 0 20px;
+}
+.support-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left; /* Aligned to the left */
+  margin-bottom: 30px;
+}
+.support-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 3. The main FAQ container box */
+.faq-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 4. Individual Q&A items */
+.faq-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 25px;
+}
+.faq-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+.faq-answer {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/*
+
+CONTACT US PAGE (contact-us.html) - FINAL FIX
+
+*/
+
+/* 1. Apply Poppins font */
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Style the layout and title */
+.contact-page .home-content-dark {
+  /* === THIS IS THE FIX === */
+  /* Remove the default narrow width from the main container */
+  max-width: none; 
+  width: 100%;
+  padding: 0 20px; /* Keep the side padding */
+}
+.contact-page .page-title {
+  /* This centers the title, assuming it's OUTSIDE the box */
+  max-width: 800px; /* Match the form width */
+  margin: 0 auto 30px auto; /* Center the title block */
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left; /* Aligns text left within its centered block */
+}
+.contact-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 3. The main form container */
+.contact-form-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 50px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  /* === THIS IS THE FIX === */
+  max-width: 800px;  /* Set the width */
+  margin: 0 auto;    /* Center the form box itself */
+}
+
+/* 4. Form inputs and labels */
+.contact-form-container .form-group-labeled {
+  margin-bottom: 25px;
+}
+.contact-form-container .form-group-labeled label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  display: block;
+}
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 18px; 
+  border: 1px solid #ddd;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; 
+}
+
+.contact-form-container textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+/* 5. The "Done" button */
+.btn-done {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+.btn-done:hover {
+  background-color: #368383;
+}
+
+
+/*
+
+CONFIRMATION PAGE (contact-confirmation.html)
+
+*/
+
+.confirmation-page {
+  /* === ADD YOUR BACKGROUND IMAGE HERE === 
+    Replace 'images/your-dog-background.jpg' with the path to your image.
+  */
+  background-image: url('images/your-dog-background.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.confirmation-box {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 50px 60px;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+.confirmation-icon {
+  margin-bottom: 20px;
+}
+
+.confirmation-box h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.confirmation-box p {
+  font-size: 18px;
+  color: #555;
+  margin: 0 0 30px 0;
+}
+
+.btn-home {
+  display: inline-block;
+  width: 100%;
+  padding: 16px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+.btn-home:hover {
+  background-color: #368383;
+}
+
+/*
+
+USER SETTINGS PAGE (usersettings.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.user-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.user-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #f7f7f7;
+  max-width: 1000px; /* Set a max width */
+  margin: 40px auto;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+/* 2. Main layout grid */
+.user-settings-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* 300px for pic, rest for form */
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* 3. Left Column: Profile Picture */
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.profile-pic-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.profile-pic-circle img {
+  width: 60px;
+  height: 60px;
+  filter: invert(1); /* Makes black icon white */
+  opacity: 0.7;
+}
+
+/* 4. Right Column: Form */
+.user-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.setting-input-box {
+  position: relative; /* For the edit icon */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.setting-input-box label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+.setting-input-box input[type="text"],
+.setting-input-box textarea {
+  width: 100%;
+  padding: 10px 0; /* Simpler padding */
+  font-size: 16px; 
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+  box-sizing: border-box; 
+}
+.setting-input-box textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* 5. Edit (Pencil) Icon */
+.edit-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+.bio-edit-icon {
+  top: auto; /* Moves it to the bottom */
+  bottom: 25px;
+}
+
+/* 6. "Done" button */
+.user-settings-form .btn-done {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #43A2A2;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+.user-settings-form .btn-done:hover {
+  background-color: #368383;
+}
+
+/*
+
+PET PROFILES PAGE (pet-profiles.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.pet-profiles-page {
+  font-family: 'Poppins', sans-serif;
+}
+.pet-profiles-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 1000px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main layout grid */
+.pet-profile-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* 300px for pic, rest for form */
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* 3. Title styles */
+.pet-profile-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 30px 0;
+}
+
+/* 4. Left Column: Pet Photo */
+.pet-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pet-photo-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px dashed #ccc;
+  transition: background-color 0.2s ease;
+}
+.pet-photo-circle:hover {
+  background-color: #e9e9e9;
+  border-color: #aaa;
+}
+.pet-photo-circle img {
+  /* === THIS IS THE FIX === */
+  width: 245px;  /* Was 60px */
+  height: 245px; /* Was 60px */
+  opacity: 0.5;
+}
+
+/* 5. Right Column: Pet Info Form */
+.pet-info-form {
+  width: 100%;
+}
+.pet-info-box {
+  position: relative; /* For the edit icon */
+  margin-bottom: 25px;
+}
+.pet-info-box label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+.pet-info-box input[type="text"] {
+  width: 100%;
+  font-size: 18px; 
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  padding: 10px 40px 10px 0; /* Space for icon */
+  border: none;
+  border-bottom: 2px solid #eee;
+  outline: none;
+  box-sizing: border-box; 
+  transition: border-color 0.2s ease;
+}
+.pet-info-box input[type="text"]:focus {
+  border-bottom-color: #43A2A2;
+}
+
+/* 6. Edit (Pencil) Icon */
+.pet-info-box .edit-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+.pet-info-box input:focus + .edit-icon {
+  color: #43A2A2;
+}
+
+/*
+
+HEALTH SETTINGS PAGE (health-settings.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.health-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.health-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.health-settings-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+
+PRIVACY SETTINGS PAGE (privacy-settings.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.privacy-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.privacy-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.privacy-settings-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+
+ACCESSIBILITY PAGE (accessibility.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.accessibility-page {
+  font-family: 'Poppins', sans-serif;
+}
+.accessibility-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.accessibility-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+
+NOTIFICATION SETTINGS PAGE (notification-settings.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.notification-settings-page {
+  font-family: 'Poppins', sans-serif;
+}
+.notification-settings-page .home-content-dark {
+  /* Override the default dark background */
+  background-color: #fff; /* White box */
+  max-width: 900px; /* Set a max width */
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Main content container */
+.settings-container {
+  max-width: 700px;
+}
+.notification-settings-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Individual setting row */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.setting-row:last-child {
+  border-bottom: none;
+}
+.setting-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.setting-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 4. The toggle switch image */
+.toggle-switch {
+  width: 60px; /* Set a fixed width */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.toggle-switch:hover {
+  opacity: 0.8;
+}
+
+/*
+
+PET SELECT PAGE (pet-select.html)
+
+*/
+
+/* 1. Apply Poppins font and light background */
+.pet-select-page {
+  font-family: 'Poppins', sans-serif;
+}
+.pet-select-page .home-content-dark {
+  /* White box */
+  background-color: #fff; 
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+/* 2. Page Title */
+.pet-select-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* 3. Pet Grid */
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+/* 4. Pet Card */
+.pet-card,
+.pet-add-card {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.pet-card:hover,
+.pet-add-card:hover {
+  border-color: #43A2A2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+.pet-card h3,
+.pet-add-card h3 {
+  margin: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.pet-card-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.pet-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5. Add Pet Card */
+.pet-add-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+}
+.pet-add-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pet-add-icon i {
+  font-size: 60px;
+  color: #ccc;
+}
+.pet-add-card:hover .pet-add-icon i {
+  color: #43A2A2;
+}
+.pet-add-card h3 {
+  color: #777;
+}
+.pet-add-card:hover h3 {
+  color: #43A2A2;
+}
+
+
+/*
+
+
+MOBILE RESPONSIVE STYLES
+(Add this at the VERY BOTTOM of style.css)
+
+
+*/
+
+/* This rule applies to all screens 768px wide or smaller.
+  This will cover tablets and all mobile phones.
+*/
+@media (max-width: 768px) {
+
+  /*GLOBAL FIXES (All Pages)*/
+  
+  .home-content-dark,
+  .contact-form-container,
+  .settings-container,
+  .pet-profiles-page .home-content-dark,
+  .health-settings-page .home-content-dark,
+  .privacy-settings-page .home-content-dark,
+  .accessibility-page .home-content-dark,
+  .notification-settings-page .home-content-dark {
+    max-width: 100%; 
+    padding: 25px 20px; 
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box; 
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .main-header-dark {
+    padding: 10px 15px;
+  }
+  .main-nav-dark {
+    gap: 15px; 
+  }
+
+  /* ABOUT US PAGE (The Timeline) */
+
+  .vision-box,
+  .vision-box.box-left,
+  .vision-box.box-right,
+  .vision-box.box-bottom {
+    float: none;
+    clear: both;
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .timeline-center,
+  .vision-box::before {
+    display: none;
+  }
+
+  /*USER SETTINGS & PET PROFILES (The Grids)*/
+
+  .user-settings-grid,
+  .pet-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* 2. Center the profile photo */
+  .profile-pic-container,
+  .pet-photo-container {
+    padding-top: 0;
+    align-items: center;
+  }
+
+  .profile-pic-circle,
+  .pet-photo-circle {
+    width: 200px;
+    height: 200px;
+  }
+  .pet-photo-circle img {
+    width: 100px; /* Down from 120px */
+    height: 100px;
+  }
+  .pet-info-box label {
+    font-size: 14px;
+  }
+  .pet-info-box input[type="text"] {
+    font-size: 16px;
+  }
+
+  /* SETTINGS PAGES (The Toggles) */
+
+  .setting-text h3 {
+    font-size: 18px;
+  }
+  .setting-text p {
+    font-size: 14px;
+    padding-right: 10px; 
+  }
+ .toggle-switch {
+  width: 50px;
+}
+
+/*PET-PROFILE.HTML*/
+.profile-page .pet-profile-grid {
+  grid-template-columns: 1fr;
+  gap: 0; 
+}
+
+
+.profile-page .pet-profile-main,
+.profile-page .profile-section { 
+  position: relative;
+  z-index: 1;
+}
+  
 }

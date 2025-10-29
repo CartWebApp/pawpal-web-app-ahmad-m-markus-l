@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Pawpal</title>
+  <title>Pet Profiles - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="home-page-dark">
+<body class="pet-profiles-page home-page-dark">
 
   <header class="main-header-dark">
     <figure class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
     </figure>
-
     <nav class="main-nav-dark">
-      <a href="home.html" class="nav-active">
+      <a href="home.html">
         <img src="images/Icons/home.svg" alt="Home">
       </a>
       <a href="schedule.html">
@@ -26,33 +25,65 @@
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
-
     <aside class="user-icons-dark">
-      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn" class="nav-active">
       <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
       <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
     </aside>
   </header>
 
   <main class="home-content-dark">
-    <section class="pet-profile-main">
-      <a href="pet-profile.html" class="pet-profile-image-link">
-        <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture" id="pet-profile-btn">
-      </a>
+    <section class="pet-profile-grid">
+      
+      <section class="pet-photo-container">
+        <h2 class="pet-profile-title">Pet Photo:</h2>
+        <figure class="pet-photo-circle">
+          <img src="images/Pngs/Camera.png" alt="Upload Pet Photo">
+        </figure>
+      </section>
 
-      <section class="pet-profile-name-box">
-        Buddy
+      <section class="pet-info-form">
+        <h2 class="pet-profile-title">Pet information:</h2>
+        
+        <section class="pet-info-box">
+          <label for="pet-name">Pet Name</label>
+          <input type="text" id="pet-name" placeholder="Enter pet name">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="pet-info-box">
+          <label for="pet-type">Type of Pet</label>
+          <input type="text" id="pet-type" placeholder="e.g., Dog, Cat">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="pet-info-box">
+          <label for="pet-breed">Breed</label>
+          <input type="text" id="pet-breed" placeholder="Enter breed">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="pet-info-box">
+          <label for="pet-birthdate">Birthdate or Adoption Date</label>
+          <input type="text" id="pet-birthdate" placeholder="MM/DD/YYYY">
+          <i class='bx bx-calendar-alt edit-icon'></i>
+        </section>
+
+        <section class="pet-info-box">
+          <label for="pet-spay-neuter">Sex & Spay/Neuter Status</label>
+          <input type="text" id="pet-spay-neuter" placeholder="e.g., Male, Neutered">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="pet-info-box">
+          <label for="pet-vet">Veterinarian Information (Optional)</label>
+          <input type="text" id="pet-vet" placeholder="e.g., City Vet, Dr. Smith">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+        
       </section>
     </section>
-
-    <section class="reminders-section" id="reminders-list">
-      <h3>Reminders:</h3>
-    </section>
   </main>
-
-  <a href="pet-select.html" class="add-event-btn">
-    <img src="images/Icons/Plus-box-icon.svg" alt="Add Pet">
-  </a>
 
   <footer class="main-footer-dark">
     <a href="about-us.html">About us</a>
@@ -82,34 +113,6 @@
     </section>
   </aside>
 
-  <section class="add-event-overlay-panel" id="add-event-panel">
-    <button class="close-overlay-btn" id="close-event-panel-btn">
-      <i class='bx bx-x'></i>
-    </button>
-    <h2>Add Event</h2>
-    <form>
-      <section class="form-group-labeled">
-        <label for="event-name">Event Name:</label>
-        <input type="text" id="event-name">
-      </section>
-      <section class="form-group-labeled">
-        <label for="pet-selector">Pet Selector:</label>
-        <select id="pet-selector">
-          <option>Selected Pet: Buddy</option>
-        </select>
-      </section>
-      <section class="form-group-labeled">
-        <label for="event-date">Date:</label>
-        <input type="text" id="event-date" placeholder="-- / -- / --">
-      </section>
-      <section class="form-group-labeled">
-        <label for="event-time">Time:</label>
-        <input type="text" id="event-time" placeholder="-- : --">
-      </section>
-      <button type="submit" class="btn-save-event">Save</button>
-    </form>
-  </section>
-
   <section class="logout-overlay-panel" id="logout-panel">
     <h2>Log Out?</h2>
     <p>Are you sure you want to log out?</p>
@@ -118,7 +121,7 @@
       <button class="btn-logout-confirm">Log out</button>
     </footer>
   </section>
-
+  
   <script src="javascript/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="support-page home-page-dark">
+
+  <header class="main-header-dark">
+    <figure class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </figure>
+    <nav class="main-nav-dark">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+    <aside class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </aside>
+  </header>
+
+  <main class="home-content-dark">
+    <h1 class="page-title">FAQ</h1>
+
+    <section class="faq-container">
+      <article class="faq-item">
+        <p class="faq-question">Q: How do I add and manage my pet's profile?</p>
+        <p class="faq-answer">A: Go to My Pets -> Add Pet to enter your pet's details like name, breed, age, and health info. You can manage multiple pets from the same account.</p>
+      </article>
+
+      <article class="faq-item">
+        <p class="faq-question">Q: How does the app help me care for my pet's health?</p>
+        <p class="faq-answer">A: The app tracks vaccinations, medications, vet visits, and symptoms. It also sends reminders for checkups, feeding, and medication schedules.</p>
+      </article>
+
+      <article class="faq-item">
+        <p class="faq-question">Q: Can I share my pet's health data with my vet?</p>
+        <p class="faq-answer">A: Yes. Under Privacy & Sharing Controls, you can securely share health updates and records with your veterinarian.</p>
+      </article>
+
+      <article class="faq-item">
+        <p class="faq-question">Q: What should I do in case of an emergency?</p>
+        <p class="faq-answer">A: Use the Emergency Actions feature to quickly call your vet, send alerts to emergency contacts, or view nearby animal hospitals.</p>
+      </article>
+
+      <article class="faq-item">
+        <p class="faq-question">Q: How do I control notifications and alerts?</p>
+        <p class="faq-answer">A: Visit Notification Settings to choose which reminders you want to receive — including health updates, feeding times, and emergency alerts.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="main-footer-dark">
+    <a href="about-us.html">About us</a>
+    <a href="support.html" class="footer-active">Support</a>
+    <a href="contact-us.html">Contact us</a>
+  </footer>
+
+  <section class="overlay" id="page-overlay"></section>
+
+  <aside class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <a href="pet-profiles.html">Pet Profile Management</a>
+    <a href="health-settings.html">Health & Safety Settings</a>
+    <a href="privacy-settings.html">Privacy & Sharing Controls</a>
+    <a href="accessibility.html">Accessibility Options</a>
+    <a href="notification-settings.html">Notification settings</a>
+    <a href="#" class="logout-link" id="logout-btn">Log out</a>
+  </aside>
+
+  <aside class="notifications-overlay-panel" id="notifications-panel">
+    <header class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </header>
+    <section class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </section>
+  </aside>
+
+  <section class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <footer class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </footer>
+  </section>
+  
+  <script src="javascript/script.js"></script>
+</body>
+</html>

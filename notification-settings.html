@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Settings - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="notification-settings-page home-page-dark">
+
+  <header class="main-header-dark">
+    <figure class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </figure>
+    <nav class="main-nav-dark">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+    <aside class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn" class="nav-active">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </aside>
+  </header>
+
+  <main class="home-content-dark">
+    <section class="settings-container">
+      <h1 class="page-title">Notification settings:</h1>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>Health Alerts</h3>
+          <p>Receive push notifications for abnormal health readings.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>Medication Reminders</h3>
+          <p>Get alerts when it's time for your pet's medication.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>Appointment Reminders</h3>
+          <p>Be notified of upcoming vet or grooming appointments.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>Feeding Reminders</h3>
+          <p>Set and receive reminders for your pet's feeding times.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>Walk Reminders</h3>
+          <p>Get push notifications for scheduled walks.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>General Reminders</h3>
+          <p>Enable notifications for custom reminders you set.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+
+      <section class="setting-row">
+        <article class="setting-text">
+          <h3>App Updates</h3>
+          <p>Stay informed about new features and important app news.</p>
+        </article>
+        <aside class="setting-toggle">
+          <img src="images/Pngs/switch-tab.png" alt="Toggle off" class="toggle-switch" data-alt-src="images/Pngs/switch-tab-2.png">
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <footer class="main-footer-dark">
+    <a href="about-us.html">About us</a>
+    <a href="support.html">Support</a>
+    <a href="contact-us.html">Contact us</a>
+  </footer>
+
+  <section class="overlay" id="page-overlay"></section>
+
+  <aside class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <a href="pet-profiles.html">Pet Profile Management</a>
+    <a href="health-settings.html">Health & Safety Settings</a>
+    <a href="privacy-settings.html">Privacy & Sharing Controls</a>
+    <a href="accessibility.html">Accessibility Options</a>
+    <a href="notification-settings.html">Notification settings</a>
+    <a href="#" class="logout-link" id="logout-btn">Log out</a>
+  </aside>
+
+  <aside class="notifications-overlay-panel" id="notifications-panel">
+    <header class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </header>
+    <section class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </section>
+  </aside>
+
+  <section class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <footer class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </footer>
+  </section>
+  
+  <script src="javascript/script.js"></script>
+</body>
+</html>
