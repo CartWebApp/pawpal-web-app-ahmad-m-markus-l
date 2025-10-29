@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-/*GLOBAL STYLES*/
-
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Poppins', sans-serif; 
-}
-
-/*SPLASH PAGE */
-
-.splash-container {
-
-  height: 100vh; 
-  width: 100%;
-=======
 /*
 ========================================
 GLOBAL STYLES
@@ -58,7 +42,6 @@ SPLASH PAGE (index.html)
   width: 100%;
 
   /* 2. Set the background image */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   background-image: url('../images/Pngs/background.png');
   background-size: cover;
   background-position: center;
@@ -73,18 +56,8 @@ SPLASH PAGE (index.html)
   font-weight: 700;
 }
 
-<<<<<<< HEAD
 /*LOGIN PAGE */
 
-=======
-/*
-========================================
-LOGIN PAGE (login.html)
-========================================
-*/
-
-/* 1. The full-page background container */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .login-page-container {
   background-image: url('../images/Pngs/background.png');
   background-size: cover;
@@ -95,11 +68,7 @@ LOGIN PAGE (login.html)
   min-height: 100vh;
 }
 
-<<<<<<< HEAD
 /* The white "login box" */
-=======
-/* 2. The white "login box" */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .login-box {
   background-color: white;
   padding: 40px;
@@ -108,67 +77,34 @@ LOGIN PAGE (login.html)
   width: 400px;
   text-align: center;
 }
-<<<<<<< HEAD
-=======
-
-/* 3. The logo (inside the box) */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .login-logo {
   width: 70px; 
   height: 70px;
   margin-bottom: 30px;
 }
-<<<<<<< HEAD
 .form-group {
   margin-bottom: 20px;
 }
-=======
-
-/* 4. The form "group" (the wrapper div) */
-.form-group {
-  margin-bottom: 20px;
-}
-
-/* 5. The input boxes */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .form-group input {
   width: 100%;
   padding: 15px;
   border: none;
-<<<<<<< HEAD
   background-color: #f7f7f7; 
   border-radius: 8px;
   box-sizing: border-box; 
 }
 
 
-=======
-  background-color: #f7f7f7; /* Soft gray background */
-  border-radius: 8px;
-  box-sizing: border-box; /* Very important! */
-}
-
-/* 6. The placeholder text inside the inputs */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .form-group input::placeholder {
   color: #999;
   font-family: 'Poppins', sans-serif;
 }
-<<<<<<< HEAD
-=======
-
-/* 7. The main "Log-in" button */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .btn-primary {
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 8px;
-<<<<<<< HEAD
-  background-color: #43A2A2;
-=======
   background-color: #43A2A2; /* The correct teal color */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   color: white;
   font-size: 16px;
   font-weight: 700;
@@ -177,18 +113,6 @@ LOGIN PAGE (login.html)
 }
 
 .btn-primary:hover {
-<<<<<<< HEAD
-  background-color: #3B8E8E; 
-}
-.signup-link {
-  margin-top: 25px;
-}
-.signup-link a {
-  color: #888; 
-  text-decoration: none;
-  font-size: 14px;
-}
-=======
   background-color: #3B8E8E; /* A darker teal for hover */
 }
 
@@ -203,15 +127,10 @@ LOGIN PAGE (login.html)
   font-size: 14px;
 }
 
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .signup-link a:hover {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
-/* VERIFICATION PAGE */
-
-=======
 /*
 ========================================
 VERIFICATION PAGE (verify-email.html)
@@ -219,7 +138,6 @@ VERIFICATION PAGE (verify-email.html)
 */
 
 /* 1. Style the new text */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .verification-title {
   font-size: 24px;
   font-weight: 700;
@@ -227,23 +145,11 @@ VERIFICATION PAGE (verify-email.html)
   margin-top: 10px;
   margin-bottom: 10px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .verification-text {
   font-size: 14px;
   color: #777;
   margin-bottom: 30px;
 }
-<<<<<<< HEAD
-.verification-code-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-=======
 
 /* 2. The container for the 6 boxes */
 .verification-code-container {
@@ -254,7 +160,6 @@ VERIFICATION PAGE (verify-email.html)
 }
 
 /* 3. The 6 individual code boxes */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .code-input {
   width: 45px;
   height: 55px;
@@ -263,15 +168,10 @@ VERIFICATION PAGE (verify-email.html)
   font-weight: 600;
   border: 1px solid #ddd;
   border-radius: 8px;
-<<<<<<< HEAD
-=======
-  /* Make it a box */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   padding: 0;
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 /*VERIFIED PAGE (verified.html)*/
 
 .verified-icon-container {
@@ -296,64 +196,16 @@ VERIFICATION PAGE (verify-email.html)
 
 /*CREATE PET PROFILE PAGE*/
 
-=======
-/*
-========================================
-VERIFIED PAGE (verified.html)
-========================================
-*/
-
-/* 1. Style the checkmark icon */
-.verified-icon-container {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Makes it a circle */
-  border: 4px solid #43A2A2; /* The same teal color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto 20px; /* Center it */
-}
-
-.verified-icon-container img {
-  width: 50px; /* Adjust size of icon inside */
-}
-
-/* 2. Adjust the "continue!" button */
-#continue-btn {
-  text-decoration: none; /* Removes underline from the <a> tag */
-  display: block; /* Makes it a block so width:100% works */
-  box-sizing: border-box; /* Fixes padding issues */
-}
-
-/*
-========================================
-CREATE PET PROFILE PAGE (create-profile.html)
-========================================
-*/
-
-/* 1. The circular camera icon uploader */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .pet-profile-picture-uploader {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-<<<<<<< HEAD
   background-color: #f7f7f7; 
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px auto 30px; 
 }
-=======
-  background-color: #f7f7f7; /* Same as input fields */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto 30px; /* Center it */
-}
-
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .pet-profile-picture-uploader label {
   cursor: pointer;
 }
@@ -361,7 +213,6 @@ CREATE PET PROFILE PAGE (create-profile.html)
 /* Replace it with this: */
 
 .pet-profile-picture-uploader img {
-<<<<<<< HEAD
   width: 100px;  
   height: 100px; 
   opacity: 0.6;
@@ -374,25 +225,6 @@ CREATE PET PROFILE PAGE (create-profile.html)
 }
 .input-icon {
   position: absolute; 
-=======
-  width: 100px;  /* <-- Made it bigger */
-  height: 100px; /* <-- Made it bigger */
-  opacity: 0.6;
-}
-
-/* 2. Hide the real file input */
-#pet-photo-upload {
-  display: none;
-}
-
-/* 3. This positions the calendar icon */
-.form-group-with-icon {
-  position: relative; /* This is the anchor */
-}
-
-.input-icon {
-  position: absolute; /* This floats on top */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
@@ -400,18 +232,12 @@ CREATE PET PROFILE PAGE (create-profile.html)
   height: 20px;
   opacity: 0.6;
 }
-<<<<<<< HEAD
-=======
-
-/* 4. Fix for the "Next" button (since it's an <a> tag) */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 #next-btn {
   text-decoration: none;
   display: block;
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 /*ADDITIONAL INFO PAGE*/
 
 .form-group-labeled {
@@ -420,28 +246,11 @@ CREATE PET PROFILE PAGE (create-profile.html)
 }
 .form-group-labeled label {
   display: block; 
-=======
-/*
-========================================
-ADDITIONAL INFO PAGE (additional-info.html)
-========================================
-*/
-
-/* 1. New styles for our labeled inputs */
-.form-group-labeled {
-  text-align: left; /* Align labels to the left */
-  margin-bottom: 15px;
-}
-
-.form-group-labeled label {
-  display: block; /* Puts label on its own line */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: 600;
   color: #555;
 }
-<<<<<<< HEAD
 .form-group-labeled label span {
   font-weight: 400; 
   color: #888;
@@ -450,29 +259,10 @@ ADDITIONAL INFO PAGE (additional-info.html)
   background-color: #fff; 
   border: 1px solid #ddd; 
 }
-=======
-
-/* 2. Style for the "(Optional)" text */
-.form-group-labeled label span {
-  font-weight: 400; /* Makes it regular, not bold */
-  color: #888;
-}
-
-/* 3. IMPORTANT: Override the gray input 
-    from the login page 
-*/
-.form-group-labeled input {
-  background-color: #fff; /* Make it white */
-  border: 1px solid #ddd; /* Give it a light border */
-}
-
-/* 4. Fix for the "Done" button (since it's an <a> tag) */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 #done-btn {
   text-decoration: none;
   display: block;
   box-sizing: border-box;
-<<<<<<< HEAD
   margin-top: 25px;
 }
 
@@ -484,216 +274,25 @@ ADDITIONAL INFO PAGE (additional-info.html)
   padding: 12px;
   background-color: #E0F2F2; 
   color: #43A2A2; 
-=======
-  margin-top: 25px; /* Give it some space */
-}
-
-/*
-========================================
-PROFILE CREATED PAGE (profile-created.html)
-========================================
-*/
-
-/* 1. Style the new "secondary" button */
-.btn-secondary {
-  display: block; /* Make it a block */
-  margin-top: 15px;
-  padding: 12px;
-  background-color: #E0F2F2; /* Very light teal */
-  color: #43A2A2; /* The main teal color */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
   border-radius: 8px;
-<<<<<<< HEAD
   box-sizing: border-box; 
 }
 .btn-secondary:hover {
   background-color: #CFF0F0; 
 
 }
-=======
-  box-sizing: border-box; /* Fixes padding issues */
-}
-
-.btn-secondary:hover {
-  background-color: #CFF0F0; /* A slightly darker light teal */
-}
-
-/* 2. Fix for the "continue!" <a> button */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 #continue-to-home-btn {
   text-decoration: none;
   display: block;
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 /*HOME PAGE - DARK THEME */
 
-=======
-/*
-========================================
-HOME PAGE (home.html)
-========================================
-*/
-
-/* 1. Reset the body for the main app */
-body.home-page {
-  background-color: #f9f9f9; /* A very light gray, not the image */
-  color: #333;
-}
-
-/* 2. Main Header */
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 2px 10px rgba(0,0,0, 0.05);
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 700;
-}
-.logo-container img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-/* 3. Main Navigation */
-.main-nav a {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #888;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin: 0 5px;
-}
-.main-nav a i {
-  font-size: 20px;
-  margin-right: 8px;
-}
-/* The "active" tab */
-.main-nav a.nav-active,
-.main-nav a:hover {
-  background-color: #E0F2F2;
-  color: #43A2A2;
-}
-
-/* 4. User Icons (Right side) */
-.user-icons {
-  display: flex;
-  align-items: center;
-}
-.user-icons i {
-  font-size: 26px;
-  color: #777;
-  margin-left: 25px;
-  cursor: pointer;
-}
-.user-icons i:hover {
-  color: #43A2A2;
-}
-
-/* 5. Main Content Area */
-.home-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 30px auto; /* Center the content */
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-.welcome-banner {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0, 0.05);
-}
-.welcome-banner h1 {
-  margin-top: 0;
-  font-size: 32px;
-}
-
-/* 6. Pet Profile Header (from last image) */
-.pet-profile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  margin-top: 30px;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0, 0.05);
-}
-.pet-profile-info {
-  display: flex;
-  align-items: center;
-}
-.pet-profile-info img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  margin-right: 20px;
-}
-.pet-profile-text h2 {
-  margin: 0 0 5px;
-  font-size: 24px;
-}
-.pet-profile-text span {
-  font-size: 16px;
-  color: #777;
-}
-.btn-pet-action {
-  background-color: #f5f5f5;
-  color: #555;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-left: 10px;
-  cursor: pointer;
-}
-.btn-pet-action i {
-  margin-right: 5px;
-}
-
-/* 7. Main Footer */
-.main-footer {
-  text-align: center;
-  padding: 40px;
-  margin-top: 50px;
-  color: #999;
-}
-.main-footer a {
-  color: #777;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 15px;
-}
-.main-footer a:hover {
-  text-decoration: underline;
-}
-
-/*
-========================================
-HOME PAGE - DARK THEME (home.html)
-========================================
-*/
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 body.home-page-dark {
   background-color: #F0F2F5;
   color: #1c1e21;
@@ -701,11 +300,6 @@ body.home-page-dark {
   flex-direction: column;
   min-height: 100vh;
 }
-<<<<<<< HEAD
-=======
-
-/* 1. Dark Header */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .main-header-dark {
   display: flex;
   justify-content: space-between;
@@ -713,39 +307,20 @@ body.home-page-dark {
   padding: 10px 40px;
   background-color: #333;
 }
-<<<<<<< HEAD
 .logo-box {
   width: 150px;
-=======
-
-/* 2. Logo Box (Left) */
-.logo-box {
-  width: 150px; /* Give it a set width */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   display: flex;
   align-items: center;
 }
 .logo-box img {
   width: 30px;
   height: 30px;
-<<<<<<< HEAD
   filter: brightness(0) invert(1); 
 }
 .main-nav-dark {
   display: flex;
   justify-content: center; 
   flex-grow: 1; 
-=======
-  /* This filter turns the black SVG to white */
-  filter: brightness(0) invert(1); 
-}
-
-/* 3. Dark Nav (Center) */
-.main-nav-dark {
-  display: flex;
-  justify-content: center; /* Center icons within the nav area */
-  flex-grow: 1; /* Tell nav to take all remaining space */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   gap: 50px;
 }
 .main-nav-dark a img {
@@ -758,7 +333,6 @@ body.home-page-dark {
 .main-nav-dark a:hover img {
   opacity: 1;
   transform: scale(1.1);
-<<<<<<< HEAD
   filter: drop-shadow(0 0 5px #43A2A2);
 }
 
@@ -766,17 +340,6 @@ body.home-page-dark {
   width: 150px;
   display: flex;
   justify-content: flex-end;
-=======
-  /* === RE-ADDED THE GLOW EFFECT === */
-  filter: drop-shadow(0 0 5px #43A2A2);
-}
-
-/* 4. User Icons (Right) */
-.user-icons-dark {
-  width: 150px; /* Match the logo-box width */
-  display: flex;
-  justify-content: flex-end; /* Push icons to the right */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   gap: 25px;
 }
 .user-icons-dark img {
@@ -788,7 +351,6 @@ body.home-page-dark {
 .user-icons-dark img:hover {
   transform: scale(1.1);
 }
-<<<<<<< HEAD
 .home-content-dark {
   max-width: 900px;
   margin: 40px; 
@@ -801,26 +363,6 @@ body.home-page-dark {
 }
 .pet-profile-main {
   text-align: left;
-=======
-
-/* 5. Main Content Area */
-/* This new rule aligns the block to the left */
-.home-content-dark {
-  max-width: 900px;
-  margin: 40px; /* This sets a 40px margin on all sides, aligning it left */
-  padding: 0;
-  flex-grow: 1; /* This still keeps the footer down */
-}
-
-/* This NEW rule fixes the pet-profile.html page */
-.profile-page .home-content-dark {
-  margin: 40px auto;
-  padding: 0 20px; /* Adds breathing room for the centered layout */
-}
-
-.pet-profile-main {
-  text-align: left; /* <-- This is the fix */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   margin-bottom: 40px;
 }
 .pet-profile-main img {
@@ -839,19 +381,11 @@ body.home-page-dark {
 .reminders-section {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   gap: 15px;
 }
 .reminders-section h3 {
   font-size: 20px;
   margin-bottom: 0; 
-=======
-  gap: 15px; /* <-- THIS ADDS THE SPACING! */
-}
-.reminders-section h3 {
-  font-size: 20px;
-  margin-bottom: 0; /* We use gap now */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 }
 
 .reminder-card {
@@ -885,28 +419,14 @@ body.home-page-dark {
   color: #555;
   font-size: 14px;
 }
-<<<<<<< HEAD
 .add-event-btn {
   position: fixed;
   bottom: 100px; 
-=======
-
-
-/* 7. Floating "Add" Button */
-/* This new rule moves the button up above the footer */
-.add-event-btn {
-  position: fixed;
-  bottom: 100px; /* Moved up to 100px from the bottom */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   right: 40px;
   z-index: 50;
 }
 .add-event-btn img {
-<<<<<<< HEAD
  
-=======
-  /* Let's give your icon a size (adjust as needed) */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   width: 80px; 
   height: 80px;
   display: block;
@@ -914,15 +434,8 @@ body.home-page-dark {
   transition: transform 0.2s ease;
 }
 .add-event-btn:hover img {
-<<<<<<< HEAD
   transform: scale(1.05); 
 }
-=======
-  transform: scale(1.05); /* A nice little grow effect */
-}
-
-/* 8. Dark Footer */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .main-footer-dark {
   background-color: #333;
   padding: 30px;
@@ -936,38 +449,18 @@ body.home-page-dark {
   margin: 0 20px;
 }
 
-<<<<<<< HEAD
 /* ANIMATION FOR NEW CARDS */
 .reminder-card {
-=======
-/* === ANIMATION FOR NEW CARDS === */
-.reminder-card {
-  /* This tells the card to animate any changes */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reminder-card.new-card-animation {
-<<<<<<< HEAD
   opacity: 0;
   transform: translateY(20px);
 }
 
 /* LAYER 2: HIDDEN OVERLAY STYLES */
 
-=======
-  /* This is the "starting" state (invisible) */
-  opacity: 0;
-  transform: translateY(20px);
-}
-/*
-========================================
-LAYER 2: HIDDEN OVERLAY STYLES
-========================================
-*/
-
-/* 1. The Full-Screen Dark Background */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .overlay {
   position: fixed;
   top: 0;
@@ -976,15 +469,8 @@ LAYER 2: HIDDEN OVERLAY STYLES
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 100;
-<<<<<<< HEAD
   display: none;
 }
-=======
-  display: none; /* Hidden by default */
-}
-
-/* 2. Settings Panel */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .settings-overlay-panel {
   position: fixed;
   top: 0;
@@ -995,11 +481,7 @@ LAYER 2: HIDDEN OVERLAY STYLES
   z-index: 101;
   padding: 20px;
   box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-<<<<<<< HEAD
   display: none; 
-=======
-  display: none; /* Hidden by default */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 }
 .settings-overlay-panel h2 {
   font-size: 28px;
@@ -1023,16 +505,9 @@ LAYER 2: HIDDEN OVERLAY STYLES
   margin-top: 10px;
 }
 
-<<<<<<< HEAD
 .notifications-overlay-panel {
   position: fixed;
   top: 80px; 
-=======
-/* 3. Notifications Panel */
-.notifications-overlay-panel {
-  position: fixed;
-  top: 80px; /* Position below header */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   right: 40px;
   width: 380px;
   max-height: 500px;
@@ -1041,11 +516,7 @@ LAYER 2: HIDDEN OVERLAY STYLES
   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
   z-index: 101;
   overflow-y: auto;
-<<<<<<< HEAD
   display: none;
-=======
-  display: none; /* Hidden by default */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 }
 .notifications-header {
   display: flex;
@@ -1084,11 +555,6 @@ LAYER 2: HIDDEN OVERLAY STYLES
   font-size: 14px;
   color: #777;
 }
-<<<<<<< HEAD
-=======
-
-/* 4. Add Event Panel */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 .add-event-overlay-panel {
   position: fixed;
   top: 50%;
@@ -1100,11 +566,7 @@ LAYER 2: HIDDEN OVERLAY STYLES
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   padding: 30px;
   z-index: 101;
-<<<<<<< HEAD
   display: none; 
-=======
-  display: none; /* Hidden by default */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 }
 .add-event-overlay-panel h2 {
   text-align: center;
@@ -1184,15 +646,9 @@ LAYER 2: HIDDEN OVERLAY STYLES
 }
 
 /*
-<<<<<<< HEAD
 
 JAVASCRIPT "WAKE UP" CLASS
 
-=======
-========================================
-JAVASCRIPT "WAKE UP" CLASS
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* This class will be added by JavaScript to show an overlay */
@@ -1213,15 +669,9 @@ JAVASCRIPT "WAKE UP" CLASS
 }
 
 /*
-<<<<<<< HEAD
 
 PET PROFILE PAGE (pet-profile.html)
 
-=======
-========================================
-PET PROFILE PAGE (pet-profile.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. The 2-Column Grid Layout */
@@ -1395,15 +845,9 @@ PET PROFILE PAGE (pet-profile.html)
 }
 
 /*
-<<<<<<< HEAD
 
 DYNAMIC REMINDERS & NOTIFICATIONS
 
-=======
-========================================
-DYNAMIC REMINDERS & NOTIFICATIONS
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Style for the empty "No notifications" message */
@@ -1432,15 +876,9 @@ DYNAMIC REMINDERS & NOTIFICATIONS
 }
 
 /*
-<<<<<<< HEAD
 
 HOMEPAGE - "BUDDY" NAME BOX FIX
 
-=======
-========================================
-HOMEPAGE - "BUDDY" NAME BOX FIX
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. This styles the link around the camera image */
@@ -1464,15 +902,9 @@ HOMEPAGE - "BUDDY" NAME BOX FIX
 }
 
 /*
-<<<<<<< HEAD
 
 SCHEDULE PAGE (schedule.html)
 
-=======
-========================================
-SCHEDULE PAGE (schedule.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. This styles the "Appointments" title */
@@ -1740,15 +1172,9 @@ SCHEDULE PAGE (schedule.html)
 }
 
 /*
-<<<<<<< HEAD
 
 HEALTH PAGE (health.html)
 
-=======
-========================================
-HEALTH PAGE (health.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* This centers the title and the entire page. */
@@ -1957,15 +1383,9 @@ HEALTH PAGE (health.html)
 }
 
 /*
-<<<<<<< HEAD
 
 HEALTH PAGE (health.html) - OVERLAYS
 
-=======
-========================================
-HEALTH PAGE (health.html) - OVERLAYS
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 6. "Add New Health Record" Menu (Already added, just a reminder) */
@@ -2184,7 +1604,6 @@ HEALTH PAGE (health.html) - OVERLAYS
 
 /* ... rest of your code ... */
 /*
-<<<<<<< HEAD
 
 GLOBAL STYLES & RESETS
 
@@ -2193,16 +1612,6 @@ GLOBAL STYLES & RESETS
 
 ABOUT US PAGE (about-us.html)
 
-=======
-========================================
-GLOBAL STYLES & RESETS
-========================================
-*/
-/*
-========================================
-ABOUT US PAGE (about-us.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font to this page */
@@ -2326,15 +1735,9 @@ ABOUT US PAGE (about-us.html)
 
 
 /*
-<<<<<<< HEAD
 
 SUPPORT PAGE (support.html)
 
-=======
-========================================
-SUPPORT PAGE (support.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font to this page */
@@ -2392,15 +1795,9 @@ SUPPORT PAGE (support.html)
 }
 
 /*
-<<<<<<< HEAD
 
 CONTACT US PAGE (contact-us.html) - FINAL FIX
 
-=======
-========================================
-CONTACT US PAGE (contact-us.html) - FINAL FIX
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font */
@@ -2490,15 +1887,9 @@ CONTACT US PAGE (contact-us.html) - FINAL FIX
 
 
 /*
-<<<<<<< HEAD
 
 CONFIRMATION PAGE (contact-confirmation.html)
 
-=======
-========================================
-CONFIRMATION PAGE (contact-confirmation.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 .confirmation-page {
@@ -2565,15 +1956,9 @@ CONFIRMATION PAGE (contact-confirmation.html)
 }
 
 /*
-<<<<<<< HEAD
 
 USER SETTINGS PAGE (usersettings.html)
 
-=======
-========================================
-USER SETTINGS PAGE (usersettings.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -2691,15 +2076,9 @@ USER SETTINGS PAGE (usersettings.html)
 }
 
 /*
-<<<<<<< HEAD
 
 PET PROFILES PAGE (pet-profiles.html)
 
-=======
-========================================
-PET PROFILES PAGE (pet-profiles.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -2806,15 +2185,9 @@ PET PROFILES PAGE (pet-profiles.html)
 }
 
 /*
-<<<<<<< HEAD
 
 HEALTH SETTINGS PAGE (health-settings.html)
 
-=======
-========================================
-HEALTH SETTINGS PAGE (health-settings.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -2878,15 +2251,9 @@ HEALTH SETTINGS PAGE (health-settings.html)
 }
 
 /*
-<<<<<<< HEAD
 
 PRIVACY SETTINGS PAGE (privacy-settings.html)
 
-=======
-========================================
-PRIVACY SETTINGS PAGE (privacy-settings.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -2950,15 +2317,9 @@ PRIVACY SETTINGS PAGE (privacy-settings.html)
 }
 
 /*
-<<<<<<< HEAD
 
 ACCESSIBILITY PAGE (accessibility.html)
 
-=======
-========================================
-ACCESSIBILITY PAGE (accessibility.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -3022,15 +2383,9 @@ ACCESSIBILITY PAGE (accessibility.html)
 }
 
 /*
-<<<<<<< HEAD
 
 NOTIFICATION SETTINGS PAGE (notification-settings.html)
 
-=======
-========================================
-NOTIFICATION SETTINGS PAGE (notification-settings.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -3094,15 +2449,9 @@ NOTIFICATION SETTINGS PAGE (notification-settings.html)
 }
 
 /*
-<<<<<<< HEAD
 
 PET SELECT PAGE (pet-select.html)
 
-=======
-========================================
-PET SELECT PAGE (pet-select.html)
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* 1. Apply Poppins font and light background */
@@ -3206,21 +2555,12 @@ PET SELECT PAGE (pet-select.html)
 
 
 /*
-<<<<<<< HEAD
 
 
 MOBILE RESPONSIVE STYLES
 (Add this at the VERY BOTTOM of style.css)
 
 
-=======
-========================================
-========================================
-MOBILE RESPONSIVE STYLES
-(Add this at the VERY BOTTOM of style.css)
-========================================
-========================================
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 */
 
 /* This rule applies to all screens 768px wide or smaller.
@@ -3228,18 +2568,8 @@ MOBILE RESPONSIVE STYLES
 */
 @media (max-width: 768px) {
 
-<<<<<<< HEAD
   /*GLOBAL FIXES (All Pages)*/
   
-=======
-  /*
-  ========================================
-  GLOBAL FIXES (All Pages)
-  ========================================
-  */
-  
-  /* 1. Make all main content boxes fill the screen */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   .home-content-dark,
   .contact-form-container,
   .settings-container,
@@ -3248,7 +2578,6 @@ MOBILE RESPONSIVE STYLES
   .privacy-settings-page .home-content-dark,
   .accessibility-page .home-content-dark,
   .notification-settings-page .home-content-dark {
-<<<<<<< HEAD
     max-width: 100%; 
     padding: 25px 20px; 
     margin-left: 0;
@@ -3261,99 +2590,35 @@ MOBILE RESPONSIVE STYLES
     margin-bottom: 20px;
   }
 
-=======
-    
-    /* This overrides the 900px/800px desktop widths */
-    max-width: 100%; 
-    
-    /* Make padding smaller for mobile */
-    padding: 25px 20px; 
-    
-    /* Remove extra margins */
-    margin-left: 0;
-    margin-right: 0;
-    
-    /* Fix for some pages being inside another box */
-    box-sizing: border-box; 
-  }
-  
-  /* 2. Reduce the size of all page titles */
-  .page-title {
-    font-size: 28px; /* Down from 36px */
-    margin-bottom: 20px;
-  }
-  
-  /* 3. Make header icons fit */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   .main-header-dark {
     padding: 10px 15px;
   }
   .main-nav-dark {
-<<<<<<< HEAD
     gap: 15px; 
   }
 
   /* ABOUT US PAGE (The Timeline) */
 
-=======
-    /* Tighter spacing between icons */
-    gap: 15px; 
-  }
-  .user-icons-dark {
-    /* Tighter spacing for user icons */
-    gap: 15px; 
-  }
-
-  /*
-  ========================================
-  ABOUT US PAGE (The Timeline)
-  ========================================
-  */
-  
-  /* 1. Stack all timeline boxes into one column */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   .vision-box,
   .vision-box.box-left,
   .vision-box.box-right,
   .vision-box.box-bottom {
     float: none;
     clear: both;
-<<<<<<< HEAD
     width: 100%; 
     margin-left: auto;
     margin-right: auto;
   }
-=======
-    width: 100%; /* Make them fill the container */
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* 2. Hide all the branches (center and side) */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   .timeline-center,
   .vision-box::before {
     display: none;
   }
 
-<<<<<<< HEAD
   /*USER SETTINGS & PET PROFILES (The Grids)*/
 
   .user-settings-grid,
   .pet-profile-grid {
     grid-template-columns: 1fr;
-=======
-  /*
-  ========================================
-  USER SETTINGS & PET PROFILES (The Grids)
-  ========================================
-  */
-  
-  /* 1. Stack the photo and form vertically */
-  .user-settings-grid,
-  .pet-profile-grid {
-    grid-template-columns: 1fr; /* Change from 2 columns to 1 */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
     gap: 30px;
   }
   
@@ -3363,12 +2628,6 @@ MOBILE RESPONSIVE STYLES
     padding-top: 0;
     align-items: center;
   }
-<<<<<<< HEAD
-
-=======
-  
-  /* 3. Make photo circle a bit smaller */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   .profile-pic-circle,
   .pet-photo-circle {
     width: 200px;
@@ -3378,11 +2637,6 @@ MOBILE RESPONSIVE STYLES
     width: 100px; /* Down from 120px */
     height: 100px;
   }
-<<<<<<< HEAD
-=======
-  
-  /* 4. Make form inputs more readable */
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
   .pet-info-box label {
     font-size: 14px;
   }
@@ -3390,7 +2644,6 @@ MOBILE RESPONSIVE STYLES
     font-size: 16px;
   }
 
-<<<<<<< HEAD
   /* SETTINGS PAGES (The Toggles) */
 
   .setting-text h3 {
@@ -3417,112 +2670,4 @@ MOBILE RESPONSIVE STYLES
   z-index: 1;
 }
   
-=======
-  /*
-  ========================================
-  SETTINGS PAGES (The Toggles)
-  ========================================
-  */
-  
-  /* 1. Make text smaller so it fits */
-  .setting-text h3 {
-    font-size: 18px; /* Down from 20px */
-  }
-  .setting-text p {
-    font-size: 14px; /* Down from 16px */
-    /* Help text wrap better */
-    padding-right: 10px; 
-  }
-  
-  /* 2. Make the toggle slightly smaller */
-  .toggle-switch {
-    width: 50px; /* Down from 60px */
-  }
-
-
-  /*
-  ========================================
-  PET-PROFILE.HTML (Overlap Bug Fix - Aggressive)
-  ========================================
-  */
-
-  /* This is a much stronger fix. We are resetting 
-    the layout at all three levels: the grid, 
-    the columns, and the cards inside.
-  */
-
-  /* 1. This time, we use Flexbox to stack the columns,
-     which is more reliable than 'display: block'.
-  */
-  .profile-page .pet-profile-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0; /* Remove any desktop gap */
-  }
-
-  /* 2. We force both columns to be 100% wide
-     and *reset* their position and margins,
-     overriding any desktop styles.
-  */
-  .profile-page .pet-profile-col-left,
-  .profile-page .pet-profile-col-right {
-    width: 100%;
-    position: static; /* Resets any 'relative' or 'absolute' */
-    margin: 0;
-    padding: 0;
-  }
-
-  /* 3. Finally, we reset the position of all
-     the cards *inside* the columns. This
-     is the most likely source of the overlap bug.
-  */
-  .profile-page .pet-profile-main,
-  .profile-page .profile-section {
-    position: static; /* Forces default stacking */
-    margin-bottom: 25px; /* Adds space so they don't touch */
-  }
-  
-  /*
-  ========================================
-  SCHEDULE PAGE (Mobile Layout Fix)
-  ========================================
-  */
-  
-  /* 1. This destroys the desktop grid layout */
-  .schedule-page .schedule-grid {
-    display: block;
-    width: 100%;
-  }
-  
-  /* 2. This makes both columns stack vertically */
-  .schedule-page .calendar-container,
-  .schedule-page .upcoming-container {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box; /* Prevents padding from breaking layout */
-    margin-bottom: 25px; /* Adds space between the stacked boxes */
-  }
-
-  /*
-  ========================================
-  HEALTH PAGE (Mobile Layout Fix)
-  ========================================
-  */
-  
-  /* 1. This destroys the desktop grid layout */
-  .health-page .health-grid {
-    display: block;
-    width: 100%;
-  }
-  
-  /* 2. This makes both columns stack vertically */
-  .health-page .health-col-left,
-  .health-page .health-col-right {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box; /* Prevents padding from breaking layout */
-    margin-bottom: 25px; /* Adds space between the stacked boxes */
-  }
->>>>>>> 4e6223442c73bebff9309052783452f733245b37
 }
