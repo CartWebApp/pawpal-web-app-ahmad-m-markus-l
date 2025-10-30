@@ -1,14 +1,5 @@
-/*
-========================================
-GLOBAL STYLES
-========================================
-*/
-/*
-========================================
-TARGETED STICKY FOOTER FIX (Schedule & Health)
-========================================
-*/
-/* This targets *only* the schedule and health page bodies */
+/*GLOBAL STYLES*/
+
 .schedule-page,
 .health-page {
   display: flex;
@@ -16,32 +7,22 @@ TARGETED STICKY FOOTER FIX (Schedule & Health)
   min-height: 100vh;
 }
 
-/* This targets the <main> element *only* inside those two pages */
 .schedule-page > main,
 .health-page > main {
   flex-grow: 1;
 }
 
-/* Make sure the body fills the whole page */
 body, html {
   height: 100%;
   margin: 0;
-  /* Make sure to use your real font name from Figma! */
   font-family: 'Poppins', sans-serif; 
 }
 
-/*
-========================================
-SPLASH PAGE (index.html)
-========================================
-*/
+/*SPLASH PAGE (index.html)*/
 
 .splash-container {
-  /* 1. Set the size to fill the entire screen */
-  height: 100vh; /* vh = viewport height */
+  height: 100vh; 
   width: 100%;
-
-  /* 2. Set the background image */
   background-image: url('../images/Pngs/background.png');
   background-size: cover;
   background-position: center;
@@ -68,7 +49,6 @@ SPLASH PAGE (index.html)
   min-height: 100vh;
 }
 
-/* The white "login box" */
 .login-box {
   background-color: white;
   padding: 40px;
@@ -104,7 +84,7 @@ SPLASH PAGE (index.html)
   padding: 15px;
   border: none;
   border-radius: 8px;
-  background-color: #43A2A2; /* The correct teal color */
+  background-color: #43A2A2; 
   color: white;
   font-size: 16px;
   font-weight: 700;
@@ -113,16 +93,15 @@ SPLASH PAGE (index.html)
 }
 
 .btn-primary:hover {
-  background-color: #3B8E8E; /* A darker teal for hover */
+  background-color: #3B8E8E; 
 }
 
-/* 8. The footer "Create an account?" link */
 .signup-link {
   margin-top: 25px;
 }
 
 .signup-link a {
-  color: #888; /* The neutral gray color */
+  color: #888;
   text-decoration: none;
   font-size: 14px;
 }
@@ -131,13 +110,7 @@ SPLASH PAGE (index.html)
   text-decoration: underline;
 }
 
-/*
-========================================
-VERIFICATION PAGE (verify-email.html)
-========================================
-*/
-
-/* 1. Style the new text */
+/*VERIFICATION PAGE */
 .verification-title {
   font-size: 24px;
   font-weight: 700;
@@ -151,15 +124,13 @@ VERIFICATION PAGE (verify-email.html)
   margin-bottom: 30px;
 }
 
-/* 2. The container for the 6 boxes */
 .verification-code-container {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between the boxes */
+  gap: 10px;
   margin-bottom: 30px;
 }
 
-/* 3. The 6 individual code boxes */
 .code-input {
   width: 45px;
   height: 55px;
@@ -172,7 +143,7 @@ VERIFICATION PAGE (verify-email.html)
   box-sizing: border-box;
 }
 
-/*VERIFIED PAGE (verified.html)*/
+/*VERIFIED PAGE*/
 
 .verified-icon-container {
   width: 100px;
@@ -194,8 +165,6 @@ VERIFICATION PAGE (verify-email.html)
   box-sizing: border-box; 
 }
 
-/*CREATE PET PROFILE PAGE*/
-
 .pet-profile-picture-uploader {
   width: 100px;
   height: 100px;
@@ -209,8 +178,6 @@ VERIFICATION PAGE (verify-email.html)
 .pet-profile-picture-uploader label {
   cursor: pointer;
 }
-
-/* Replace it with this: */
 
 .pet-profile-picture-uploader img {
   width: 100px;  
@@ -449,7 +416,6 @@ body.home-page-dark {
   margin: 0 20px;
 }
 
-/* ANIMATION FOR NEW CARDS */
 .reminder-card {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -598,7 +564,7 @@ body.home-page-dark {
   font-size: 20px;
 }
 
-/* 5. Logout Panel */
+
 .logout-overlay-panel {
   position: fixed;
   top: 50%;
@@ -609,9 +575,9 @@ body.home-page-dark {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   padding: 30px;
-  z-index: 102; /* Needs to be on top of settings panel */
+  z-index: 102; 
   text-align: center;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 .logout-overlay-panel h2 {
   margin-top: 0;
@@ -622,7 +588,7 @@ body.home-page-dark {
   margin-top: 30px;
 }
 .logout-buttons button {
-  flex: 1; /* Make both buttons equal width */
+  flex: 1; 
   padding: 12px;
   font-size: 16px;
   font-weight: 600;
@@ -640,23 +606,18 @@ body.home-page-dark {
   border-color: #D9534F;
 }
 
-/* This class will be added by JavaScript to show an overlay */
 .overlay-visible {
   display: block !important;
 }
 
-/*
+/*JAVASCRIPT "WAKE UP" CLASS*/
 
-JAVASCRIPT "WAKE UP" CLASS
 
-*/
-
-/* This class will be added by JavaScript to show an overlay */
 .overlay-visible {
   display: block !important;
 }
 
-/* Fix for <a> tags styled as buttons */
+
 #signup-btn {
   text-decoration: none;
   display: block;
@@ -668,39 +629,34 @@ JAVASCRIPT "WAKE UP" CLASS
   box-sizing: border-box;
 }
 
-/*
+/*PET PROFILE PAGE */
 
-PET PROFILE PAGE (pet-profile.html)
-
-*/
-
-/* 1. The 2-Column Grid Layout */
 .pet-profile-grid {
   display: grid;
-  grid-template-columns: 350px 1fr; /* Left col = 350px, Right col = fills rest */
+  grid-template-columns: 350px 1fr; 
   gap: 30px;
   align-items: flex-start;
 }
 
 .pet-profile-col-left {
-  position: sticky; /* Makes it "stick" as you scroll */
+  position: sticky; 
   top: 40px;
 }
 
 .pet-profile-col-right {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Spaces out the white boxes vertically */
+  gap: 30px; 
 }
 
-/* 2. The Big Camera Icon (Left Column) */
+
 .pet-profile-main.large {
   text-align: center;
   margin-bottom: 30px;
 }
 .pet-profile-main.large img {
-  width: 250px;  /* <-- Made it much bigger */
-  height: 250px; /* <-- Made it much bigger */
+  width: 250px;  
+  height: 250px; 
   border-radius: 50%;
   background-color: #1a1a1a;
   margin-bottom: 15px;
@@ -710,14 +666,12 @@ PET PROFILE PAGE (pet-profile.html)
   margin: 0;
 }
 
-/* 3. Generic Section styles (for headlines) */
 .profile-section h3 {
   font-size: 20px;
   margin-bottom: 15px;
   margin-top: 0;
 }
 
-/* 4. Generic White Box Style */
 .profile-card {
   background-color: #fff;
   border-radius: 12px;
@@ -726,8 +680,6 @@ PET PROFILE PAGE (pet-profile.html)
 }
 
 /* 5. Specific Card Content Styling */
-
-/* "Pet Information" card */
 .info-row {
   display: flex;
   align-items: center;
@@ -798,21 +750,17 @@ PET PROFILE PAGE (pet-profile.html)
   background: conic-gradient(#43A2A2 0% 50%, #f0f0f0 50% 100%);
 }
 
-/* === "Add a Reminder" card [FIXED] === */
-
-/* This rule is just for the <form> tag */
 #add-reminder-form {
-  position: relative; /* This lets us position the button inside */
+  position: relative;
 }
 
-/* This new rule styles the INPUT field */
 #reminder-name {
-  background-color: #f0f2f5; /* The light gray from your design */
+  background-color: #f0f2f5;
   border: none;
-  border-radius: 20px; /* Makes it rounded */
-  padding: 15px 60px 15px 20px; /* Top, Right(for button), Bottom, Left */
+  border-radius: 20px;
+  padding: 15px 60px 15px 20px;
   width: 100%;
-  box-sizing: border-box; /* Prevents padding from breaking layout */
+  box-sizing: border-box;
   font-size: 16px;
   color: #333;
 }
@@ -820,37 +768,27 @@ PET PROFILE PAGE (pet-profile.html)
   color: #888;
 }
 
-/* This new rule styles the "plus" BUTTON */
 .btn-save-reminder {
   position: absolute;
-  right: 5px; /* Position 5px from the right edge */
-  top: 50%;   /* Center it vertically */
-  transform: translateY(-50%); /* ...finish centering */
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
   
-  width: 40px;  /* Small circular button */
-  height: 40px; /* Small circular button */
+  width: 40px;
+  height: 40px; 
   border-radius: 50%;
   background-color: #43A2A2;
   color: white;
   border: none;
-  
-  /* For the plus icon */
   font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
   cursor: pointer;
-  box-shadow: none; /* Remove the old shadow */
+  box-shadow: none; 
 }
 
-/*
-
-DYNAMIC REMINDERS & NOTIFICATIONS
-
-*/
-
-/* 1. Style for the empty "No notifications" message */
+/*DYNAMIC REMINDERS & NOTIFICATIONS*/
 .empty-state {
   padding: 30px 20px;
   text-align: center;
@@ -858,56 +796,41 @@ DYNAMIC REMINDERS & NOTIFICATIONS
   font-style: italic;
 }
 
-/* 2. Make the icon container "relative" for the dot */
 .user-icons-dark img#bell-icon-btn {
   position: relative;
 }
 
-/* 3. The "new notification" red dot */
 .notification-dot {
   position: absolute;
   top: -2px;
   right: -5px;
   width: 10px;
   height: 10px;
-  background-color: #D9534F; /* Red */
+  background-color: #D9534F;
   border-radius: 50%;
-  border: 2px solid #333; /* Matches the header */
+  border: 2px solid #333;
 }
 
-/*
-
-HOMEPAGE - "BUDDY" NAME BOX FIX
-
-*/
-
-/* 1. This styles the link around the camera image */
+/*HOMEPAGE*/
 .pet-profile-image-link {
-  display: inline-block; /* Fixes link spacing */
-  line-height: 0; /* Fixes link spacing */
-  text-decoration: none; /* Removes underline */
+  display: inline-block; 
+  line-height: 0; 
+  text-decoration: none; 
 }
 
-/* 2. This styles the new white "Buddy" box */
 .pet-profile-name-box {
   display: inline-block;
-  background-color: #fff; /* Filled white box */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Same shadow as reminder cards */
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
   border-radius: 10px;
   padding: 10px 25px;
-  margin-top: 20px; /* Space from the camera icon */
-  color: #333; /* Dark text */
+  margin-top: 20px; 
+  color: #333;
   font-size: 20px;
   font-weight: 600;
 }
 
-/*
-
-SCHEDULE PAGE (schedule.html)
-
-*/
-
-/* 1. This styles the "Appointments" title */
+/*SCHEDULE PAGE*/
 .page-title {
   font-size: 36px;
   font-weight: 700;
@@ -915,34 +838,30 @@ SCHEDULE PAGE (schedule.html)
   margin-bottom: 30px;
 }
 
-/* 2. This makes the layout wide and centered */
 .schedule-page .home-content-dark {
-  /* === THE HORIZONTAL FIX === */
-  max-width: 90vw; /* Use 90% of the screen width */
+  max-width: 90vw;
   margin: 40px auto; 
   padding: 0;
 }
 
-/* 3. The 2-Column Grid */
 .schedule-grid {
   display: grid;
-  grid-template-columns: 2.5fr 1fr; /* Make calendar much wider */
+  grid-template-columns: 2.5fr 1fr;
   gap: 30px;
   align-items: flex-start; 
 }
 
-/* 4. Left Column: Calendar */
 .calendar-container {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 25px;
-  min-height: 700px; /* Give it a tall height */
+  min-height: 700px;
 }
 .calendar-header {
   font-size: 24px;
   font-weight: 600;
-  text-align: left; /* Match Figma */
+  text-align: left;
   margin-bottom: 30px;
 }
 .calendar-body {
@@ -954,7 +873,7 @@ SCHEDULE PAGE (schedule.html)
   font-weight: 600;
   font-size: 16px;
   color: #777;
-  text-align: left; /* Match Figma */
+  text-align: left;
   margin-bottom: 10px;
 }
 .calendar-body .day {
@@ -964,8 +883,7 @@ SCHEDULE PAGE (schedule.html)
   height: 90px;
   padding: 8px;
   border-radius: 8px;
-  /* === THE CALENDAR DAY FIX === */
-  text-align: left; /* Align number to the left */
+  text-align: left; 
   vertical-align: top;
 }
 .calendar-body .day-today {
@@ -973,7 +891,6 @@ SCHEDULE PAGE (schedule.html)
   color: #fff;
 }
 
-/* 5. Right Column: Upcoming Events */
 .upcoming-container {
   background-color: #fff;
   border-radius: 12px;
@@ -981,10 +898,7 @@ SCHEDULE PAGE (schedule.html)
   padding: 25px;
   position: sticky;
   top: 40px;
-  min-height: 700px; /* Match calendar height */
-  
-  /* === THE BUTTON FIX (part 1) === */
-  /* Use flexbox to push button to bottom */
+  min-height: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -992,7 +906,7 @@ SCHEDULE PAGE (schedule.html)
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 15px;
   margin-bottom: 20px;
-  flex-shrink: 0; /* Stop header from shrinking */
+  flex-shrink: 0; 
 }
 .upcoming-header h3 {
   margin: 0;
@@ -1003,31 +917,28 @@ SCHEDULE PAGE (schedule.html)
   display: flex;
   flex-direction: column;
   gap: 15px;
-  flex-grow: 1; /* This makes the list fill the empty space */
+  flex-grow: 1; 
   overflow-y: auto;
 }
 .upcoming-list .empty-state {
   margin-top: 30px;
 }
 
-/* === THE BUTTON FIX (part 2) === */
 .btn-add-upcoming {
   background-color: #43A2A2;
   color: white;
   border: none;
-  border-radius: 20px; /* Rounded square */
+  border-radius: 20px;
   width: 70px;
   height: 70px;
-  font-size: 40px; /* Big plus icon */
+  font-size: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* Position at bottom */
-  margin-top: 20px; /* Space from list */
-  margin-left: auto; /* Push to the right */
-  flex-shrink: 0; /* Stop button from shrinking */
+  margin-top: 20px; 
+  margin-left: auto; 
+  flex-shrink: 0; 
   transition: all 0.2s ease;
 }
 .btn-add-upcoming:hover {
@@ -1036,7 +947,6 @@ SCHEDULE PAGE (schedule.html)
 }
 
 
-/* 6. Style for new event cards (Unchanged) */
 .event-card {
   display: flex;
   align-items: center;
@@ -1082,7 +992,7 @@ SCHEDULE PAGE (schedule.html)
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   padding: 30px;
   z-index: 101;
-  display: none; /* Hidden by default */
+  display: none;
 }
 .schedule-add-event-overlay h2 {
   text-align: center;
@@ -1102,14 +1012,11 @@ SCHEDULE PAGE (schedule.html)
   width: 30px;
   height: 30px;
 }
-/* Fix to show the dropdown arrow on the <select> tags */
+
 .schedule-add-event-overlay select {
   appearance: auto;
 }
 
-/* === NEW STYLES FOR THE FORM === */
-
-/* Style for the labels (big and bold) */
 .schedule-add-event-overlay .form-group-labeled {
   margin-bottom: 20px;
 }
@@ -1121,7 +1028,6 @@ SCHEDULE PAGE (schedule.html)
   display: block;
 }
 
-/* Style for ALL inputs and selects (white, rounded) */
 .schedule-add-event-overlay input[type="text"],
 .schedule-add-event-overlay select {
   width: 100%;
@@ -1130,33 +1036,30 @@ SCHEDULE PAGE (schedule.html)
   background-color: #fff;
   border-radius: 12px;
   font-size: 16px;
-  box-sizing: border-box; /* Prevents padding from breaking layout */
-  appearance: none; /* Removes default select arrow */
+  box-sizing: border-box; 
+  appearance: none; 
 }
 
-/* Style for the special icon container */
+
 .input-with-icon {
   position: relative;
 }
 
-/* Style for the icon INSIDE the container (on the LEFT) */
+
 .input-with-icon .input-icon {
   position: absolute;
-  left: 20px; /* Position on the left */
+  left: 20px; 
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
 }
 
-/* Style for the input field NEXT to the icon */
-/* Style for the input field NEXT to the icon */
 .input-with-icon input {
-  padding-left: 55px; /* Add padding to make space for the icon */
-  text-align: center; /* <-- ADD THIS LINE */
+  padding-left: 55px; 
+  text-align: center; 
 }
 
-/* Style for the 'Save' button (already correct) */
 .btn-save-event {
   width: 100px;
   height: 100px;
@@ -1171,35 +1074,27 @@ SCHEDULE PAGE (schedule.html)
   margin: 30px auto 0;
 }
 
-/*
-
-HEALTH PAGE (health.html)
-
-*/
-
-/* This centers the title and the entire page. */
+/*HEALTH PAGE*/
 .health-page .page-title {
   font-size: 36px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .health-page .home-content-dark {
-  max-width: 90vw; /* Use 90% of the screen width */
+  max-width: 90vw; 
   margin: 40px auto; 
   padding: 0;
 }
 
-/* 1. The 2-Column Grid */
 .health-grid {
   display: grid;
-  /* === CHANGED: Fixed left col, bigger gap === */
   grid-template-columns: 400px 1fr; 
   gap: 50px;
   align-items: flex-start;
 }
 
-/* 2. Left Column */
 .health-col-left h2 {
   font-size: 24px;
   margin-top: 0;
@@ -1225,25 +1120,22 @@ HEALTH PAGE (health.html)
   object-fit: cover;
 }
 
-/* 3. Left Column Info Cards */
 .health-info-card {
   background-color: #fff;
   border-radius: 12px;
-  /* === CHANGED: Bigger padding === */
   padding: 25px 30px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  /* === CHANGED: More space between === */
+  
   margin-bottom: 25px;
 }
 .health-info-card h4 {
   margin-top: 0;
   margin-bottom: 12px;
-  /* === CHANGED: Bigger font === */
   font-size: 20px;
   font-weight: 700;
 }
 .health-info-card p {
-  /* === CHANGED: Bigger font === */
+  
   font-size: 18px;
   color: #555;
   margin: 0;
@@ -1259,30 +1151,25 @@ HEALTH PAGE (health.html)
   height: 24px;
 }
 .health-info-card .info-card-content p {
-  font-size: 18px; /* Match other text */
+  font-size: 18px; 
 }
-/* Specific fix for weight card icon */
 .health-info-card .info-card-content img[alt="Scale"] {
   margin-right: auto;
   margin-left: 10px;
 }
 
-/* 4. Right Column Link Cards */
 .health-col-right {
   display: flex;
   flex-direction: column;
-  /* === CHANGED: More space between === */
   gap: 25px;
 }
 .health-link-card {
   background-color: #fff;
   border-radius: 12px;
-  /* === CHANGED: Bigger padding === */
   padding: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-decoration: none;
   color: #333;
-  /* === CHANGED: Bigger font === */
   font-size: 24px;
   font-weight: 600;
   display: flex;
@@ -1299,7 +1186,6 @@ HEALTH PAGE (health.html)
   color: #43A2A2;
 }
 
-/* 5. The new big "Add" button */
 .btn-add-health {
   position: fixed;
   bottom: 100px;
@@ -1307,7 +1193,6 @@ HEALTH PAGE (health.html)
   z-index: 50;
 }
 .btn-add-health img {
-  /* === CHANGED: Bigger button === */
   width: 120px; 
   height: 120px;
   display: block;
@@ -1318,77 +1203,6 @@ HEALTH PAGE (health.html)
   transform: scale(1.05);
 }
 
-/* 6. "Add New Health Record" Overlay (health.html) */
-.health-add-overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 450px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  padding: 30px;
-  z-index: 101;
-  display: none; /* Hidden by default */
-}
-.health-add-overlay h2 {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-.health-close-btn {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: #f5f5f5;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.health-option-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.health-option-card {
-  display: flex;
-  align-items: center;
-  background-color: #f9f9f9;
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-.health-option-card:hover {
-  background-color: #f0f0f0;
-  border-color: #ddd;
-  transform: scale(1.02);
-}
-.health-option-card img {
-  width: 24px;
-  height: 24px;
-  margin-right: 15px;
-}
-
-/*
-
-HEALTH PAGE (health.html) - OVERLAYS
-
-*/
-
-/* 6. "Add New Health Record" Menu (Already added, just a reminder) */
 .health-add-overlay {
   position: fixed;
   top: 50%;
@@ -1422,7 +1236,6 @@ HEALTH PAGE (health.html) - OVERLAYS
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5; /* Keep it on top */
 }
 .health-option-list {
   display: flex;
@@ -1453,19 +1266,84 @@ HEALTH PAGE (health.html) - OVERLAYS
   margin-right: 15px;
 }
 
-/* 7. NEW: "Health LOG" Overlays (for displaying history) */
+/*HEALTH PAGE */
+
+.health-add-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 30px;
+  z-index: 101;
+  display: none; 
+}
+.health-add-overlay h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.health-close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5; 
+}
+.health-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.health-option-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.health-option-card:hover {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  transform: scale(1.02);
+}
+.health-option-card img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
 .health-log-overlay {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px; /* Wider for logs */
+  width: 600px; 
   max-height: 80vh;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   padding: 30px;
-  z-index: 102; /* Higher than the menu */
+  z-index: 102; 
   display: none; 
   flex-direction: column;
 }
@@ -1480,7 +1358,7 @@ HEALTH PAGE (health.html) - OVERLAYS
   flex-direction: column;
   gap: 15px;
   overflow-y: auto;
-  padding-right: 10px; /* For scrollbar */
+  padding-right: 10px; 
 }
 .health-log-list .empty-state {
   text-align: center;
@@ -1489,7 +1367,7 @@ HEALTH PAGE (health.html) - OVERLAYS
   font-style: italic;
 }
 
-/* 8. NEW: "Health FORM" Overlays (for data input) */
+
 .health-form-overlay {
   position: fixed;
   top: 50%;
@@ -1500,7 +1378,7 @@ HEALTH PAGE (health.html) - OVERLAYS
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   padding: 30px;
-  z-index: 103; /* Highest level */
+  z-index: 103; 
   display: none; 
 }
 .health-form-overlay h2 {
@@ -1544,9 +1422,7 @@ HEALTH PAGE (health.html) - OVERLAYS
   margin-top: 10px;
 }
 
-/* 9. NEW: Log Card Styles (for inside the log overlays) */
 
-/* Base card for all logs */
 .log-card {
   background-color: #f9f9f9;
   border: 1px solid #eee;
@@ -1554,7 +1430,6 @@ HEALTH PAGE (health.html) - OVERLAYS
   padding: 20px;
 }
 
-/* Weight Card (Image 1) */
 .log-card-weight {
   display: flex;
   justify-content: space-between;
@@ -1570,7 +1445,6 @@ HEALTH PAGE (health.html) - OVERLAYS
   font-weight: 600;
 }
 
-/* Medication Card (Image 2) */
 .log-card-med h4,
 .log-card-vax h4,
 .log-card-vet h4 {
@@ -1602,24 +1476,12 @@ HEALTH PAGE (health.html) - OVERLAYS
   box-sizing: border-box;
 }
 
-/* ... rest of your code ... */
-/*
-
-GLOBAL STYLES & RESETS
-
-*/
-/*
-
-ABOUT US PAGE (about-us.html)
-
-*/
-
-/* 1. Apply Poppins font to this page */
+/*GLOBAL STYLES & RESETS*/
+/*ABOUT US PAGE*/
 .about-us-page {
   font-family: 'Poppins', sans-serif;
 }
 
-/* 2. Center the layout and title */
 .about-us-page .page-title {
   font-size: 36px;
   font-weight: 700;
@@ -1627,7 +1489,7 @@ ABOUT US PAGE (about-us.html)
   margin-bottom: 50px;
 }
 .about-us-page .home-content-dark {
-  max-width: 1000px; /* 1000px wide container */
+  max-width: 1000px; 
   margin: 40px auto; 
   padding: 0;
 }
@@ -1636,15 +1498,14 @@ ABOUT US PAGE (about-us.html)
   color: #fff;
 }
 
-/* 3. The Timeline Container */
+
 .vision-timeline {
   position: relative;
   width: 100%;
   margin: 50px 0;
-  overflow: auto; /* Clears the floats */
+  overflow: auto; 
 }
 
-/* 4. The central "branch" line */
 .timeline-center {
   position: absolute;
   left: 50%;
@@ -1655,16 +1516,15 @@ ABOUT US PAGE (about-us.html)
   background-color: #ddd;
 }
 
-/* 5. Base style for all boxes */
 .vision-box {
   position: relative; 
   background-color: #fff;
   border-radius: 12px;
   padding: 20px 25px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  width: 400px; /* This will now be EXACTLY 400px */
+  width: 400px; 
   margin-bottom: 50px; 
-  z-index: 2; /* <-- ADD THIS LINE */
+  z-index: 2; 
 }
 .vision-box h3 {
   display: flex;
@@ -1690,7 +1550,6 @@ ABOUT US PAGE (about-us.html)
   line-height: 1.6;
 }
 
-/* 6. Position Left vs. Right Boxes */
 .vision-box.box-left {
   float: left;
 }
@@ -1698,7 +1557,7 @@ ABOUT US PAGE (about-us.html)
   float: right;
 }
 
-/* 7. The connecting horizontal branch line */
+
 .vision-box::before {
   content: '';
   position: absolute;
@@ -1706,7 +1565,6 @@ ABOUT US PAGE (about-us.html)
   transform: translateY(-50%);
   height: 8px;
   background-color: #ddd;
-  /* This math is now correct: (1000 - 400 - 400 - 8) / 2 = 96 */
   width: 96px; 
   z-index: 1;
 }
@@ -1717,14 +1575,13 @@ ABOUT US PAGE (about-us.html)
   left: -96px; 
 }
 
-/* 8. The final box at the bottom */
 .vision-box.box-bottom {
   float: none;
   clear: both;
   margin: 50px auto 0; 
   width: 400px;
 }
-/* The vertical branch for the bottom box */
+
 .box-bottom::before {
   width: 8px;
   height: 50px; 
@@ -1732,29 +1589,20 @@ ABOUT US PAGE (about-us.html)
   top: -50px; 
   transform: translateX(-50%);
 }
-
-
-/*
-
-SUPPORT PAGE (support.html)
-
-*/
-
-/* 1. Apply Poppins font to this page */
+/*SUPPORT PAGE */
 .support-page {
   font-family: 'Poppins', sans-serif;
 }
 
-/* 2. Style the layout and title */
 .support-page .home-content-dark {
-  max-width: 900px; /* Centered, fixed-width layout */
+  max-width: 900px; 
   margin: 40px auto; 
   padding: 0 20px;
 }
 .support-page .page-title {
   font-size: 36px;
   font-weight: 700;
-  text-align: left; /* Aligned to the left */
+  text-align: left; 
   margin-bottom: 30px;
 }
 .support-page .main-footer-dark .footer-active {
@@ -1762,7 +1610,6 @@ SUPPORT PAGE (support.html)
   color: #fff;
 }
 
-/* 3. The main FAQ container box */
 .faq-container {
   background-color: #fff;
   border-radius: 12px;
@@ -1770,7 +1617,6 @@ SUPPORT PAGE (support.html)
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* 4. Individual Q&A items */
 .faq-item {
   margin-bottom: 25px;
   border-bottom: 1px solid #f0f0f0;
@@ -1794,50 +1640,38 @@ SUPPORT PAGE (support.html)
   line-height: 1.6;
 }
 
-/*
+/*CONTACT US PAGE */
 
-CONTACT US PAGE (contact-us.html) - FINAL FIX
-
-*/
-
-/* 1. Apply Poppins font */
 .contact-page {
   font-family: 'Poppins', sans-serif;
 }
 
-/* 2. Style the layout and title */
 .contact-page .home-content-dark {
-  /* === THIS IS THE FIX === */
-  /* Remove the default narrow width from the main container */
   max-width: none; 
   width: 100%;
-  padding: 0 20px; /* Keep the side padding */
+  padding: 0 20px;
 }
 .contact-page .page-title {
-  /* This centers the title, assuming it's OUTSIDE the box */
-  max-width: 800px; /* Match the form width */
-  margin: 0 auto 30px auto; /* Center the title block */
+  max-width: 800px; 
+  margin: 0 auto 30px auto; 
   font-size: 36px;
   font-weight: 700;
-  text-align: left; /* Aligns text left within its centered block */
+  text-align: left; 
 }
 .contact-page .main-footer-dark .footer-active {
   font-weight: 700;
   color: #fff;
 }
 
-/* 3. The main form container */
 .contact-form-container {
   background-color: #fff;
   border-radius: 12px;
   padding: 40px 50px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  /* === THIS IS THE FIX === */
-  max-width: 800px;  /* Set the width */
-  margin: 0 auto;    /* Center the form box itself */
+  max-width: 800px;  
+  margin: 0 auto;    
 }
 
-/* 4. Form inputs and labels */
 .contact-form-container .form-group-labeled {
   margin-bottom: 25px;
 }
@@ -1866,7 +1700,6 @@ CONTACT US PAGE (contact-us.html) - FINAL FIX
   resize: vertical;
 }
 
-/* 5. The "Done" button */
 .btn-done {
   width: 100%;
   padding: 20px;
@@ -1885,18 +1718,9 @@ CONTACT US PAGE (contact-us.html) - FINAL FIX
   background-color: #368383;
 }
 
-
-/*
-
-CONFIRMATION PAGE (contact-confirmation.html)
-
-*/
-
+/*CONFIRMATION PAGE */
 .confirmation-page {
-  /* === ADD YOUR BACKGROUND IMAGE HERE === 
-    Replace 'images/your-dog-background.jpg' with the path to your image.
-  */
-  background-image: url('images/your-dog-background.jpg');
+  background-image: url('../images/Pngs/background.png');
   background-size: cover;
   background-position: center;
   font-family: 'Poppins', sans-serif;
@@ -1955,34 +1779,26 @@ CONFIRMATION PAGE (contact-confirmation.html)
   background-color: #368383;
 }
 
-/*
-
-USER SETTINGS PAGE (usersettings.html)
-
-*/
-
-/* 1. Apply Poppins font and light background */
+/*USER SETTINGS PAGE */
 .user-settings-page {
   font-family: 'Poppins', sans-serif;
 }
 .user-settings-page .home-content-dark {
-  /* Override the default dark background */
   background-color: #f7f7f7;
-  max-width: 1000px; /* Set a max width */
+  max-width: 1000px; 
   margin: 40px auto;
   padding: 50px;
   border-radius: 20px;
 }
 
-/* 2. Main layout grid */
 .user-settings-grid {
   display: grid;
-  grid-template-columns: 300px 1fr; /* 300px for pic, rest for form */
+  grid-template-columns: 300px 1fr; 
   align-items: flex-start;
   gap: 60px;
 }
 
-/* 3. Left Column: Profile Picture */
+
 .profile-pic-container {
   display: flex;
   justify-content: center;
@@ -2003,18 +1819,17 @@ USER SETTINGS PAGE (usersettings.html)
 .profile-pic-circle img {
   width: 60px;
   height: 60px;
-  filter: invert(1); /* Makes black icon white */
+  filter: invert(1); 
   opacity: 0.7;
 }
 
-/* 4. Right Column: Form */
 .user-settings-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .setting-input-box {
-  position: relative; /* For the edit icon */
+  position: relative;
   background-color: #fff;
   border-radius: 12px;
   padding: 20px 25px;
@@ -2030,7 +1845,7 @@ USER SETTINGS PAGE (usersettings.html)
 .setting-input-box input[type="text"],
 .setting-input-box textarea {
   width: 100%;
-  padding: 10px 0; /* Simpler padding */
+  padding: 10px 0;
   font-size: 16px; 
   font-family: 'Poppins', sans-serif;
   border: none;
@@ -2042,7 +1857,6 @@ USER SETTINGS PAGE (usersettings.html)
   resize: vertical;
 }
 
-/* 5. Edit (Pencil) Icon */
 .edit-icon {
   position: absolute;
   top: 25px;
@@ -2052,11 +1866,10 @@ USER SETTINGS PAGE (usersettings.html)
   cursor: pointer;
 }
 .bio-edit-icon {
-  top: auto; /* Moves it to the bottom */
+  top: auto;
   bottom: 25px;
 }
 
-/* 6. "Done" button */
 .user-settings-form .btn-done {
   width: 100%;
   padding: 18px;
@@ -2075,35 +1888,29 @@ USER SETTINGS PAGE (usersettings.html)
   background-color: #368383;
 }
 
-/*
+/*PET PROFILES PAGE*/
 
-PET PROFILES PAGE (pet-profiles.html)
 
-*/
-
-/* 1. Apply Poppins font and light background */
 .pet-profiles-page {
   font-family: 'Poppins', sans-serif;
 }
 .pet-profiles-page .home-content-dark {
-  /* Override the default dark background */
-  background-color: #fff; /* White box */
-  max-width: 1000px; /* Set a max width */
+  background-color: #fff; 
+  max-width: 1000px; 
   margin: 40px auto;
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.07);
 }
 
-/* 2. Main layout grid */
 .pet-profile-grid {
   display: grid;
-  grid-template-columns: 300px 1fr; /* 300px for pic, rest for form */
+  grid-template-columns: 300px 1fr; 
   align-items: flex-start;
   gap: 50px;
 }
 
-/* 3. Title styles */
+
 .pet-profile-title {
   font-size: 24px;
   font-weight: 700;
@@ -2111,7 +1918,7 @@ PET PROFILES PAGE (pet-profiles.html)
   margin: 0 0 30px 0;
 }
 
-/* 4. Left Column: Pet Photo */
+
 .pet-photo-container {
   display: flex;
   flex-direction: column;
@@ -2134,18 +1941,17 @@ PET PROFILES PAGE (pet-profiles.html)
   border-color: #aaa;
 }
 .pet-photo-circle img {
-  /* === THIS IS THE FIX === */
-  width: 245px;  /* Was 60px */
-  height: 245px; /* Was 60px */
+  width: 245px;  
+  height: 245px;
   opacity: 0.5;
 }
 
-/* 5. Right Column: Pet Info Form */
+
 .pet-info-form {
   width: 100%;
 }
 .pet-info-box {
-  position: relative; /* For the edit icon */
+  position: relative;
   margin-bottom: 25px;
 }
 .pet-info-box label {
@@ -2160,7 +1966,7 @@ PET PROFILES PAGE (pet-profiles.html)
   font-size: 18px; 
   font-family: 'Poppins', sans-serif;
   color: #000;
-  padding: 10px 40px 10px 0; /* Space for icon */
+  padding: 10px 40px 10px 0; 
   border: none;
   border-bottom: 2px solid #eee;
   outline: none;
@@ -2171,7 +1977,6 @@ PET PROFILES PAGE (pet-profiles.html)
   border-bottom-color: #43A2A2;
 }
 
-/* 6. Edit (Pencil) Icon */
 .pet-info-box .edit-icon {
   position: absolute;
   bottom: 10px;
@@ -2184,27 +1989,19 @@ PET PROFILES PAGE (pet-profiles.html)
   color: #43A2A2;
 }
 
-/*
-
-HEALTH SETTINGS PAGE (health-settings.html)
-
-*/
-
-/* 1. Apply Poppins font and light background */
+/*HEALTH SETTINGS PAGE*/
 .health-settings-page {
   font-family: 'Poppins', sans-serif;
 }
 .health-settings-page .home-content-dark {
-  /* Override the default dark background */
-  background-color: #fff; /* White box */
-  max-width: 900px; /* Set a max width */
+  background-color: #fff; 
+  max-width: 900px;
   margin: 40px auto;
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.07);
 }
 
-/* 2. Main content container */
 .settings-container {
   max-width: 700px;
 }
@@ -2216,7 +2013,6 @@ HEALTH SETTINGS PAGE (health-settings.html)
   text-align: left;
 }
 
-/* 3. Individual setting row */
 .setting-row {
   display: flex;
   justify-content: space-between;
@@ -2239,9 +2035,8 @@ HEALTH SETTINGS PAGE (health-settings.html)
   margin: 0;
 }
 
-/* 4. The toggle switch image */
 .toggle-switch {
-  width: 60px; /* Set a fixed width */
+  width: 60px;
   height: auto;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -2250,27 +2045,19 @@ HEALTH SETTINGS PAGE (health-settings.html)
   opacity: 0.8;
 }
 
-/*
-
-PRIVACY SETTINGS PAGE (privacy-settings.html)
-
-*/
-
-/* 1. Apply Poppins font and light background */
+/*PRIVACY SETTINGS PAGE*/
 .privacy-settings-page {
   font-family: 'Poppins', sans-serif;
 }
 .privacy-settings-page .home-content-dark {
-  /* Override the default dark background */
-  background-color: #fff; /* White box */
-  max-width: 900px; /* Set a max width */
+  background-color: #fff;
+  max-width: 900px;
   margin: 40px auto;
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.07);
 }
 
-/* 2. Main content container */
 .settings-container {
   max-width: 700px;
 }
@@ -2282,7 +2069,6 @@ PRIVACY SETTINGS PAGE (privacy-settings.html)
   text-align: left;
 }
 
-/* 3. Individual setting row */
 .setting-row {
   display: flex;
   justify-content: space-between;
@@ -2305,9 +2091,8 @@ PRIVACY SETTINGS PAGE (privacy-settings.html)
   margin: 0;
 }
 
-/* 4. The toggle switch image */
 .toggle-switch {
-  width: 60px; /* Set a fixed width */
+  width: 60px;
   height: auto;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -2316,30 +2101,23 @@ PRIVACY SETTINGS PAGE (privacy-settings.html)
   opacity: 0.8;
 }
 
-/*
-
-ACCESSIBILITY PAGE (accessibility.html)
-
-*/
-
-/* 1. Apply Poppins font and light background */
+/*ACCESSIBILITY PAGE*/
 .accessibility-page {
   font-family: 'Poppins', sans-serif;
 }
 .accessibility-page .home-content-dark {
-  /* Override the default dark background */
-  background-color: #fff; /* White box */
-  max-width: 900px; /* Set a max width */
+  background-color: #fff; 
+  max-width: 900px;
   margin: 40px auto;
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.07);
 }
 
-/* 2. Main content container */
 .settings-container {
   max-width: 700px;
 }
+
 .accessibility-page .page-title {
   font-size: 36px;
   font-weight: 700;
@@ -2348,7 +2126,6 @@ ACCESSIBILITY PAGE (accessibility.html)
   text-align: left;
 }
 
-/* 3. Individual setting row */
 .setting-row {
   display: flex;
   justify-content: space-between;
@@ -2371,9 +2148,9 @@ ACCESSIBILITY PAGE (accessibility.html)
   margin: 0;
 }
 
-/* 4. The toggle switch image */
+
 .toggle-switch {
-  width: 60px; /* Set a fixed width */
+  width: 60px; 
   height: auto;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -2382,27 +2159,19 @@ ACCESSIBILITY PAGE (accessibility.html)
   opacity: 0.8;
 }
 
-/*
-
-NOTIFICATION SETTINGS PAGE (notification-settings.html)
-
-*/
-
-/* 1. Apply Poppins font and light background */
+/*NOTIFICATION SETTINGS PAGE*/
 .notification-settings-page {
   font-family: 'Poppins', sans-serif;
 }
 .notification-settings-page .home-content-dark {
-  /* Override the default dark background */
-  background-color: #fff; /* White box */
-  max-width: 900px; /* Set a max width */
+  background-color: #fff; 
+  max-width: 900px;
   margin: 40px auto;
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.07);
 }
 
-/* 2. Main content container */
 .settings-container {
   max-width: 700px;
 }
@@ -2414,7 +2183,6 @@ NOTIFICATION SETTINGS PAGE (notification-settings.html)
   text-align: left;
 }
 
-/* 3. Individual setting row */
 .setting-row {
   display: flex;
   justify-content: space-between;
@@ -2437,9 +2205,8 @@ NOTIFICATION SETTINGS PAGE (notification-settings.html)
   margin: 0;
 }
 
-/* 4. The toggle switch image */
 .toggle-switch {
-  width: 60px; /* Set a fixed width */
+  width: 60px;
   height: auto;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -2448,18 +2215,11 @@ NOTIFICATION SETTINGS PAGE (notification-settings.html)
   opacity: 0.8;
 }
 
-/*
-
-PET SELECT PAGE (pet-select.html)
-
-*/
-
-/* 1. Apply Poppins font and light background */
+/*PET SELECT PAGE*/
 .pet-select-page {
   font-family: 'Poppins', sans-serif;
 }
 .pet-select-page .home-content-dark {
-  /* White box */
   background-color: #fff; 
   max-width: 900px; 
   margin: 40px auto;
@@ -2468,7 +2228,6 @@ PET SELECT PAGE (pet-select.html)
   box-shadow: 0 5px 25px rgba(0,0,0,0.07);
 }
 
-/* 2. Page Title */
 .pet-select-page .page-title {
   font-size: 36px;
   font-weight: 700;
@@ -2477,14 +2236,12 @@ PET SELECT PAGE (pet-select.html)
   text-align: left;
 }
 
-/* 3. Pet Grid */
 .pet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
 }
 
-/* 4. Pet Card */
 .pet-card,
 .pet-add-card {
   border: 2px solid #f0f0f0;
@@ -2522,7 +2279,6 @@ PET SELECT PAGE (pet-select.html)
   object-fit: cover;
 }
 
-/* 5. Add Pet Card */
 .pet-add-card {
   display: flex;
   flex-direction: column;
@@ -2554,18 +2310,8 @@ PET SELECT PAGE (pet-select.html)
 }
 
 
-/*
+/*0MOBILE RESPONSIVE STYLES*/
 
-
-MOBILE RESPONSIVE STYLES
-(Add this at the VERY BOTTOM of style.css)
-
-
-*/
-
-/* This rule applies to all screens 768px wide or smaller.
-  This will cover tablets and all mobile phones.
-*/
 @media (max-width: 768px) {
 
   /*GLOBAL FIXES (All Pages)*/
@@ -2597,7 +2343,7 @@ MOBILE RESPONSIVE STYLES
     gap: 15px; 
   }
 
-  /* ABOUT US PAGE (The Timeline) */
+  /* ABOUT US PAGE */
 
   .vision-box,
   .vision-box.box-left,
@@ -2614,7 +2360,7 @@ MOBILE RESPONSIVE STYLES
     display: none;
   }
 
-  /*USER SETTINGS & PET PROFILES (The Grids)*/
+  /*USER SETTINGS & PET PROFILES*/
 
   .user-settings-grid,
   .pet-profile-grid {
@@ -2622,7 +2368,7 @@ MOBILE RESPONSIVE STYLES
     gap: 30px;
   }
   
-  /* 2. Center the profile photo */
+  
   .profile-pic-container,
   .pet-photo-container {
     padding-top: 0;
@@ -2634,7 +2380,7 @@ MOBILE RESPONSIVE STYLES
     height: 200px;
   }
   .pet-photo-circle img {
-    width: 100px; /* Down from 120px */
+    width: 100px;
     height: 100px;
   }
   .pet-info-box label {
@@ -2644,7 +2390,7 @@ MOBILE RESPONSIVE STYLES
     font-size: 16px;
   }
 
-  /* SETTINGS PAGES (The Toggles) */
+  /* SETTINGS PAGES */
 
   .setting-text h3 {
     font-size: 18px;

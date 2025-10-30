@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear all saved data (reminders, health, etc.)
       localStorage.clear(); 
       
-      // Send user back to the login page
+    
       window.location.href = 'login.html';
     });
   }
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     }
-    loadEvents(); // Load on page load
+    loadEvents(); 
 
     addEventBtn.addEventListener('click', () => showPanel(addEventPanel));
     closeEventPanelBtn.addEventListener('click', hideAllPanels);
@@ -504,15 +504,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   allToggles.forEach(toggle => {
     toggle.addEventListener('click', () => {
-      // Get the current src and the alternate src
       const currentSrc = toggle.getAttribute('src');
       const altSrc = toggle.getAttribute('data-alt-src');
-      
-      // Swap them
       toggle.setAttribute('src', altSrc);
       toggle.setAttribute('data-alt-src', currentSrc);
       
-      // Update the alt text for accessibility
       if (altSrc.includes('switch-tab-2.png')) {
         toggle.setAttribute('alt', 'Toggle on');
       } else {
@@ -521,4 +517,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-}); // --- END OF MASTER DOMContentLoaded ---
+}); 
