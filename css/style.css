@@ -16,6 +16,8 @@ body {
   height: 100%;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif; 
+  background-color: #F0F2F5;
+  color: #1c1e21;
 }
 
 .home-content-dark {
@@ -313,7 +315,7 @@ body {
   gap: 15px;
   margin-top: 30px;
 }
-.logout-buttons button {
+.logout-buttons {
   flex: 1; 
   padding: 12px;
   font-size: 16px;

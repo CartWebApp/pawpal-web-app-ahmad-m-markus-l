@@ -93,8 +93,6 @@
 }
 
 .btn-add-upcoming {
-  background-color: #43A2A2;
-  color: white;
   border: none;
   border-radius: 20px;
   width: 70px;
@@ -104,17 +102,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; 
   margin-left: auto; 
   flex-shrink: 0; 
   transition: all 0.2s ease;
+}
+.btn-add-upcoming img {
+  border: none;
+  border-radius: 20px;
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; 
+  flex-shrink: 0; 
+  transition: all 0.2s ease; 
 }
 .btn-add-upcoming:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(67, 162, 162, 0.4);
 }
-
-
 .event-card {
   display: flex;
   align-items: center;
@@ -147,8 +156,6 @@
   color: #555;
 }
 
-
-/* 5. The New "Add Event" Overlay */
 .schedule-add-event-overlay {
   position: fixed;
   top: 50%;

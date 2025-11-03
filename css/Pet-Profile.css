@@ -7,7 +7,6 @@
   align-items: flex-start;
 }
 .pet-profile-col-left {
-  position: sticky; 
   top: 40px;
 }
 .pet-profile-col-right {
@@ -158,7 +157,7 @@
   background-color: #333;
   padding: 30px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 300px;
 }
 .main-footer-dark-1 a {
   color: #43A2A2;

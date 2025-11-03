@@ -1,8 +1,4 @@
-/*
-========================================
-SPLASH PAGE (index.html) LOGIC
-========================================
-*/
+/* SPLASH PAGE */
 // This runs immediately
 const splashWelcome = document.getElementById('splash-welcome');
 if (splashWelcome) {
@@ -11,11 +7,7 @@ if (splashWelcome) {
   }, 3000);
 }
 
-/*
-========================================
-UNIVERSAL APP LOGIC (Runs on all pages)
-========================================
-*/
+/* UNIVERSAL APP LOGIC */
 
 // We only have ONE DOMContentLoaded listener for the entire site
 document.addEventListener('DOMContentLoaded', () => {
