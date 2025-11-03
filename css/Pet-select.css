@@ -1,0 +1,89 @@
+/*PET SELECT PAGE*/
+.pet-select-page {
+  font-family: 'Poppins', sans-serif;
+}
+.pet-select-page .home-content-dark {
+  background-color: #fff; 
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+.pet-select-page .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+.pet-card,
+.pet-add-card {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.pet-card:hover,
+.pet-add-card:hover {
+  border-color: #43A2A2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+.pet-card h3,
+.pet-add-card h3 {
+  margin: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.pet-card-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.pet-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pet-add-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+}
+.pet-add-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pet-add-icon i {
+  font-size: 60px;
+  color: #ccc;
+}
+.pet-add-card:hover .pet-add-icon i {
+  color: #43A2A2;
+}
+.pet-add-card h3 {
+  color: #777;
+}
+.pet-add-card:hover h3 {
+  color: #43A2A2;
+}
