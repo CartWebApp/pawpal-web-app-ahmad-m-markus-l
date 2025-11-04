@@ -5,7 +5,6 @@
   <title>Home - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home-page.css">
 </head>
 
 <body class="home-page-dark">
@@ -17,13 +16,13 @@
     </section>
 
     <nav class="main-nav-dark" aria-label="Main Navigation">
-      <a href="home.html">
+      <a href="home.html" class="nav-active">
         <img src="images/Icons/home.svg" alt="Home">
       </a>
       <a href="schedule.html">
         <img src="images/Icons/calender-icon.svg" alt="Schedule">
       </a>
-      <a href="health.html" class="nav-active">
+      <a href="health.html">
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
@@ -41,7 +40,7 @@
         <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture" id="pet-profile-btn">
       </a>
 
-      <section class="pet-profile-name-box">
+      <section class="pet-profile-name-box" id="home-pet-name">
         Buddy
       </section>
     </section>
@@ -78,7 +77,7 @@
   <aside class="notifications-overlay-panel" id="notifications-panel">
     <header class="notifications-header">
       <h2>Notifications</h2>
-      <a href="#">Mark all as read</a>
+      <a href="#" id="mark-all-read-btn">Mark all as read</a>
     </header>
     <section class="notification-list-container" id="notification-list">
       <p class="empty-state">No notifications yet.</p>
@@ -116,10 +115,10 @@
   <section class="logout-overlay-panel" id="logout-panel">
     <h2>Log Out?</h2>
     <p>Are you sure you want to log out?</p>
-    <footer class="logout-buttons">
+    <div class="logout-buttons">
       <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
       <button class="btn-logout-confirm">Log out</button>
-    </footer>
+    </div>
   </section>
 
   <script src="javascript/script.js"></script>

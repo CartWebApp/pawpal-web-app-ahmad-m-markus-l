@@ -6,11 +6,9 @@
   <title>Pet Profiles - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/All-Settings-Pages.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="main-header-dark">
     <section class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
@@ -23,7 +21,7 @@
       <a href="schedule.html">
         <img src="images/Icons/calender-icon.svg" alt="Schedule">
       </a>
-      <a href="health.html" class="nav-active">
+      <a href="health.html">
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
@@ -45,50 +43,66 @@
         </figure>
       </section>
 
-      <section class="pet-info-form">
-        <h2 class="pet-profile-title">Pet information:</h2>
-        
-        <section class="pet-info-box">
-          <label for="pet-name">Pet Name</label>
-          <input type="text" id="pet-name" placeholder="Enter pet name">
-          <i class='bx bx-pencil edit-icon'></i>
-        </section>
+      <form class="pet-info-form" id="pet-profiles-form">
+  <h2 class="pet-profile-title">Pet information:</h2>
+  
+  <section class="pet-info-box">
+    <label for="edit-pet-name">Pet Name</label>
+    <input type="text" id="edit-pet-name" placeholder="Enter pet name">
+    <i class='bx bx-pencil edit-icon'></i>
+  </section>
 
-        <section class="pet-info-box">
-          <label for="pet-type">Type of Pet</label>
-          <input type="text" id="pet-type" placeholder="e.g., Dog, Cat">
-          <i class='bx bx-pencil edit-icon'></i>
-        </section>
+  <section class="pet-info-box">
+    <label for="edit-pet-type">Type of Pet</label>
+    <input type="text" id="edit-pet-type" placeholder="e.g., Dog, Cat">
+    <i class='bx bx-pencil edit-icon'></i>
+  </section>
 
-        <section class="pet-info-box">
-          <label for="pet-breed">Breed</label>
-          <input type="text" id="pet-breed" placeholder="Enter breed">
-          <i class='bx bx-pencil edit-icon'></i>
-        </section>
+  <section class="pet-info-box">
+    <label for="edit-pet-breed">Breed</label>
+    <input type="text" id="edit-pet-breed" placeholder="Enter breed">
+    <i class='bx bx-pencil edit-icon'></i>
+  </section>
 
-        <section class="pet-info-box">
-          <label for="pet-birthdate">Birthdate or Adoption Date</label>
-          <input type="text" id="pet-birthdate" placeholder="MM/DD/YYYY">
-          <i class='bx bx-calendar-alt edit-icon'></i>
-        </section>
+  <section class="pet-info-box">
+    <label for="edit-pet-dob">Birthdate</label>
+    <input type="date" id="edit-pet-dob">
+    <i class='bx bx-calendar-alt edit-icon'></i>
+  </section>
 
-        <section class="pet-info-box">
-          <label for="pet-spay-neuter">Sex & Spay/Neuter Status</label>
-          <input type="text" id="pet-spay-neuter" placeholder="e.g., Male, Neutered">
-          <i class='bx bx-pencil edit-icon'></i>
-        </section>
-
-        <section class="pet-info-box">
-          <label for="pet-vet">Veterinarian Information (Optional)</label>
-          <input type="text" id="pet-vet" placeholder="e.g., City Vet, Dr. Smith">
-          <i class='bx bx-pencil edit-icon'></i>
-        </section>
-        
-      </section>
+  <section class="pet-info-box">
+    <label for="edit-pet-gender">Sex</label>
+    <select id="edit-pet-gender">
+      <option value="">-- Select --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </section>
+  
+  <section class="pet-info-box" id="edit-neuter-group" style="display: none;">
+    <label for="edit-pet-neuter">Neutered</label>
+    <select id="edit-pet-neuter">
+      <option value="">-- Select --</option>
+      <option value="Neutered">Neutered</option>
+      <option value="Not Neutered">Not Neutered</option>
+    </select>
+  </section>
+  
+  <section class="pet-info-box" id="edit-spay-group" style="display: none;">
+    <label for="edit-pet-spay">Spayed</label>
+    <select id="edit-pet-spay">
+      <option value="">-- Select --</option>
+      <option value="Spayed">Spayed</option>
+      <option value="Not Spayed">Not Spayed</option>
+    </select>
+  </section>
+  <button type="submit" class="btn-primary" id="save-edit-pet-btn" style="margin-top: 20px;">Save Changes</button>
+  
+</form>
     </section>
   </main>
 
-  <footer class="main-footer-dark">
+  <footer class="main-footer-dark-3">
     <a href="about-us.html">About us</a>
     <a href="support.html">Support</a>
     <a href="contact-us.html">Contact us</a>
@@ -109,7 +123,7 @@
   <aside class="notifications-overlay-panel" id="notifications-panel">
     <header class="notifications-header">
       <h2>Notifications</h2>
-      <a href="#">Mark all as read</a>
+      <a href="#" id="mark-all-read-btn">Mark all as read</a>
     </header>
     <section class="notification-list-container" id="notification-list">
       <p class="empty-state">No notifications yet.</p>

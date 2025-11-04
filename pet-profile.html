@@ -6,9 +6,8 @@
   <title>Pet Profile - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/Pet-Profile.css">
 </head>
-<body> 
+<body class="profile-page home-page-dark"> 
   
 <!-- HEADER -->
   <header class="main-header-dark">
@@ -23,7 +22,7 @@
       <a href="schedule.html">
         <img src="images/Icons/calender-icon.svg" alt="Schedule">
       </a>
-      <a href="health.html" class="nav-active">
+      <a href="health.html">
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
@@ -41,7 +40,7 @@
       <section class="pet-profile-col-left">
         <section class="pet-profile-main large">
           <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture">
-          <h2>Pet Name</h2>
+          <h2 id="profile-pet-name">Pet Name</h2>
         </section>
 
         <section class="profile-section">
@@ -49,17 +48,17 @@
           <section class="profile-card">
             <section class="info-row">
               <span>Weight:</span>
-              <strong>120lbs</strong>
+              <strong id="profile-weight-text">120lbs</strong>
               <img src="images/Icons/scale.svg" alt="Weight" class="info-icon">
             </section>
             <section class="info-row">
               <span>Gender:</span>
-              <strong>Male</strong>
+              <strong id="profile-gender-text">Male</strong>
               <img src="images/Icons/Male.svg" alt="Male" class="info-icon">
             </section>
             <section class="info-row">
               <span>Neuter Status:</span>
-              <strong>Yes</strong>
+              <strong id="profile-neuter-text">Yes</strong>
               <img src="images/Icons/checkmark-icon.svg" alt="Yes" class="info-icon">
             </section>
           </section>
@@ -70,9 +69,8 @@
         <section class="profile-section">
           <h3>Upcoming Events:</h3>
           <section class="profile-card">
-            <section class="event-card-item">
-              <img src="images/Icons/pill.svg" alt="Pill">
-              <span>Pill Medication - 6:30 AM</span>
+            <section class="profile-event-list" id="profile-event-list">
+              <p class="empty-state">No upcoming events.</p>
             </section>
           </section>
         </section>
@@ -83,13 +81,13 @@
             <section class="stat-item">
               <span>Sleep Average</span>
               <section class="stat-circle" id="sleep-circle">
-                <strong>97%</strong>
+                <strong id="sleep-percent">97%</strong>
               </section>
             </section>
             <section class="stat-item">
               <span>Energy</span>
               <section class="stat-circle" id="energy-circle">
-                <strong>50%</strong>
+                <strong id="energy-percent">50%</strong>
               </section>
             </section>
           </section>
@@ -133,7 +131,7 @@
   <aside class="notifications-overlay-panel" id="notifications-panel">
     <header class="notifications-header">
       <h2>Notifications</h2>
-      <a href="#">Mark all as read</a>
+      <a href="#" id="mark-all-read-btn">Mark all as read</a>
     </header>
     <section class="notification-list-container" id="notification-list">
       <p class="empty-state">No notifications yet.</p>

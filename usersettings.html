@@ -6,8 +6,6 @@
   <title>User Settings - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/All-Settings-Pages.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
@@ -42,35 +40,35 @@
         </div>
       </section>
 
-      <form class="user-settings-form">
+      <form class="user-settings-form" id="user-settings-form">
+        
         <section class="setting-input-box">
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter your username">
+          <label for="user-first-name">First Name</label>
+          <input type="text" id="user-first-name" placeholder="Enter your first name">
           <i class='bx bx-pencil edit-icon'></i>
         </section>
 
         <section class="setting-input-box">
-          <label for="gender">Gender</label>
-          <input type="text" id="gender" placeholder="Enter your gender">
+          <label for="user-last-name">Last Name</label>
+          <input type="text" id="user-last-name" placeholder="Enter your last name">
           <i class='bx bx-pencil edit-icon'></i>
         </section>
 
         <section class="setting-input-box">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Enter your name">
+          <label for="user-email">E-mail</label>
+          <input type="email" id="user-email" placeholder="Enter your e-mail">
           <i class='bx bx-pencil edit-icon'></i>
         </section>
 
         <section class="setting-input-box">
-          <label for="bio">My bio:</label>
-          <textarea id="bio" placeholder="Tell us about you and your pets..."></textarea>
-          <i class='bx bx-pencil edit-icon bio-edit-icon'></i>
+          <label for="user-password">New Password</label>
+          <input type="password" id="user-password" placeholder="Enter new password (optional)">
+          <i class='bx bx-pencil edit-icon'></i>
         </section>
 
-        <button type="submit" class="btn-done">Done</button>
+        <button type="submit" class="btn-done" id="save-user-settings-btn">Save Changes</button>
       </form>
-
-    </section>
+      </section>
   </main>
 
   <footer class="main-footer-dark">
@@ -94,7 +92,7 @@
   <aside class="notifications-overlay-panel" id="notifications-panel">
     <header class="notifications-header">
       <h2>Notifications</h2>
-      <a href="#">Mark all as read</a>
+      <a href="#" id="mark-all-read-btn">Mark all as read</a>
     </header>
     <section class="notification-list-container" id="notification-list">
       <p class="empty-state">No notifications yet.</p>

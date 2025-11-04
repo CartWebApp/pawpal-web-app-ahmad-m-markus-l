@@ -6,7 +6,6 @@
   <title>Sign Up - Pawpal</title>
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login-signup-pages.css">
 </head>
 <body>
 
@@ -19,26 +18,26 @@
       <form id="signup-form">
         
         <section class="form-group">
-          <input type="text" name="first-name" placeholder="First name" required>
+          <input type="text" id="signup-first-name" name="first-name" placeholder="First name" required>
         </section>
 
         <section class="form-group">
-          <input type="text" name="last-name" placeholder="Last name" required>
+          <input type="text" id="signup-last-name" name="last-name" placeholder="Last name" required>
         </section>
         
         <section class="form-group">
-          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="email" id="signup-email" name="email" placeholder="E-mail" required>
         </section>
 
         <section class="form-group">
-          <input type="password" name="password" placeholder="Password" required>
+          <input type="password" id="signup-password" name="password" placeholder="Password" required>
         </section>
         
         <section class="form-group">
-          <input type="password" name="password-confirm" placeholder="Re-type password" required>
+          <input type="password" id="signup-password-confirm" name="password-confirm" placeholder="Re-type password" required>
         </section>
 
-        <a href="verify-email.html" class="btn-primary" id="signup-btn">Sign-up</a>
+        <button type="submit" class="btn-primary" id="signup-btn">Sign-up</button>
       </form>
 
     </main>
