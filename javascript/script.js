@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentWeightText = document.getElementById('current-weight-text');
   const currentAllergyText = document.getElementById('current-allergy-text');
   const currentMedicationText = document.getElementById('current-medication-text');
+  const addHealthPanel = document.getElementById('health-add-panel'); 
   const allHealthPanels = document.querySelectorAll('.health-log-overlay, .health-form-overlay, #health-add-panel');
   const allHealthCloseButtons = document.querySelectorAll('.health-close-btn');
   const allHealthForms = [
@@ -97,6 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const addVetVisitBtn = document.getElementById('add-vet-visit-btn');
   const addVaccinationBtn = document.getElementById('add-vaccination-btn');
   const addAllergyBtn = document.getElementById('add-allergy-btn');
+  
+  // === THIS IS THE FIX FOR THE ERRORS IN YOUR SCREENSHOT ===
+  const weightHistoryPanel = document.getElementById('weight-history-panel');
+  const medicationLogPanel = document.getElementById('medication-log-panel');
+  const vaccinationLogPanel = document.getElementById('vaccination-log-panel');
+  const vetVisitsPanel = document.getElementById('vet-visits-panel');
+  const logWeightPanel = document.getElementById('log-weight-panel');
+  const logMedicationPanel = document.getElementById('log-medication-panel');
+  const logVaccinationPanel = document.getElementById('log-vaccination-panel');
+  const logVetVisitPanel = document.getElementById('log-vet-visit-panel');
+  const logAllergyPanel = document.getElementById('log-allergy-panel');
+  // === END OF FIX ===
 
   // -- Contact Page Elements --
   const contactForm = document.getElementById('contact-form');
@@ -115,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const editSpayGroup = document.getElementById('edit-spay-group');
 
   // -- User "Create" & "Edit" Flow --
-  const signupForm = document.getElementById('signup-form'); // <-- GET THE FORM
+  const signupForm = document.getElementById('signup-form');
   const saveUserSettingsBtn = document.getElementById('save-user-settings-btn');
 
 
@@ -125,7 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!panel) return;
     pageOverlay.classList.add('overlay-visible');
     
-    if (panel && (panel.classList.contains('health-log-overlay') || panel.classList.contains('health-form-overlay'))) {
+    // This is the other fix, which is already in your file
+    if (panel && (panel.classList.contains('health-log-overlay') || panel.classList.contains('health-form-overlay') || panel.classList.contains('health-add-overlay'))) {
       panel.style.display = 'flex';
     } else if (panel) {
       panel.style.display = 'block';
@@ -847,8 +861,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 9. NEW: USER "CREATE" AND "EDIT" LOGIC ---
   
   // -- LOGIC FOR: signup.html --
-  if (signupForm) { // <-- CORRECTED: Listen to the form
-    signupForm.addEventListener('submit', (e) => { // <-- CORRECTED: Listen for 'submit'
+  if (signupForm) { 
+    signupForm.addEventListener('submit', (e) => { 
       e.preventDefault(); // Stop the form from refreshing
       
       // 1. Get all values
@@ -859,7 +873,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const passwordConfirm = document.getElementById('signup-password-confirm').value;
       
       // 2. Validation
-      // The 'required' attribute in HTML will handle empty fields
+      // HTML 'required' handles empty fields, so we only check passwords
       
       if (password !== passwordConfirm) {
         alert('Passwords do not match. Please re-type your password.');

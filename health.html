@@ -10,7 +10,6 @@
 
 <body class="health-page home-page-dark">
 
-  <!-- HEADER -->
   <header class="main-header-dark">
     <section class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
@@ -35,13 +34,11 @@
     </section>
   </header>
 
-  <!-- MAIN -->
   <main class="home-content-dark">
     <h1 class="page-title">Health Report</h1>
 
     <section class="health-grid">
       
-      <!-- LEFT COLUMN -->
       <aside class="health-col-left">
 
         <figure class="health-pet-img">
@@ -50,10 +47,10 @@
 
         <article class="health-info-card">
           <h4>Current Weight:</h4>
-          <div class="info-card-content">
+          <section class="info-card-content">
             <img src="images/Icons/scale.svg" alt="Scale">
             <p id="current-weight-text">-- lbs</p>
-          </div>
+          </section>
         </article>
 
         <article class="health-info-card">
@@ -63,14 +60,13 @@
 
         <article class="health-info-card">
           <h4>Medications:</h4>
-          <div class="info-card-content">
+          <section class="info-card-content">
             <p id="current-medication-text">No medications logged.</p>
             <img src="images/Icons/pill.svg" alt="Pill">
-          </div>
+          </section>
         </article>
       </aside>
 
-      <!-- RIGHT COLUMN -->
       <nav class="health-col-right" aria-label="Health Logs">
         <a href="#" class="health-link-card" id="weight-history-btn">
           <span>Weight History</span>
@@ -97,17 +93,14 @@
       <img src="images/Icons/Plus-box-icon.svg" alt="Add Health Record">
     </a>
 
-  <!-- FOOTER -->
   <footer class="main-footer-dark">
     <a href="about-us.html">About us</a>
     <a href="support.html">Support</a>
     <a href="contact-us.html">Contact us</a>
   </footer>
 
-  <!-- OVERLAYS -->
-  <div class="overlay" id="page-overlay"></div>
+  <section class="overlay" id="page-overlay"></section>
 
-  <!-- SETTINGS PANEL -->
   <aside class="settings-overlay-panel" id="settings-panel">
     <h2>Settings</h2>
     <nav aria-label="Settings Links">
@@ -120,7 +113,6 @@
     </nav>
   </aside>
 
-  <!-- NOTIFICATIONS PANEL -->
   <aside class="notifications-overlay-panel" id="notifications-panel">
     <header class="notifications-header">
       <h2>Notifications</h2>
@@ -131,17 +123,15 @@
     </section>
   </aside>
 
-  <!-- LOGOUT PANEL -->
   <aside class="logout-overlay-panel" id="logout-panel">
     <h2>Log Out?</h2>
     <p>Are you sure you want to log out?</p>
-    <section class="logout-buttons">
+    <footer class="logout-buttons">
       <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
       <button class="btn-logout-confirm">Log out</button>
-    </section>
+    </footer>
   </aside>
 
-  <!-- ADD HEALTH RECORD PANEL -->
   <aside class="health-add-overlay" id="health-add-panel">
     <button class="health-close-btn" id="health-close-btn">
       <i class='bx bx-x'></i>
@@ -164,14 +154,13 @@
         <img src="images/Icons/syringe.svg" alt="Vaccination">
         <span>Add Vaccination</span>
       </a>
-      <a href="#" class="health-option-card" id="add-allergy-btn">
+      <a href="#" classs="health-option-card" id="add-allergy-btn">
         <img src="images/Icons/warning.svg" alt="Allergy">
         <span>Add Allergy</span>
       </a>
     </nav>
   </aside>
 
-  <!-- HEALTH LOG SECTIONS -->
   <section class="health-log-overlay" id="weight-history-panel">
     <button class="health-close-btn"><i class='bx bx-x'></i></button>
     <h2>Weight History</h2>
@@ -196,7 +185,6 @@
     <section class="health-log-list" id="vet-visit-log-list"></section>
   </section>
 
-  <!-- FORM PANELS -->
   <section class="health-form-overlay" id="log-weight-panel">
     <button class="health-close-btn"><i class='bx bx-x'></i></button>
     <h2>Log New Weight</h2>
@@ -253,7 +241,7 @@
         <label for="vax-date-due-input">Next Due Date:</label>
         <input type="date" id="vax-date-due-input">
       </fieldset>
-      <button type="submit" class="btn-save-health-form">Save</button>
+      <button type="submit" class="btn-save-health-form">Save</D_button>
     </form>
   </section>
 
