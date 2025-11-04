@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="about-us-page home-page-dark">
+
+  <!-- HEADER -->
+  <header class="main-header-dark">
+    <section class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </section>
+
+    <nav class="main-nav-dark" aria-label="Main Navigation">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+
+    <section class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </section>
+  </header>
+
+  <main class="home-content-dark">
+    <h1 class="page-title">Our Vision</h1>
+
+    <section class="vision-timeline">
+      <span class="timeline-center"></span>
+
+      <article class="vision-box box-right">
+        <h3>
+          <img src="images/Icons/lightbulb.svg" alt="Lightbulb">
+          The Spark of an Idea
+        </h3>
+        <p>As devoted pet owners, we know the worry that comes with tracking our furry family's health—from vet appointments to dietary needs. We dreamed of a single place to manage it all, a tool to help us be the best pet parents we can be. That dream became our mission.</p>
+      </article>
+
+      <article class="vision-box box-left">
+        <h3>
+          <img src="images/Icons/bullseye.svg" alt="Bullseye">
+          Our Core Mission
+        </h3>
+        <p>Our mission is to empower pet owners with the tools and knowledge for proactive pet care. We want to help you build a stronger, healthier, and happier bond with your companion by simplifying wellness management and putting peace of mind in your pocket.</p>
+      </article>
+
+      <article class="vision-box box-right">
+        <h3>
+          <img src="images/Icons/user.svg" alt="User">
+          Designed for you
+        </h3>
+        <p>We built our platform for the dedicated pet parent. Every feature, from vaccination reminders to activity logging, is crafted to be intuitive and helpful. It’s a seamless experience designed for your life and your pet’s well-being.</p>
+      </article>
+
+      <article class="vision-box box-left">
+        <h3>
+          <img src="images/Icons/handshake.svg" alt="Handshake">
+          Our Guiding Values
+        </h3>
+        <p>Compassion, Trust, and Innovation guide everything we do. We are committed to creating a reliable platform you can depend on, driven by a genuine love for animals and a passion for using technology to improve their lives.</p>
+      </article>
+
+      <article class="vision-box box-right">
+        <h3>
+          <img src="images/Icons/group-icon.svg" alt="Group">
+          More Than a Product
+        </h3>
+        <p>We're not just building an app; we're building a community of passionate pet lovers. Your stories, feedback, and love for your pets inspire us to improve every day. You and your companion are at the heart of our journey.</p>
+      </article>
+
+      <article class="vision-box-1 box-left">
+        <h3>
+          <img src="images/Icons/rocket.svg" alt="Rocket">
+          The Future We're Building
+        </h3>
+        <p>We're constantly working on new ways to support you and your pet. Our vision is a future where every pet thrives. Join our pack and start your pet's wellness journey with us today!</p>
+      </article>
+
+      <article class="vision-box box-bottom">
+        <h3>
+          <img src="images/Icons/shield.svg" alt="Shield">
+          Our Promise to You
+        </h3>
+        <p>Our promise is to always put the health and happiness of your pet first. We are dedicated to providing a secure, reliable, and supportive platform for the most important members of your family.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="main-footer-dark">
+    <a href="about-us.html" class="footer-active">About us</a>
+    <a href="support.html">Support</a>
+    <a href="contact-us.html">Contact us</a>
+  </footer>
+
+  <section class="overlay" id="page-overlay"></section>
+
+  <aside class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <a href="pet-profiles.html">Pet Profile Management</a>
+    <a href="health-settings.html">Health & Safety Settings</a>
+    <a href="privacy-settings.html">Privacy & Sharing Controls</a>
+    <a href="accessibility.html">Accessibility Options</a>
+    <a href="notification-settings.html">Notification settings</a>
+    <a href="#" class="logout-link" id="logout-btn">Log out</a>
+  </aside>
+
+  <aside class="notifications-overlay-panel" id="notifications-panel">
+    <header class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </header>
+    <section class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </section>
+  </aside>
+
+  <section class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <div class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </div>
+  </section>
+  
+  <script src="javascript/script.js"></script>
+</body>
+</html>

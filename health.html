@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Report - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="health-page home-page-dark">
+
+  <!-- HEADER -->
+  <header class="main-header-dark">
+    <section class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </section>
+
+    <nav class="main-nav-dark" aria-label="Main Navigation">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html" class="nav-active">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+
+    <section class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </section>
+  </header>
+
+  <!-- MAIN -->
+  <main class="home-content-dark">
+    <h1 class="page-title">Health Report</h1>
+
+    <section class="health-grid">
+      
+      <!-- LEFT COLUMN -->
+      <aside class="health-col-left">
+
+        <figure class="health-pet-img">
+          <img src="images/Pngs/Camera-Black.png" alt="Pet Profile">
+        </figure>
+
+        <article class="health-info-card">
+          <h4>Current Weight:</h4>
+          <div class="info-card-content">
+            <img src="images/Icons/scale.svg" alt="Scale">
+            <p id="current-weight-text">-- lbs</p>
+          </div>
+        </article>
+
+        <article class="health-info-card">
+          <h4>Allergies:</h4>
+          <p id="current-allergy-text">No known allergies</p>
+        </article>
+
+        <article class="health-info-card">
+          <h4>Medications:</h4>
+          <div class="info-card-content">
+            <p id="current-medication-text">No medications logged.</p>
+            <img src="images/Icons/pill.svg" alt="Pill">
+          </div>
+        </article>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <nav class="health-col-right" aria-label="Health Logs">
+        <a href="#" class="health-link-card" id="weight-history-btn">
+          <span>Weight History</span>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+        <a href="#" class="health-link-card" id="medication-log-btn">
+          <span>Medication Log</span>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+        <a href="#" class="health-link-card" id="vaccination-log-btn">
+          <span>Vaccinations</span>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+        <a href="#" class="health-link-card" id="vet-visits-btn">
+          <span>Vet Visits</span>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+      </nav>
+    </section>
+
+  </main>
+
+    <a href="#" class="btn-add-health" id="health-add-btn">
+      <img src="images/Icons/Plus-box-icon.svg" alt="Add Health Record">
+    </a>
+
+  <!-- FOOTER -->
+  <footer class="main-footer-dark">
+    <a href="about-us.html">About us</a>
+    <a href="support.html">Support</a>
+    <a href="contact-us.html">Contact us</a>
+  </footer>
+
+  <!-- OVERLAYS -->
+  <div class="overlay" id="page-overlay"></div>
+
+  <!-- SETTINGS PANEL -->
+  <aside class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <nav aria-label="Settings Links">
+      <a href="pet-profiles.html">Pet Profile Management</a>
+      <a href="health-settings.html">Health & Safety Settings</a>
+      <a href="privacy-settings.html">Privacy & Sharing Controls</a>
+      <a href="accessibility.html">Accessibility Options</a>
+      <a href="notification-settings.html">Notification settings</a>
+      <a href="#" class="logout-link" id="logout-btn">Log out</a>
+    </nav>
+  </aside>
+
+  <!-- NOTIFICATIONS PANEL -->
+  <aside class="notifications-overlay-panel" id="notifications-panel">
+    <header class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </header>
+    <section class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </section>
+  </aside>
+
+  <!-- LOGOUT PANEL -->
+  <aside class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <section class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </section>
+  </aside>
+
+  <!-- ADD HEALTH RECORD PANEL -->
+  <aside class="health-add-overlay" id="health-add-panel">
+    <button class="health-close-btn" id="health-close-btn">
+      <i class='bx bx-x'></i>
+    </button>
+    <h2>Add New Health Record</h2>
+    <nav class="health-option-list" aria-label="Health Record Options">
+      <a href="#" class="health-option-card" id="add-weight-btn">
+        <img src="images/Icons/scale.svg" alt="Weight">
+        <span>Log New Weight</span>
+      </a>
+      <a href="#" class="health-option-card" id="add-medication-btn">
+        <img src="images/Icons/pill.svg" alt="Medication">
+        <span>Log Medication and Dose</span>
+      </a>
+      <a href="#" class="health-option-card" id="add-vet-visit-btn">
+        <img src="images/Icons/stethoscope.svg" alt="Vet Visit">
+        <span>Add Vet Visit</span>
+      </a>
+      <a href="#" class="health-option-card" id="add-vaccination-btn">
+        <img src="images/Icons/syringe.svg" alt="Vaccination">
+        <span>Add Vaccination</span>
+      </a>
+      <a href="#" class="health-option-card" id="add-allergy-btn">
+        <img src="images/Icons/warning.svg" alt="Allergy">
+        <span>Add Allergy</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- HEALTH LOG SECTIONS -->
+  <section class="health-log-overlay" id="weight-history-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Weight History</h2>
+    <section class="health-log-list" id="weight-log-list"></section>
+  </section>
+
+  <section class="health-log-overlay" id="medication-log-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Medication Log</h2>
+    <section class="health-log-list" id="medication-log-list"></section>
+  </section>
+
+  <section class="health-log-overlay" id="vaccination-log-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Vaccination Log</h2>
+    <section class="health-log-list" id="vaccination-log-list"></section>
+  </section>
+
+  <section class="health-log-overlay" id="vet-visits-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Vet Visit Log</h2>
+    <section class="health-log-list" id="vet-visit-log-list"></section>
+  </section>
+
+  <!-- FORM PANELS -->
+  <section class="health-form-overlay" id="log-weight-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Log New Weight</h2>
+    <form id="log-weight-form">
+      <fieldset class="form-group-labeled">
+        <label for="weight-input">New Weight (lbs):</label>
+        <input type="number" id="weight-input" placeholder="120">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="weight-date-input">Date Logged:</label>
+        <input type="date" id="weight-date-input">
+      </fieldset>
+      <button type="submit" class="btn-save-health-form">Save</button>
+    </form>
+  </section>
+
+  <section class="health-form-overlay" id="log-medication-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Log Medication</h2>
+    <form id="log-medication-form">
+      <fieldset class="form-group-labeled">
+        <label for="med-name-input">Medication Name:</label>
+        <input type="text" id="med-name-input" placeholder="Flea & Tick">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="med-dose-input">Dose:</label>
+        <input type="text" id="med-dose-input" placeholder="5 mg or 1 pill">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="med-date-input">Date Logged:</label>
+        <input type="date" id="med-date-input">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="med-time-input">Time Administered:</label>
+        <input type="time" id="med-time-input">
+      </fieldset>
+      <button type="submit" class="btn-save-health-form">Save</button>
+    </form>
+  </section>
+
+  <section class="health-form-overlay" id="log-vaccination-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Add Vaccination</h2>
+    <form id="log-vaccination-form">
+      <fieldset class="form-group-labeled">
+        <label for="vax-name-input">Vaccination Name:</label>
+        <input type="text" id="vax-name-input" placeholder="Rabies">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="vax-date-given-input">Date Given:</label>
+        <input type="date" id="vax-date-given-input">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="vax-date-due-input">Next Due Date:</label>
+        <input type="date" id="vax-date-due-input">
+      </fieldset>
+      <button type="submit" class="btn-save-health-form">Save</button>
+    </form>
+  </section>
+
+  <section class="health-form-overlay" id="log-vet-visit-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Add Vet Visit</h2>
+    <form id="log-vet-visit-form">
+      <fieldset class="form-group-labeled">
+        <label for="vet-date-input">Date of Visit:</label>
+        <input type="date" id="vet-date-input">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="vet-reason-input">Reason for Visit:</label>
+        <input type="text" id="vet-reason-input" placeholder="Annual Checkup">
+      </fieldset>
+      <fieldset class="form-group-labeled">
+        <label for="vet-clinic-input">Clinic Name:</label>
+        <input type="text" id="vet-clinic-input" placeholder="City Vet">
+      </fieldset>
+      <button type="submit" class="btn-save-health-form">Save</button>
+    </form>
+  </section>
+
+  <section class="health-form-overlay" id="log-allergy-panel">
+    <button class="health-close-btn"><i class='bx bx-x'></i></button>
+    <h2>Add Allergy</h2>
+    <form id="log-allergy-form">
+      <fieldset class="form-group-labeled">
+        <label for="allergy-name-input">Allergy Name:</label>
+        <input type="text" id="allergy-name-input" placeholder="e.g., Peanuts, Pollen">
+      </fieldset>
+      <button type="submit" class="btn-save-health-form">Save</button>
+    </form>
+  </section>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

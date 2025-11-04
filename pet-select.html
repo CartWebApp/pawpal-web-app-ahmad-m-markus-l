@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support - Pawpal</title>
+  <title>Select Pet - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="support-page home-page-dark">
+
+<body>
 
   <header class="main-header-dark">
     <figure class="logo-box">
@@ -32,39 +33,32 @@
   </header>
 
   <main class="home-content-dark">
-    <h1 class="page-title">FAQ</h1>
+    <section class="pet-select-container">
+      <h1 class="page-title-3">My Pets</h1>
 
-    <section class="faq-container">
-      <article class="faq-item">
-        <p class="faq-question">Q: How do I add and manage my pet's profile?</p>
-        <p class="faq-answer">A: Go to My Pets -> Add Pet to enter your pet's details like name, breed, age, and health info. You can manage multiple pets from the same account.</p>
-      </article>
+      <section class="pet-grid">
+        
+        <a href="home.html" class="pet-card">
+          <figure class="pet-card-photo">
+            <img src="images/Pngs/pet-placeholder.png" alt="Pet Photo">
+          </figure>
+          <h3>Buddy</h3>
+        </a>
 
-      <article class="faq-item">
-        <p class="faq-question">Q: How does the app help me care for my pet's health?</p>
-        <p class="faq-answer">A: The app tracks vaccinations, medications, vet visits, and symptoms. It also sends reminders for checkups, feeding, and medication schedules.</p>
-      </article>
+        <a href="create-profile-pet.html" class="pet-add-card">
+          <section class="pet-add-icon">
+            <i class='bx bx-plus'></i>
+          </section>
+          <h3>Add New Pet</h3>
+        </a>
 
-      <article class="faq-item">
-        <p class="faq-question">Q: Can I share my pet's health data with my vet?</p>
-        <p class="faq-answer">A: Yes. Under Privacy & Sharing Controls, you can securely share health updates and records with your veterinarian.</p>
-      </article>
-
-      <article class="faq-item">
-        <p class="faq-question">Q: What should I do in case of an emergency?</p>
-        <p class="faq-answer">A: Use the Emergency Actions feature to quickly call your vet, send alerts to emergency contacts, or view nearby animal hospitals.</p>
-      </article>
-
-      <article class="faq-item">
-        <p class="faq-question">Q: How do I control notifications and alerts?</p>
-        <p class="faq-answer">A: Visit Notification Settings to choose which reminders you want to receive — including health updates, feeding times, and emergency alerts.</p>
-      </article>
+      </section>
     </section>
   </main>
 
-  <footer class="main-footer-dark">
+  <footer class="main-footer-dark-1">
     <a href="about-us.html">About us</a>
-    <a href="support.html" class="footer-active">Support</a>
+    <a href="support.html">Support</a>
     <a href="contact-us.html">Contact us</a>
   </footer>
 
@@ -98,25 +92,6 @@
       <button class="btn-logout-confirm">Log out</button>
     </footer>
   </section>
-  
-  <script src="javascript/script.js"></script>
-</body>
-</html>
-  </div>
-
-  <div class="notifications-overlay-panel" id="notifications-panel">
-      <p class="empty-state">No notifications yet.</p>
-    </div>
-  </div>
-
-  <div class="logout-overlay-panel" id="logout-panel">
-    <h2>Log Out?</h2>
-    <p>Are you sure you want to log out?</p>
-    <div class="logout-buttons">
-      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
-      <button class="btn-logout-confirm">Log out</button>
-    </div>
-  </div>
   
   <script src="javascript/script.js"></script>
 </body>

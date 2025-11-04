@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - Pawpal</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="schedule-page">
+
+  <!-- HEADER -->
+  <header class="main-header-dark">
+    <section class="logo-box">
+      <img src="images/Icons/paw.svg" alt="Pawpal Logo">
+    </section>
+
+    <nav class="main-nav-dark" aria-label="Main Navigation">
+      <a href="home.html">
+        <img src="images/Icons/home.svg" alt="Home">
+      </a>
+      <a href="schedule.html" class="nav-active">
+        <img src="images/Icons/calender-icon.svg" alt="Schedule">
+      </a>
+      <a href="health.html">
+        <img src="images/Icons/heart-nav.svg" alt="Health">
+      </a>
+    </nav>
+
+    <section class="user-icons-dark">
+      <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
+    </section>
+  </header> 
+
+  <main class="home-content-dark">
+    <h1 class="page-title">Appointments</h1>
+
+    <section class="schedule-grid">
+      
+      <section class="calendar-container">
+        <header class="calendar-header">October 2025</header>
+        <section class="calendar-body">
+          <span class="day-name">Sun</span>
+          <span class="day-name">Mon</span>
+          <span class="day-name">Tue</span>
+          <span class="day-name">Wed</span>
+          <span class="day-name">Thu</span>
+          <span class="day-name">Fri</span>
+          <span class="day-name">Sat</span>
+          <span class="day"></span>
+          <span class="day"></span>
+          <span class="day"></span>
+          <span class="day">1</span>
+          <span class="day">2</span>
+          <span class="day">3</span>
+          <span class="day">4</span>
+          <span class="day">5</span>
+          <span class="day">6</span>
+          <span class="day">7</span>
+          <span class="day">8</span>
+          <span class="day">9</span>
+          <span class="day day-today">10</span>
+          <span class="day">11</span>
+          <span class="day">12</span>
+          <span class="day">13</span>
+          <span class="day">14</span>
+          <span class="day">15</span>
+          <span class="day">16</span>
+          <span class="day">17</span>
+          <span class="day">18</span>
+          <span class="day">19</span>
+          <span class="day">20</span>
+          <span class="day">21</span>
+          <span class="day">22</span>
+          <span class="day">23</span>
+          <span class="day">24</span>
+          <span class="day">25</span>
+          <span class="day">26</span> 
+          <span class="day">27</span>
+          <span class="day">28</span>
+          <span class="day">29</span>
+          <span class="day">30</span>
+          <span class="day">31</span>
+        </section>
+      </section>
+
+      <section class="upcoming-container">
+        <header class="upcoming-header">
+          <h3>Upcoming</h3>
+        </header>
+        
+        <section class="upcoming-list" id="upcoming-list">
+          <p class="empty-state">No upcoming events.</p>
+        </section>
+
+        <button class="btn-add-upcoming"id="schedule-add-btn">
+          <img src="images/Icons/Plus-box-icon.svg" alt="">
+        </button>
+      </section>
+    </section>
+  </main>
+
+  <footer class="main-footer-dark">
+    <a href="about-us.html">About us</a>
+    <a href="support.html">Support</a>
+    <a href="contact-us.html">Contact us</a>
+  </footer>
+
+  <section class="overlay" id="page-overlay"></section>
+
+  <aside class="settings-overlay-panel" id="settings-panel">
+    <h2>Settings</h2>
+    <a href="pet-profiles.html">Pet Profile Management</a>
+    <a href="health-settings.html">Health & Safety Settings</a>
+    <a href="privacy-settings.html">Privacy & Sharing Controls</a>
+    <a href="accessibility.html">Accessibility Options</a>
+    <a href="notification-settings.html">Notification settings</a>
+    <a href="#" class="logout-link" id="logout-btn">Log out</a>
+  </aside>
+
+  <aside class="notifications-overlay-panel" id="notifications-panel">
+    <header class="notifications-header">
+      <h2>Notifications</h2>
+      <a href="#">Mark all as read</a>
+    </header>
+    <section class="notification-list-container" id="notification-list">
+      <p class="empty-state">No notifications yet.</p>
+    </section>
+  </aside>
+
+  <section class="logout-overlay-panel" id="logout-panel">
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to log out?</p>
+    <footer class="logout-buttons">
+      <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
+      <button class="btn-logout-confirm">Log out</button>
+    </footer>
+  </section>
+  
+  <section class="schedule-add-event-overlay" id="schedule-add-event-panel">
+    <button class="schedule-close-btn" id="schedule-close-btn">
+      <img src="images/Icons/exit.svg" alt="Close">
+    </button>
+
+    <h2>Add Event</h2>
+    
+    <form id="schedule-event-form">
+      <section class="form-group-labeled">
+        <label for="event-name-select">Event Name:</label>
+        <select id="event-name-select">
+          <option value="Pill Medication">Pill Medication</option>
+          <option value="Walk">Walk</option>
+          <option value="Groom Appointment">Groom Appointment</option>
+          <option value="Veterinary Visit">Veterinary Visit</option>
+          <option value="Other">Other (Custom)</option>
+        </select>
+      </section>
+      
+      <section class="form-group-labeled" id="custom-event-group" style="display: none;">
+        <label for="event-name-custom">Custom Event Name:</label>
+        <input type="text" id="event-name-custom" placeholder="e.g., Dog Park">
+      </section>
+      
+      <section class="form-group-labeled">
+        <label for="pet-selector-schedule">Pet Selector:</label>
+        <select id="pet-selector-schedule">
+          <option>Selected Pet: Buddy</option>
+        </select>
+      </section>
+
+      <section class="form-group-labeled">
+        <label for="event-date-schedule">Date:</label>
+        <section class="input-with-icon">
+          <img src="images/Icons/black-calender.svg" alt="Calendar" class="input-icon">
+          <input type="text" id="event-date-schedule" placeholder="--|--">
+        </section>
+      </section>
+
+      <section class="form-group-labeled">
+        <label for="event-time-schedule">Time:</label>
+        <section class="input-with-icon">
+          <img src="images/Icons/clock.svg" alt="Clock" class="input-icon">
+          <input type="text" id="event-time-schedule" placeholder="--|--">
+        </section>
+      </section>
+
+      <button type="submit" class="btn-save-event">Save</button>
+    </form>
+  </section>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

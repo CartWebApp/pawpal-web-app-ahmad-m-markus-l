@@ -1,22 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Pawpal</title>
+  <title>User Settings - Pawpal</title>
   
   <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body class="home-page-dark">
-
-    <!-- HEADER -->
   <header class="main-header-dark">
-    <section class="logo-box">
+    <figure class="logo-box">
       <img src="images/Icons/paw.svg" alt="Pawpal Logo">
-    </section>
-
-    <nav class="main-nav-dark" aria-label="Main Navigation">
-      <a href="home.html" class="nav-active">
+    </figure>
+    <nav class="main-nav-dark">
+      <a href="home.html">
         <img src="images/Icons/home.svg" alt="Home">
       </a>
       <a href="schedule.html">
@@ -26,41 +24,58 @@
         <img src="images/Icons/heart-nav.svg" alt="Health">
       </a>
     </nav>
-
-    <section class="user-icons-dark">
+    <aside class="user-icons-dark">
       <img src="images/Icons/Setting-icon.svg" alt="Settings" id="settings-icon-btn">
-      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn">
+      <img src="images/Icons/mdi_user.svg" alt="Profile" id="user-icon-btn" class="nav-active">
       <img src="images/Icons/bell.svg" alt="Notifications" id="bell-icon-btn">
-    </section>
+    </aside>
   </header>
-  
-  <main class="home-content-dark">
-    <section class="pet-profile-main">
-      <a href="pet-profile.html" class="pet-profile-image-link">
-        <img src="images/Pngs/Camera-Black.png" alt="Pet Profile Picture" id="pet-profile-btn">
-      </a>
 
-      <section class="pet-profile-name-box">
-        Buddy
+  <main class="home-content-dark-1">
+    <section class="user-settings-grid">
+      
+      <section class="profile-pic-container">
+        <div class="profile-pic-circle">
+          <img src="images/Icons/Camera-Black.png" alt="Upload Photo">
+        </div>
       </section>
-    </section>
 
-    <section class="reminders-section" id="reminders-list">
-      <h3>Reminders:</h3>
+      <form class="user-settings-form">
+        <section class="setting-input-box">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="setting-input-box">
+          <label for="gender">Gender</label>
+          <input type="text" id="gender" placeholder="Enter your gender">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="setting-input-box">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+          <i class='bx bx-pencil edit-icon'></i>
+        </section>
+
+        <section class="setting-input-box">
+          <label for="bio">My bio:</label>
+          <textarea id="bio" placeholder="Tell us about you and your pets..."></textarea>
+          <i class='bx bx-pencil edit-icon bio-edit-icon'></i>
+        </section>
+
+        <button type="submit" class="btn-done">Done</button>
+      </form>
+
     </section>
   </main>
 
-  <a href="pet-select.html" class="add-event-btn">
-    <img src="images/Icons/Plus-box-icon.svg" alt="Add Pet">
-  </a>
-
-  <!-- FOOTER -->
   <footer class="main-footer-dark">
     <a href="about-us.html">About us</a>
     <a href="support.html">Support</a>
     <a href="contact-us.html">Contact us</a>
   </footer>
-
 
   <section class="overlay" id="page-overlay"></section>
 
@@ -84,43 +99,15 @@
     </section>
   </aside>
 
-  <section class="add-event-overlay-panel" id="add-event-panel">
-    <button class="close-overlay-btn" id="close-event-panel-btn">
-      <i class='bx bx-x'></i>
-    </button>
-    <h2>Add Event</h2>
-    <form>
-      <section class="form-group-labeled">
-        <label for="event-name">Event Name:</label>
-        <input type="text" id="event-name">
-      </section>
-      <section class="form-group-labeled">
-        <label for="pet-selector">Pet Selector:</label>
-        <select id="pet-selector">
-          <option>Selected Pet: Buddy</option>
-        </select>
-      </section>
-      <section class="form-group-labeled">
-        <label for="event-date">Date:</label>
-        <input type="text" id="event-date" placeholder="-- / -- / --">
-      </section>
-      <section class="form-group-labeled">
-        <label for="event-time">Time:</label>
-        <input type="text" id="event-time" placeholder="-- : --">
-      </section>
-      <button type="submit" class="btn-save-event">Save</button>
-    </form>
-  </section>
-
   <section class="logout-overlay-panel" id="logout-panel">
     <h2>Log Out?</h2>
     <p>Are you sure you want to log out?</p>
-    <div class="logout-buttons">
+    <footer class="logout-buttons">
       <button class="btn-cancel" id="cancel-logout-btn">Cancel</button>
       <button class="btn-logout-confirm">Log out</button>
-    </div>
+    </footer>
   </section>
-
+  
   <script src="javascript/script.js"></script>
 </body>
 </html>
