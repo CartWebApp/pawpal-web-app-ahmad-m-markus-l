@@ -1,0 +1,72 @@
+/*CONTACT US PAGE */
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+}
+.home-content-dark-1 {
+  max-width: 700px;
+  height: 75%;
+  margin: 40px auto;
+  padding: 40px 50px;
+}
+.page-title {
+  max-width: 800px; 
+  margin: 0 auto 50px auto; 
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left; 
+}
+.contact-page .main-footer-dark .footer-active {
+  font-weight: 700;
+  color: #fff;
+}
+.contact-form-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 50px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 800px;  
+  margin: 0 auto;    
+}
+.contact-form-container .form-group-labeled {
+  margin-bottom: 25px;
+}
+.contact-form-container .form-group-labeled label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  display: block;
+}
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 18px; 
+  border: 1px solid #ddd;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; 
+}
+.contact-form-container textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+.btn-done {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #43A2A2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+.btn-done:hover {
+  background-color: #368383;
+}
